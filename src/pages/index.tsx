@@ -1,11 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import PocketBase from "pocketbase";
 import { useEffect } from "react";
 import styles from "styles/Home.module.scss";
 
 import Layout from "../components/Layout";
-const client = new PocketBase("https://pocketbase.io");
+//const client = new PocketBase("https://pocketbase.io");
 
 const Home: NextPage = () => {
   useEffect(() => {
