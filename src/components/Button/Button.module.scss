@@ -1,0 +1,11 @@
+@tailwind components;
+@layer components {
+  .button {
+    @apply text-white;
+    line-height: 1.375rem;
+    padding: 1.1875rem 3.25rem;
+    background: none;
+    border: 1px solid #ffffff;
+    border-radius: 0.75rem;
+  }
+}

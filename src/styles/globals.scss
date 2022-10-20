@@ -27,3 +27,14 @@ a {
     background: black;
   }
 }
+
+.section-title {
+  @apply text-white text-center;
+  font-size: 2.25rem;
+  line-height: 3.125rem;
+}
+.section-subtitle {
+  @apply text-white text-center opacity-40;
+  font-size: 1.125rem;
+  line-height: 1.5625rem;
+}
