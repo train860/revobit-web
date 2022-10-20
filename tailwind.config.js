@@ -2,9 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    container: {
+      center: true,
+    },
     screens: {
-      xl: { max: "1600px" },
-      lg: { max: "1200px" },
+      sm: "480px",
+      md: "768px",
+      lg: "1200px",
+      xl: "1600px",
     },
     extend: {
       colors: {
