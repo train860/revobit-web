@@ -7,6 +7,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: 16px;
+  @apply bg-rev-bg-black;
 }
 
 a {
@@ -32,9 +33,12 @@ a {
   @apply text-white text-center;
   font-size: 2.25rem;
   line-height: 3.125rem;
+  margin-top: 6rem;
+  margin-bottom: 0.9375rem;
 }
 .section-subtitle {
   @apply text-white text-center opacity-40;
   font-size: 1.125rem;
   line-height: 1.5625rem;
+  margin-bottom: 4.25rem;
 }

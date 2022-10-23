@@ -1,0 +1,32 @@
+@tailwind components;
+@layer components {
+  .section-card {
+    @apply flex flex-row items-center;
+    &.right {
+      flex-direction: row-reverse;
+    }
+    .section-card-text {
+      @apply flex-1 flex flex-col;
+      h2 {
+        font-weight: 600;
+        font-size: 1.875rem;
+        line-height: 2.625rem;
+        color: #ffffff;
+        margin-bottom: 0.25rem;
+      }
+      .des-item {
+        flex: 1;
+        background: #17172f;
+        border-radius: 0.75rem;
+        padding: 1.125rem 1.75rem;
+        color: #ffffff;
+        margin-top: 1.25rem;
+        opacity: 0.3;
+        font-size: 1.125rem;
+      }
+    }
+    .section-card-content {
+      @apply flex-1;
+    }
+  }
+}

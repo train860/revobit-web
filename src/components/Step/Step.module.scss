@@ -1,0 +1,117 @@
+@tailwind components;
+@layer components {
+  .steps {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .selected p {
+      color: rgba(108, 211, 84, 1);
+    }
+    .step {
+      min-width: 80px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &.first {
+        .progress .line:first-child {
+          border-color: transparent;
+        }
+      }
+      &.last {
+        .progress .line:last-child {
+          border-color: transparent;
+        }
+      }
+
+      &.active {
+        .progress .line {
+          border-color: rgba(108, 211, 84, 1);
+        }
+      }
+      &.selected {
+        .progress .line:first-child {
+          border-color: rgba(108, 211, 84, 1);
+        }
+        .circle {
+          background: rgba(108, 211, 84, 1);
+          border-color: rgba(108, 211, 84, 1);
+        }
+      }
+      .circle {
+        flex-shrink: 1;
+        width: 0.75rem;
+        height: 0.75rem;
+        background: #08071b;
+        border: 3px solid #393949;
+        border-radius: 100%;
+        margin: 0 0.25rem;
+      }
+      p {
+        font-size: 1.125rem;
+        &.text {
+          height: 2rem;
+          text-align: center;
+        }
+      }
+    }
+
+    .step .progress {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 1rem 0;
+      .line {
+        flex: 1;
+        border-bottom: 2px rgba(255, 255, 255, 0.2) dashed;
+      }
+    }
+    .bar {
+      flex: 1;
+      position: relative;
+      background: #09081c;
+      border: 2px dashed rgba(255, 255, 255, 0.2);
+      height: 1.875rem;
+      &.left-top {
+        border-top-left-radius: 1rem;
+        border-bottom: 0;
+        border-right: 0;
+      }
+      &.right-top {
+        border-top-right-radius: 1rem;
+        border-bottom: 0;
+        border-left: 0;
+      }
+      &.left-bottom {
+        border-bottom-left-radius: 1rem;
+        border-top: 0;
+        border-right: 0;
+      }
+      &.right-bottom {
+        border-bottom-right-radius: 1rem;
+        border-top: 0;
+        border-left: 0;
+      }
+    }
+    .circle-step {
+      min-width: 15.625rem;
+      .active .bar {
+        border-color: rgba(108, 211, 84, 1);
+      }
+      .selected {
+        .bar:first-child {
+          border-color: rgba(108, 211, 84, 1);
+        }
+        .circle {
+          background: rgba(108, 211, 84, 1);
+          border-color: rgba(108, 211, 84, 1);
+        }
+      }
+    }
+  }
+}

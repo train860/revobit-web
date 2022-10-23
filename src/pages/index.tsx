@@ -1,13 +1,18 @@
 //const client = new PocketBase("https://pocketbase.io");
 
+import Button from "components/Button";
+import ContactForm from "components/ContactForm";
+import Layout from "components/Layout";
+import SectionCard from "components/SectionCard";
+import Step from "components/Step";
+import Tabbar from "components/Tabbar";
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "styles/Home.module.scss";
 
-import Layout from "../components/Layout";
-
 const Home: NextPage = () => {
+  const [tabActiveIndex, setTabActiveIndex] = useState<number>(0);
   useEffect(() => {
     //client.records.getList("posts", 1, 20, {});
   }, []);
@@ -33,6 +38,64 @@ const Home: NextPage = () => {
           <div className={styles["mask"]}>
             <div className="container">0000</div>
           </div>
+        </div>
+        <div className="bg-rev-bg-contact">
+          <div className="container py-6 ">
+            <h2 className="section-title">联系我们</h2>
+            <h3 className="section-subtitle">
+              释放设计灵感，即刻开启时尚数字新体验。
+            </h3>
+            <ContactForm />
+            <Button>立即探索</Button>
+          </div>
+        </div>
+
+        <div className="container py-6">
+          <Tabbar
+            activeIndex={tabActiveIndex}
+            items={[
+              { icon: "", text: "产品开发" },
+              { icon: "", text: "协同管理" },
+              { icon: "", text: "数据管理" },
+              { icon: "", text: "信息同步" },
+              { icon: "", text: "供应商管理" },
+              { icon: "", text: "智能化" },
+            ]}
+            onItemChange={(index) => {
+              setTabActiveIndex(index);
+            }}
+          />
+        </div>
+        <div className="container py-6">
+          <SectionCard
+            title={"进度实时管理"}
+            mode={"left"}
+            className="w-4/5 ml-10"
+            list={[
+              {
+                icon: "",
+                text: "按照企业的产品线、开发模式等维度自定义专属开发流程",
+              },
+              { icon: "", text: "通过流程驱动业务单据" },
+            ]}
+          >
+            111
+          </SectionCard>
+        </div>
+        <div className="container py-6">
+          <Step
+            selectedIndex={8}
+            list={[
+              { index: 1, text: "数字企划" },
+              { index: 2, text: "设计规划及任务分配" },
+              { index: 3, text: "材料颜色规划" },
+              { index: [5, 6], text: ["3D流程", "2D流程"] },
+              { index: 7, text: "样品开发" },
+              { index: 8, text: "评审管理" },
+              { index: 9, text: "BOM/Pre-cost" },
+              { index: 10, text: "生产技转" },
+            ]}
+          ></Step>
         </div>
       </main>
     </Layout>

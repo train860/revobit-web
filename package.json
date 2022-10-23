@@ -10,17 +10,20 @@
     "lint": "eslint ./ --ext js,jsx,ts,tsx --fix"
   },
   "dependencies": {
+    "@szhsin/react-menu": "^3.2.0",
     "classnames": "^2.3.2",
     "next": "12.3.1",
     "pocketbase": "^0.7.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-headroom": "^3.2.1"
   },
   "devDependencies": {
     "@tailwindcss/line-clamp": "^0.4.2",
     "@types/node": "18.11.0",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
+    "@types/react-headroom": "^2.2.2",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "autoprefixer": "^10.4.12",
     "eslint": "8.25.0",

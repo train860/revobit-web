@@ -14,6 +14,8 @@ module.exports = {
     extend: {
       colors: {
         "rev-black": "#04040E",
+        "rev-bg-black": "#08071B",
+        "rev-bg-contact": "#101025",
       },
     },
   },
