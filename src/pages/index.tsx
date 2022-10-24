@@ -1,5 +1,6 @@
 //const client = new PocketBase("https://pocketbase.io");
 
+import e2e from "assets/images/e2e.png";
 import Button from "components/Button";
 import ContactForm from "components/ContactForm";
 import Layout from "components/Layout";
@@ -7,10 +8,12 @@ import SectionCard from "components/SectionCard";
 import Step from "components/Step";
 import Tabbar from "components/Tabbar";
 import type { NextPage } from "next";
+import Image from "next/future/image";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import styles from "styles/Home.module.scss";
 
+import Category from "./sections/home/Category";
 const Home: NextPage = () => {
   const [tabActiveIndex, setTabActiveIndex] = useState<number>(0);
   useEffect(() => {
@@ -37,6 +40,26 @@ const Home: NextPage = () => {
           </video>
           <div className={styles["mask"]}>
             <div className="container">0000</div>
+          </div>
+        </div>
+        <Category />
+        {/* 端到端全链路数字化解决方案 */}
+        <div className="bg-rev-bg-black-14">
+          <div className="container">
+            <h2 className="section-title">端到端全链路数字化解决方案</h2>
+            <h3 className="section-subtitle">
+              时谛智能为时尚行业鞋、服、包等全品类提供“设计-制造-生产-销售”全链路数字化服务。
+            </h3>
+            <Image src={e2e} alt="" className="w-4/5" />
+          </div>
+        </div>
+        {/* 全球合作伙伴 */}
+        <div className="bg-rev-bg-black-14">
+          <div className="container">
+            <h2 className="section-title">全球合作伙伴</h2>
+            <h3 className="section-subtitle">
+              时谛智能已服务全球20多个国家地区，超40家一流时尚品牌，100多家供应商。
+            </h3>
           </div>
         </div>
         <div className="bg-rev-bg-contact">

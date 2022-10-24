@@ -1,6 +1,13 @@
 import logo from "assets/images/logo-footer.svg";
 import cn from "classnames";
+import BilibliIcon from "components/Icons/BilibiliIcon";
+import EmailIcon from "components/Icons/EmailIcon";
 import LocationIcon from "components/Icons/LocationIcon";
+import PhoneIcon from "components/Icons/PhoneIcon";
+import QQIcon from "components/Icons/QQIcon";
+import TiktokIcon from "components/Icons/TiktokIcon";
+import TimeIcon from "components/Icons/TimeIcon";
+import WechatIcon from "components/Icons/WechatIcon";
 import Image from "next/future/image";
 
 import styles from "./Footer.module.scss";
@@ -20,18 +27,25 @@ export default function Footer() {
             </span>
           </div>
           <div className={styles["left-section"]}>
-            <LocationIcon />
+            <TimeIcon />
             <span>星期一 - 星期五 9:30AM - 6:00PM</span>
           </div>
           <div className={styles["left-section"]}>
-            <LocationIcon />
+            <PhoneIcon />
             <span>19928307570</span>
           </div>
           <div className={styles["left-section"]}>
-            <LocationIcon />
+            <EmailIcon />
             <span>customer@4dstc.com</span>
           </div>
-          <div className={styles["left-section"]}>000</div>
+          <div className={styles["left-section"]}>
+            <div className="flex flex-row items-center">
+              <BilibliIcon className="mr-6" />
+              <TiktokIcon className="mr-6" />
+              <WechatIcon className="mr-6" />
+              <QQIcon />
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-4">

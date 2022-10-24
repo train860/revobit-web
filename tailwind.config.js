@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         "rev-black": "#04040E",
         "rev-bg-black": "#08071B",
+        "rev-bg-black-14": "#14142C",
         "rev-bg-contact": "#101025",
       },
     },

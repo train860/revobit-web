@@ -19,7 +19,7 @@ export default function FormItem(props: Props) {
       )}
     >
       <label className={styles["form-item-label"]}>
-        {props.icon}
+        {props.icon && <span className="mr-2">{props.icon}</span>}
         <span>{props.label}</span>
       </label>
       {props.type === "textarea" ? (
