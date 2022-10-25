@@ -1,6 +1,7 @@
 //const client = new PocketBase("https://pocketbase.io");
 
 import e2e from "assets/images/e2e.png";
+import Brand from "components/Brand";
 import Button from "components/Button";
 import ContactForm from "components/ContactForm";
 import Layout from "components/Layout";
@@ -54,14 +55,16 @@ const Home: NextPage = () => {
           </div>
         </div>
         {/* 全球合作伙伴 */}
-        <div className="bg-rev-bg-black-14">
+        <div className="bg-rev-bg-black py-6">
           <div className="container">
-            <h2 className="section-title">全球合作伙伴</h2>
+            <h2 className="section-title mt-0">全球合作伙伴</h2>
             <h3 className="section-subtitle">
               时谛智能已服务全球20多个国家地区，超40家一流时尚品牌，100多家供应商。
             </h3>
           </div>
+          <Brand />
         </div>
+
         <div className="bg-rev-bg-contact">
           <div className="container py-6 ">
             <h2 className="section-title">联系我们</h2>

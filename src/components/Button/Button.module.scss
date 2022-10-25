@@ -10,6 +10,7 @@
     z-index: 0;
     &:hover {
       background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(1.25rem);
     }
   }
 }

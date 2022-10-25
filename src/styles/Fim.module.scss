@@ -1,0 +1,39 @@
+.scheme {
+  background: linear-gradient(140.27deg, #212121 2.55%, #141414 93.93%);
+  border-radius: 1.875rem;
+  height: 23.75rem;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3.875rem 2.3125rem;
+  &:hover {
+  }
+  .scheme-icon,
+  .scheme-text {
+    flex: 1;
+  }
+  .scheme-icon {
+    position: relative;
+  }
+  .scheme-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      font-weight: 600;
+      font-size: 1.625rem;
+      line-height: 2.25rem;
+      color: #ffffff;
+      margin-bottom: 1.25rem;
+    }
+    p {
+      color: #ffffff;
+      opacity: 0.3;
+      text-align: center;
+    }
+  }
+}

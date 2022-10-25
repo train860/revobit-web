@@ -1,0 +1,19 @@
+@tailwind components;
+@layer components {
+  .brand {
+    @apply relative grid grid-cols-6 gap-2;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1920px;
+    .item {
+      height: 9.375rem;
+      background: #14122e;
+      border-radius: 1.5rem;
+    }
+  }
+  .cover {
+    @apply absolute left-0 right-0 bottom-0 flex justify-center items-end;
+    height: 19rem;
+    background: linear-gradient(180deg, rgba(8, 7, 27, 0) 0%, #08071b 100%);
+  }
+}

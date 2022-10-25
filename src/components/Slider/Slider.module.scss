@@ -1,0 +1,48 @@
+@tailwind components;
+@layer components {
+  .slider {
+    background: #131328;
+    border-radius: 1.875rem;
+    padding: 2.5rem;
+    @apply flex flex-row;
+    .controls {
+      width: 10rem;
+      margin-right: 2.25rem;
+      .btn {
+        width: 10rem;
+        height: 4.375rem;
+        background: #1a1a33;
+        border-radius: 0.75rem;
+        padding: 1.125rem 1.75rem;
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 2.125rem;
+        color: rgba(255, 255, 255, 0.3);
+        margin-top: 1.25rem;
+        cursor: pointer;
+
+        &:first-child {
+          margin-top: 0;
+        }
+        &:hover {
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+    .content {
+      flex: 1;
+      .images {
+        @apply grid grid-cols-2 gap-5;
+      }
+      .des {
+        margin-top: 1.25rem;
+        font-weight: 400;
+        font-size: 1.125rem;
+        line-height: 2.125rem;
+        color: #ffffff;
+        mix-blend-mode: hard-light;
+        opacity: 0.5;
+      }
+    }
+  }
+}
