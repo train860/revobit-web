@@ -37,3 +37,34 @@
     }
   }
 }
+.tab-section {
+  @apply grid grid-cols-2 gap-4;
+  padding: 6.25rem 0;
+  .left {
+    h2 {
+      font-weight: 600;
+      font-size: 1.875rem;
+      line-height: 2.625rem;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+    .des {
+      margin-bottom: 1.1875rem;
+    }
+    .des > p {
+      font-weight: 400;
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+      color: #ffffff;
+      opacity: 0.5;
+    }
+    .more {
+      font-weight: 400;
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+      color: #ffffff;
+      opacity: 0.8;
+      display: block;
+    }
+  }
+}

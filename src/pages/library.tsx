@@ -45,7 +45,7 @@ const tabDataList: TabData[] = [
   },
 ];
 //use sticky
-const Fim: NextPage = () => {
+const Library: NextPage = () => {
   const [tabActiveIndex, setTabActiveIndex] = useState<number>(0);
   return (
     <Layout>
@@ -104,4 +104,4 @@ const Fim: NextPage = () => {
     </Layout>
   );
 };
-export default Fim;
+export default Library;
