@@ -21,8 +21,10 @@
         padding: 1.125rem 1.75rem;
         color: #ffffff;
         margin-top: 1.25rem;
-        opacity: 0.3;
-        font-size: 1.125rem;
+        span {
+          opacity: 0.3;
+          font-size: 1.125rem;
+        }
       }
     }
     .section-card-content {

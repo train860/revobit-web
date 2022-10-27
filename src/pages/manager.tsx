@@ -1,5 +1,6 @@
 import e2e from "assets/images/e2e.png";
 import Button from "components/Button";
+import CommonBanner from "components/CommonBanner";
 import ContactForm from "components/ContactForm";
 import Layout from "components/Layout";
 import SectionCard from "components/SectionCard";
@@ -56,48 +57,132 @@ const Manager: NextPage = () => {
       </Head>
 
       <main>
-        {" "}
-        <Category />
+        <CommonBanner
+          image="/images/manager.jpg"
+          title="MANAGER"
+          subtitle="产品管理，从品牌企业的商品规划为起始，管理贯穿商品，款式设计，开发，选定货会，大货技转的全链路解决方案。"
+          buttonText="免费使用"
+        />
         <div className="bg-rev-bg-black py-6">
           <div className="container">
-            <h2 className="section-title">FIM助力企业实现降本增效</h2>
-            <h3 className="section-subtitle w-4/5 mx-auto">
-              FIM在整合企划-设计-开发-生产-销售全链路协同的基础上，在最为繁琐的开发环节引入3D虚拟样品替代传统实物样品，减少实物打样频次，低成本且高效地解决了传统时尚产业研发设计链条复杂、开发周期漫长、沟通成本高企等问题，大幅提升整体研发效率。
-            </h3>
-            <Slider
+            <h2 className="section-title">业务主流程</h2>
+            <Step
+              selectedIndex={8}
               list={[
-                {
-                  icon: "",
-                  title: "111",
-                  desc: "111",
-                  images: [],
-                },
-                {
-                  icon: "",
-                  title: "111",
-                  desc: "111",
-                  images: [],
-                },
+                { index: 1, text: "数字企划" },
+                { index: 2, text: "设计规划及任务分配" },
+                { index: 3, text: "材料颜色规划" },
+                { index: 4, text: "产品设计开发" },
+                { index: [5, 6], text: ["3D流程", "2D流程"] },
+                { index: 7, text: "样品开发" },
+                { index: 8, text: "评审管理" },
+                { index: 9, text: "BOM/Pre-cost" },
+                { index: 10, text: "生产技转" },
               ]}
-            />
+            ></Step>
+            <div className="container w-4/5">
+              <TabSection simple data={tabDataList[tabActiveIndex]} />
+            </div>
           </div>
         </div>
         <div className="bg-rev-bg-contact py-6">
           <div className="container">
-            <h2 className="section-title">FIM全链路数字化解决方案</h2>
-            <Tabbar
-              activeIndex={tabActiveIndex}
-              items={[
-                { icon: "", text: "Trends" },
-                { icon: "", text: "Studio" },
-                { icon: "", text: "Manager" },
-                { icon: "", text: "Library" },
+            <h2 className="section-title">为什么选择Manager</h2>
+            <SectionCard
+              title={"设计高效协同"}
+              mode={"left"}
+              className="w-4/5 ml-10"
+              list={[
+                {
+                  icon: "",
+                  text: "1",
+                },
+                { icon: "", text: "2" },
               ]}
-              onItemChange={(index) => {
-                setTabActiveIndex(index);
-              }}
-            />
-            <TabSection data={tabDataList[tabActiveIndex]} />
+            >
+              111
+            </SectionCard>
+            <SectionCard
+              title={"开放兼容"}
+              mode={"right"}
+              className="w-4/5 ml-10"
+              list={[
+                {
+                  icon: "",
+                  text: "1",
+                },
+                { icon: "", text: "2" },
+              ]}
+            >
+              111
+            </SectionCard>
+            <SectionCard
+              title={"设计高效协同"}
+              mode={"left"}
+              className="w-4/5 ml-10"
+              list={[
+                {
+                  icon: "",
+                  text: "1",
+                },
+                { icon: "", text: "2" },
+              ]}
+            >
+              111
+            </SectionCard>
+            <SectionCard
+              title={"信息互通共享"}
+              mode={"right"}
+              className="w-4/5 ml-10"
+              list={[
+                {
+                  icon: "",
+                  text: "IM实时通话功能，随时随地进行讨论和决策",
+                },
+                {
+                  icon: "",
+                  text: "2D设计及3D设计二维码动态分享，让商品端和供应链端同步产品开发状态，避免不必要的开发。",
+                },
+                {
+                  icon: "",
+                  text: "通过评审管理功能快速反馈并解决款式、设计环境等问题。",
+                },
+              ]}
+            >
+              111
+            </SectionCard>
+            <SectionCard
+              title={"进度实时管理"}
+              mode={"left"}
+              className="w-4/5 ml-10"
+              list={[
+                {
+                  icon: "",
+                  text: "按照企业的产品线、开发模式等维度自定义专属开发流程",
+                },
+                { icon: "", text: "通过流程驱动业务单据" },
+              ]}
+            >
+              111
+            </SectionCard>
+            <SectionCard
+              title={"开放兼容"}
+              mode={"right"}
+              className="w-4/5 ml-10"
+              list={[
+                {
+                  icon: "",
+                  text: "无缝兼容Adob​​e Illustrator®及Photoshop设计软件",
+                },
+                { icon: "", text: "能够打通CLO设计软件，实现线上协同管理" },
+                {
+                  icon: "",
+                  text: "与Revofim Studio无缝协作，流畅开展从3D设计样图到实际落地全过程",
+                },
+              ]}
+            >
+              111
+            </SectionCard>
           </div>
         </div>
       </main>

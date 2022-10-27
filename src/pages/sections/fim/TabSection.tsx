@@ -9,8 +9,9 @@ export type TabData = {
 };
 export interface Props {
   data: TabData;
+  simple?: boolean;
 }
-export default function TabSection({ data }: Props) {
+export default function TabSection({ simple, data }: Props) {
   console.log(data);
   return (
     <div className={styles["tab-section"]}>
@@ -22,11 +23,14 @@ export default function TabSection({ data }: Props) {
               <p key={String(index)}>{item}</p>
             ))}
           </div>
-
-          <a className={styles["more"]} href="">
-            了解更多
-          </a>
-          <Button className="mt-16">免费使用</Button>
+          {!simple && (
+            <>
+              <a className={styles["more"]} href="">
+                了解更多
+              </a>
+              <Button className="mt-16">免费使用</Button>
+            </>
+          )}
         </div>
       </div>
       <div className={styles["right"]}>00</div>
