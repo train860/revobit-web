@@ -1,6 +1,7 @@
 import e2e from "assets/images/e2e.png";
 import Button from "components/Button";
 import ContactForm from "components/ContactForm";
+import TrendsIcon from "components/Icons/TrendsIcon";
 import Layout from "components/Layout";
 import SectionCard from "components/SectionCard";
 import Slider from "components/Slider";
@@ -88,7 +89,7 @@ const Fim: NextPage = () => {
             <Tabbar
               activeIndex={tabActiveIndex}
               items={[
-                { icon: "", text: "Trends" },
+                { icon: "trends.png", text: "Trends" },
                 { icon: "", text: "Studio" },
                 { icon: "", text: "Manager" },
                 { icon: "", text: "Library" },

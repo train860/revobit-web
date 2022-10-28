@@ -22,18 +22,22 @@
     }
   }
   .tabbar-item .icon {
-    @apply flex items-center justify-center;
+    @apply relative flex items-center justify-center;
     margin-bottom: 0.75rem;
     width: 4.375rem;
     height: 4.375rem;
     position: relative;
-    border-radius: 0.75rem;
-    background: linear-gradient(
-      137.73deg,
-      #ffffff 1.65%,
-      rgba(255, 255, 255, 0) 98.48%
-    );
-    opacity: 0.08;
+
+    .bg {
+      @apply absolute left-0 right-0 bottom-0 top-0;
+      border-radius: 0.75rem;
+      background: linear-gradient(
+        137.73deg,
+        #ffffff 1.65%,
+        rgba(255, 255, 255, 0) 98.48%
+      );
+      opacity: 0.08;
+    }
   }
   .tabbar-item .text {
     @apply text-white;
@@ -48,7 +52,6 @@
     background-repeat: no-repeat;
   }
   .tabbar-item.active .text {
-    font-weight: 600;
     opacity: 1;
   }
 }
