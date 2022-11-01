@@ -1,8 +1,21 @@
 .top-banner {
-  @apply relative;
+  @apply relative bg-rev-bg-black;
   .mask {
-    @apply absolute left-0 right-0 top-0 bottom-0;
+    @apply absolute left-0 right-0 top-0 bottom-0 flex justify-center items-center;
     background: rgba(0, 0, 0, 0.2);
+  }
+  .banner-wrap {
+    @apply relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120rem;
+    height: 56.25rem;
+  }
+  .title {
+    font-weight: 300;
+    font-size: 6.25rem;
+    line-height: 8.75rem;
+    color: #ffffff;
   }
 }
 .bg-video {
@@ -77,5 +90,38 @@
       align-items: center;
       font-size: 1.125rem;
     }
+  }
+}
+.case {
+  border-radius: 1.875rem;
+  height: 40rem;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-size: cover;
+  padding: 4.375rem 3.75rem;
+  color: white;
+  &.s1 {
+    background-image: url("../assets/images/case-b1.png");
+  }
+  &.s2 {
+    background-image: url("../assets/images/case-b2.png");
+  }
+  &.s3 {
+    background-image: url("../assets/images/case-b3.png");
+  }
+  &.s4 {
+    background-image: url("../assets/images/case-b4.png");
+  }
+  h2 {
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 2.375rem;
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 2.8125rem;
+    margin-top: 0.75rem;
+    margin-bottom: 2rem;
   }
 }

@@ -14,12 +14,37 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import styles from "styles/Home.module.scss";
 
+import Case from "./sections/home/Case";
 import Category from "./sections/home/Category";
 const Home: NextPage = () => {
   const [tabActiveIndex, setTabActiveIndex] = useState<number>(0);
+  const [bannerIndex, setBannerIndex] = useState<number>(0);
   useEffect(() => {
     //client.records.getList("posts", 1, 20, {});
   }, []);
+  const renderBanner = () => {
+    if (bannerIndex === 0) {
+      return (
+        <Image
+          src="/images/banner.png"
+          alt=""
+          fill
+          className={styles["image"]}
+        />
+      );
+    }
+    return (
+      <video
+        className={styles["bg-video"]}
+        autoPlay={true}
+        loop={true}
+        muted={true}
+        controls={false}
+      >
+        <source src="https://vjs.zencdn.net/v/oceans.mp4"></source>
+      </video>
+    );
+  };
   return (
     <Layout>
       <Head>
@@ -30,20 +55,14 @@ const Home: NextPage = () => {
 
       <main>
         <div className={styles["top-banner"]}>
-          <video
-            className={styles["bg-video"]}
-            autoPlay={true}
-            loop={true}
-            muted={true}
-            controls={false}
-          >
-            <source src="https://vjs.zencdn.net/v/oceans.mp4"></source>
-          </video>
+          <div className={styles["banner-wrap"]}>{renderBanner()}</div>
           <div className={styles["mask"]}>
-            <div className="container">0000</div>
+            <div className="container text-center">
+              <span className={styles["title"]}>打造虚拟时尚 重构数字世界</span>
+            </div>
           </div>
         </div>
-        <Category />
+        <Case />
         {/* 端到端全链路数字化解决方案 */}
         <div className="bg-rev-bg-black-14">
           <div className="container">
@@ -72,56 +91,7 @@ const Home: NextPage = () => {
               释放设计灵感，即刻开启时尚数字新体验。
             </h3>
             <ContactForm />
-            <Button>立即探索</Button>
           </div>
-        </div>
-
-        <div className="container py-6">
-          <Tabbar
-            activeIndex={tabActiveIndex}
-            items={[
-              { icon: "", text: "产品开发" },
-              { icon: "", text: "协同管理" },
-              { icon: "", text: "数据管理" },
-              { icon: "", text: "信息同步" },
-              { icon: "", text: "供应商管理" },
-              { icon: "", text: "智能化" },
-            ]}
-            onItemChange={(index) => {
-              setTabActiveIndex(index);
-            }}
-          />
-        </div>
-        <div className="container py-6">
-          <SectionCard
-            title={"进度实时管理"}
-            mode={"left"}
-            className="w-4/5 ml-10"
-            list={[
-              {
-                icon: "",
-                text: "按照企业的产品线、开发模式等维度自定义专属开发流程",
-              },
-              { icon: "", text: "通过流程驱动业务单据" },
-            ]}
-          >
-            111
-          </SectionCard>
-        </div>
-        <div className="container py-6">
-          <Step
-            selectedIndex={8}
-            list={[
-              { index: 1, text: "数字企划" },
-              { index: 2, text: "设计规划及任务分配" },
-              { index: 3, text: "材料颜色规划" },
-              { index: [5, 6], text: ["3D流程", "2D流程"] },
-              { index: 7, text: "样品开发" },
-              { index: 8, text: "评审管理" },
-              { index: 9, text: "BOM/Pre-cost" },
-              { index: 10, text: "生产技转" },
-            ]}
-          ></Step>
         </div>
       </main>
     </Layout>
