@@ -25,7 +25,8 @@ export default function Header() {
       menuProps.state !== "closing" && toggleMenu(true);
     },
     onMouseLeave: () => {
-      id.current = setTimeout(() => toggleMenu(false), 100);
+      const timer = setTimeout(() => toggleMenu(false), 100);
+      id.current = Number(timer);
     },
   };
 

@@ -14,7 +14,6 @@ import type { NextPage } from "next";
 import Image from "next/future/image";
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import StickyBox from "react-sticky-box";
 import Sticky from "react-stickynode";
 import styles from "styles/Fim.module.scss";
 
