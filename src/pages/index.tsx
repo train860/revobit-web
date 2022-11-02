@@ -59,7 +59,6 @@ const Home: NextPage = () => {
           </div>
           <Brand />
         </div>
-        <button onClick={() => setProgress(progress + 10)}>增加</button>
         <div className="bg-rev-bg-contact">
           <div className="container py-6 ">
             <h2 className="section-title">联系我们</h2>
