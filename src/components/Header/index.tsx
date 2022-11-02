@@ -10,6 +10,7 @@ import {
 import logo from "assets/images/logo-header.svg";
 import cn from "classnames";
 import Image from "next/future/image";
+import Link from "next/link";
 import { useRef } from "react";
 import Headroom from "react-headroom";
 
@@ -32,15 +33,16 @@ export default function Header() {
 
   return (
     <Headroom className={styles["header"]}>
-      <div className="container flex py-3">
+      <div className={styles["header-wrap"]}>
         <div className={styles["logo"]}>
           <Image alt="" src={logo} />
         </div>
         <ul className={styles["menu"]}>
-          <li>
-            <a href="">首页</a>
-          </li>
           <li className={styles["active"]}>
+            <Link href="/">首页</Link>
+            <div className={styles.line}></div>
+          </li>
+          <li>
             <a href="" ref={ref} {...mouseEvents}>
               产品
             </a>

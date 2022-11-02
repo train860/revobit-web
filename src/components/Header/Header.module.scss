@@ -2,17 +2,24 @@
 @layer components {
   .header {
     @apply fixed top-0 left-0 w-full text-white;
+
     z-index: 9999;
     :global(.headroom--pinned) {
-      @apply bg-rev-bg-black;
+      background: rgba(8, 7, 27, 0.7);
+      backdrop-filter: blur(20px);
     }
+  }
+  .header-wrap {
+    @apply container flex;
   }
   .logo {
     margin-right: 6rem;
+    padding: 18px 0;
   }
   .menu {
     @apply flex flex-row items-center;
     li {
+      @apply relative h-full flex justify-center items-center;
       font-size: 0.875rem;
       color: rgba(255, 255, 255, 0.5);
       margin-left: 3.8125rem;
@@ -24,6 +31,15 @@
       }
       > a {
         padding: 0.5rem;
+      }
+      .line {
+        @apply absolute bottom-0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0.875rem;
+        height: 0.1875rem;
+        background: #ffffff;
+        border-radius: 1.25rem;
       }
     }
   }
@@ -59,6 +75,7 @@
     }
     :global(.szh-menu) {
       padding: 0;
+      z-index: 99999;
     }
     :global(.szh-menu__item) {
       padding: 0.625rem 1.25rem;
