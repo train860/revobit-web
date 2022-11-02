@@ -18,7 +18,7 @@ export default function Banner() {
       muted={true}
       controls={false}
     >
-      <source src="https://vjs.zencdn.net/v/oceans.mp4"></source>
+      <source src="/videos/main.mp4"></source>
     </video>
   );
   const nodes = [imageNode, videoNode];
