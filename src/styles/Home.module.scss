@@ -128,7 +128,19 @@
     }
   }
 }
+.casebg {
+  position: absolute;
+  width: 956px;
+  height: 956px;
+  right: 0;
+  bottom: 0;
+  background: #444fc4;
+  opacity: 0.2;
+  filter: blur(15.625rem);
+  transform: translate(50%, 50%);
+}
 .case {
+  position: relative;
   border-radius: 1.875rem;
   height: 40rem;
   background-repeat: no-repeat;
@@ -136,17 +148,47 @@
   background-size: cover;
   padding: 4.375rem 3.75rem;
   color: white;
+  overflow: hidden;
+  .bg-image {
+    position: absolute;
+  }
   &.s1 {
     background: linear-gradient(180deg, #20334a 0%, #352b45 100%);
+    .bg-image {
+      width: 36.4375rem;
+      height: 36.4375rem;
+      left: 0;
+      top: 7.5rem;
+    }
   }
   &.s2 {
     background: linear-gradient(161.16deg, #182922 1.21%, #3a5347 98.68%);
+    .bg-image {
+      width: 60.4375rem;
+      height: 44.6875rem;
+      top: 7rem;
+      left: -7.5rem;
+    }
   }
   &.s3 {
     background: linear-gradient(161.16deg, #3a2b55 1.21%, #2b4340 98.68%);
+    .bg-image {
+      width: 35.3125rem;
+      height: 49.9375rem;
+      top: 5rem;
+      left: 0;
+      opacity: 0.8;
+    }
   }
   &.s4 {
     background: linear-gradient(180deg, #182350 0%, #342c59 100%);
+    .bg-image {
+      width: 55.4375rem;
+      height: 78.375rem;
+      top: 3.2rem;
+      left: -6rem;
+      opacity: 0.8;
+    }
   }
   h2 {
     font-weight: 300;

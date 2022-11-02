@@ -9,7 +9,7 @@ import styles from "styles/Home.module.scss";
 //案例
 export default function Case() {
   return (
-    <div className="bg-rev-bg-black-14">
+    <div className="bg-rev-bg-black-14 relative overflow-hidden">
       <div className="container py-6 ">
         <h2 className="section-title">解决方案</h2>
         <h3 className="section-subtitle">
@@ -20,28 +20,37 @@ export default function Case() {
             <h2>01</h2>
             <h3>品牌商</h3>
             <RoundArrowRightIcon />
-            <Image className={styles["bg-image"]} src={b1} alt="" />
+            <div className={styles["bg-image"]}>
+              <Image src={b1} alt="" fill />
+            </div>
           </div>
           <div className={cn(styles.case, styles.s2)}>
             <h2>02</h2>
             <h3>材料商</h3>
             <RoundArrowRightIcon />
-            <Image className={styles["bg-image"]} src={b2} alt="" />
+            <div className={styles["bg-image"]}>
+              <Image src={b2} alt="" fill />
+            </div>
           </div>
           <div className={cn(styles.case, styles.s3)}>
             <h2>03</h2>
             <h3>制造商</h3>
             <RoundArrowRightIcon />
-            <Image className={styles["bg-image"]} src={b3} alt="" />
+            <div className={styles["bg-image"]}>
+              <Image src={b3} alt="" fill />
+            </div>
           </div>
           <div className={cn(styles.case, styles.s4)}>
             <h2>04</h2>
             <h3>生态合作伙伴</h3>
             <RoundArrowRightIcon />
-            <Image className={styles["bg-image"]} src={b4} alt="" />
+            <div className={styles["bg-image"]}>
+              <Image src={b4} alt="" fill />
+            </div>
           </div>
         </div>
       </div>
+      <div className={styles.casebg}></div>
     </div>
   );
 }

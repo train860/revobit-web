@@ -1,3 +1,4 @@
+import cn from "classnames";
 import Button from "components/Button";
 import Image from "next/future/image";
 import { useEffect, useState } from "react";
@@ -53,7 +54,9 @@ const items: string[][] = [
   ],
   ["microsoft for startups", "阿里云", "华为云"],
 ];
+const tabItems: string[] = ["品牌", "制造商", "材料商", "生态合作伙伴"];
 export default function Brand() {
+  const [activeIndex, setActiveIndex] = useState(0);
   const [list, setList] = useState<ListItem[]>([]);
   useEffect(() => {
     const mList = [];
@@ -62,9 +65,25 @@ export default function Brand() {
     }
     setList([...mList]);
   }, []);
-
+  const renderTabs = () => {
+    return tabItems.map((item, index) => {
+      return (
+        <div
+          className={cn(styles["tab"], {
+            [styles["active"]]: activeIndex === index,
+          })}
+          key={index}
+          onClick={() => setActiveIndex(index)}
+        >
+          {item}
+          <div className={styles["line"]}></div>
+        </div>
+      );
+    });
+  };
   return (
     <div className="relative">
+      <div className={cn(styles.tabs, "container")}>{renderTabs()}</div>
       <div className={styles.brand}>
         {list.map((item: ListItem, index: number) => {
           return (
@@ -73,9 +92,6 @@ export default function Brand() {
             </div>
           );
         })}
-      </div>
-      <div className={styles.cover}>
-        <Button>查看全部客户</Button>
       </div>
     </div>
   );
