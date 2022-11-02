@@ -101,16 +101,16 @@
   padding: 4.375rem 3.75rem;
   color: white;
   &.s1 {
-    background-image: url("../assets/images/case-b1.png");
+    background: linear-gradient(180deg, #20334a 0%, #352b45 100%);
   }
   &.s2 {
-    background-image: url("../assets/images/case-b2.png");
+    background: linear-gradient(161.16deg, #182922 1.21%, #3a5347 98.68%);
   }
   &.s3 {
-    background-image: url("../assets/images/case-b3.png");
+    background: linear-gradient(161.16deg, #3a2b55 1.21%, #2b4340 98.68%);
   }
   &.s4 {
-    background-image: url("../assets/images/case-b4.png");
+    background: linear-gradient(180deg, #182350 0%, #342c59 100%);
   }
   h2 {
     font-weight: 300;
@@ -124,4 +124,11 @@
     margin-top: 0.75rem;
     margin-bottom: 2rem;
   }
+}
+.e2e-wrap {
+  position: relative;
+  width: 120rem;
+  height: 63.5rem;
+  left: 50%;
+  transform: translateX(-50%);
 }

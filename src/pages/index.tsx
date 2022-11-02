@@ -1,6 +1,6 @@
 //const client = new PocketBase("https://pocketbase.io");
 
-import e2e from "assets/images/e2e.png";
+import e2e from "assets/images/home/way.png";
 import Brand from "components/Brand";
 import Button from "components/Button";
 import ContactForm from "components/ContactForm";
@@ -70,7 +70,9 @@ const Home: NextPage = () => {
             <h3 className="section-subtitle">
               时谛智能为时尚行业鞋、服、包等全品类提供“设计-制造-生产-销售”全链路数字化服务。
             </h3>
-            <Image src={e2e} alt="" className="w-4/5" />
+          </div>
+          <div className={styles["e2e-wrap"]}>
+            <Image src={e2e} alt="" />
           </div>
         </div>
         {/* 全球合作伙伴 */}

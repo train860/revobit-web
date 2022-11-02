@@ -1,5 +1,10 @@
+import b1 from "assets/images/home/case-b1.png";
+import b2 from "assets/images/home/case-b2.png";
+import b3 from "assets/images/home/case-b3.png";
+import b4 from "assets/images/home/case-b4.png";
 import cn from "classnames";
 import RoundArrowRightIcon from "components/Icons/RoundArrowRightIcon";
+import Image from "next/future/image";
 import styles from "styles/Home.module.scss";
 //案例
 export default function Case() {
@@ -15,21 +20,25 @@ export default function Case() {
             <h2>01</h2>
             <h3>品牌商</h3>
             <RoundArrowRightIcon />
+            <Image className={styles["bg-image"]} src={b1} alt="" />
           </div>
           <div className={cn(styles.case, styles.s2)}>
             <h2>02</h2>
             <h3>材料商</h3>
             <RoundArrowRightIcon />
+            <Image className={styles["bg-image"]} src={b2} alt="" />
           </div>
           <div className={cn(styles.case, styles.s3)}>
             <h2>03</h2>
             <h3>制造商</h3>
             <RoundArrowRightIcon />
+            <Image className={styles["bg-image"]} src={b3} alt="" />
           </div>
           <div className={cn(styles.case, styles.s4)}>
             <h2>04</h2>
             <h3>生态合作伙伴</h3>
             <RoundArrowRightIcon />
+            <Image className={styles["bg-image"]} src={b4} alt="" />
           </div>
         </div>
       </div>
