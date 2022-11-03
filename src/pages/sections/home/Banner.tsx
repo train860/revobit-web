@@ -21,7 +21,7 @@ export default function Banner() {
       <source src="/videos/main.mp4"></source>
     </video>
   );
-  const nodes = [imageNode, videoNode];
+  const nodes = [videoNode, imageNode];
   return (
     <div className={styles["top-banner"]}>
       <div className={styles["banner-wrap"]}>{nodes[activeIndex]}</div>
@@ -36,15 +36,6 @@ export default function Banner() {
                 })}
                 onClick={() => setActiveIndex(0)}
               >
-                <Image src={pager1} alt="" />
-                <div className={styles["pager-item-cover"]}></div>
-              </div>
-              <div
-                className={cn(styles["pager-item"], {
-                  [styles.active]: activeIndex === 1,
-                })}
-                onClick={() => setActiveIndex(1)}
-              >
                 <Image src={pager2} alt="" />
                 <div className={styles["pager-item-cover"]}></div>
                 <Progress
@@ -55,6 +46,15 @@ export default function Banner() {
                   color={"#fff"}
                   strokeWidth={2}
                 />
+              </div>
+              <div
+                className={cn(styles["pager-item"], {
+                  [styles.active]: activeIndex === 1,
+                })}
+                onClick={() => setActiveIndex(1)}
+              >
+                <Image src={pager1} alt="" />
+                <div className={styles["pager-item-cover"]}></div>
               </div>
             </div>
           </div>

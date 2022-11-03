@@ -1,4 +1,5 @@
 import cn from "classnames";
+import { useRef } from "react";
 
 import styles from "./ContactForm.module.scss";
 interface Props {
@@ -7,6 +8,7 @@ interface Props {
   label: string;
   mode: "horizontal" | "vertical";
   type: "text" | "textarea";
+  value: string;
   onChange?: (value: string) => void;
 }
 export default function FormItem(props: Props) {
@@ -25,12 +27,14 @@ export default function FormItem(props: Props) {
       {props.type === "textarea" ? (
         <textarea
           className={styles["form-item-input"]}
+          value={props.value}
           onChange={(e) => props.onChange?.(e.target.value)}
         />
       ) : (
         <input
           className={styles["form-item-input"]}
           type="text"
+          value={props.value}
           onChange={(e) => props.onChange?.(e.target.value)}
         />
       )}

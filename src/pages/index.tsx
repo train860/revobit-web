@@ -46,7 +46,15 @@ const Home: NextPage = () => {
             </h3>
           </div>
           <div className={styles["e2e-wrap"]}>
-            <Image src={e2e} alt="" />
+            <video
+              className={styles["bg-video"]}
+              autoPlay={true}
+              loop={true}
+              muted={true}
+              controls={false}
+            >
+              <source src="/videos/e2e.mp4"></source>
+            </video>
           </div>
         </div>
         {/* 全球合作伙伴 */}
@@ -65,7 +73,7 @@ const Home: NextPage = () => {
             <h3 className="section-subtitle">
               释放设计灵感，即刻开启时尚数字新体验。
             </h3>
-            <ContactForm />
+            <ContactForm page="home" />
           </div>
         </div>
       </main>
