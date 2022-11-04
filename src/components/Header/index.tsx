@@ -33,7 +33,7 @@ export default function Header() {
 
   return (
     <Headroom className={styles["header"]}>
-      <div className={styles["header-wrap"]}>
+      <div className={cn(styles["header-wrap"], "container")}>
         <div className={styles["logo"]}>
           <Image alt="" src={logo} />
         </div>
