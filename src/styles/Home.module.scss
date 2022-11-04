@@ -5,17 +5,17 @@
     background: rgba(0, 0, 0, 0.2);
   }
   .banner-wrap {
-    @apply relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120rem;
-    height: 56.25rem;
+    @apply relative w-full;
+    //left: 50%;
+    //transform: translateX(-50%);
+    //width: 120rem;
+    //height: 56.25rem;
   }
   .content {
     @apply container flex flex-1 items-center justify-center relative h-full;
     .title {
       font-weight: 300;
-      margin-top: -6.25rem;
+      //margin-top: -6.25rem;
       font-size: 6.25rem;
       line-height: 8.75rem;
       color: #ffffff;

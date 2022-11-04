@@ -28,6 +28,7 @@ export default function Banner() {
       <div className={styles["mask"]}>
         <div className={styles["content"]}>
           <span className={styles["title"]}>打造虚拟时尚 重构数字世界</span>
+          {/** 
           <div className={styles.pager}>
             <div className={styles["pager-wrap"]}>
               <div
@@ -58,6 +59,7 @@ export default function Banner() {
               </div>
             </div>
           </div>
+          */}
         </div>
       </div>
     </div>
