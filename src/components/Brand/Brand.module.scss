@@ -35,7 +35,7 @@
     }
   }
   .brand {
-    @apply container relative grid grid-cols-5 gap-5;
+    @apply relative grid grid-cols-5 gap-5;
     .item {
       @apply relative flex flex-col justify-center items-center;
       height: 9.375rem;

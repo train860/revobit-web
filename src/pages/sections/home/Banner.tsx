@@ -26,7 +26,7 @@ export default function Banner() {
     <div className={styles["top-banner"]}>
       <div className={styles["banner-wrap"]}>{nodes[activeIndex]}</div>
       <div className={styles["mask"]}>
-        <div className={styles["content"]}>
+        <div className={cn(styles["content"], "container")}>
           <span className={styles["title"]}>打造虚拟时尚 重构数字世界</span>
           {/** 
           <div className={styles.pager}>

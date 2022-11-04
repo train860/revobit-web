@@ -82,7 +82,7 @@ export default function Brand() {
   return (
     <div className="relative">
       <div className={cn(styles.tabs, "container")}>{renderTabs()}</div>
-      <div className={styles.brand}>
+      <div className={cn(styles.brand, "container")}>
         {items[activeIndex].map((item: ListItem, index: number) => {
           return (
             <div className={styles.item} key={String(index)}>
