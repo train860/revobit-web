@@ -97,7 +97,7 @@ export default function Footer() {
           <div className={styles["col-card"]}>
             <h2>下载中心</h2>
             <p>
-              <a href="">Revofin</a>
+              <a href="">Revofim</a>
             </p>
             <p>
               <a href="">Versebook</a>
