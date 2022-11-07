@@ -1,0 +1,29 @@
+@tailwind components;
+@layer components {
+  .fim-ring {
+    @apply flex flex-row;
+    .main {
+      width: 60%;
+    }
+    .sider {
+      padding-left: 6.25rem;
+      display: flex;
+      justify-items: center;
+      flex-direction: column;
+    }
+    .sider > .item {
+      margin-bottom: 3.75rem;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    .sider > .item > p {
+      font-weight: 400;
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+      color: #ffffff;
+      opacity: 0.5;
+      margin-top: 1.25rem;
+    }
+  }
+}

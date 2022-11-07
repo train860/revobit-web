@@ -1,18 +1,18 @@
 import Button from "components/Button";
+import Image from "next/future/image";
 import styles from "styles/Fim.module.scss";
 export type TabData = {
   title: string;
   des: string[];
   link?: string;
   buttonLink?: string;
-  image?: string;
+  image: string;
 };
 export interface Props {
   data: TabData;
   simple?: boolean;
 }
 export default function TabSection({ simple, data }: Props) {
-  console.log(data);
   return (
     <div className={styles["tab-section"]}>
       <div className={styles["left"]}>
@@ -33,7 +33,11 @@ export default function TabSection({ simple, data }: Props) {
           )}
         </div>
       </div>
-      <div className={styles["right"]}>00</div>
+      <div className={styles["right"]}>
+        <div className={styles["image-wrap"]}>
+          <Image src={data.image} alt="" fill className={styles["image"]} />
+        </div>
+      </div>
     </div>
   );
 }
