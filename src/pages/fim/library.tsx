@@ -16,33 +16,10 @@ import { useEffect, useState } from "react";
 import Sticky from "react-stickynode";
 import styles from "styles/Fim.module.scss";
 
-import Category from "./sections/fim/Category";
-import TabSection, { TabData } from "./sections/fim/TabSection";
+import Category from "./components/Category";
+import TabSection, { TabData } from "./components/TabSection";
 gsap.registerPlugin(ScrollTrigger);
-const tabDataList: TabData[] = [
-  {
-    title: "Trends",
-    des: [
-      "以全网电商大数据为基础，帮助企划人员分析流行趋势与快速创款的AI智能平台",
-    ],
-  },
-  {
-    title: "Studio",
-    des: ["高逼真虚拟样品减少实物开发", "加快产品设计效率", "缩短产品上市周期"],
-  },
-  {
-    title: "Manager",
-    des: [
-      "一站式产品在线协同管理平台，通过整合产品企划、款式设计、开发全链路信息，实现跨部门云端协同、共享项目进度，为企业中的不同角色提供实时进度管理与决策方案，标准化产品研发流程。",
-    ],
-  },
-  {
-    title: "Library",
-    des: [
-      "专为时尚企业提供的数字化资产管理工具，通过标准化数据帮助客户实现数字化资产的高效调用和规范管理，提高设计和开发效率。",
-    ],
-  },
-];
+const tabDataList: TabData[] = [];
 //use sticky
 const Library: NextPage = () => {
   const [tabActiveIndex, setTabActiveIndex] = useState<number>(0);

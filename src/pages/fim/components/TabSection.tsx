@@ -37,7 +37,7 @@ export default function TabSection({ simple, center, data }: Props) {
       </div>
       <div className={styles["right"]}>
         <div className={styles["image-wrap"]}>
-          <Image src={data.image} alt="" fill className="image" />
+          <Image src={data?.image} alt="" fill className="image" />
         </div>
       </div>
     </div>
