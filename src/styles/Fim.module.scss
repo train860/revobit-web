@@ -1,5 +1,22 @@
 .banner-primary-btn {
-  border-color: rgba(141, 60, 243, 1);
+  background-image: url("/images/primary-btn.png");
+  border: 0;
+  background-size: cover;
+  height: 4.0625rem;
+  &:hover {
+    background-image: url("/images/primary-btn-on.png");
+    background-size: cover;
+  }
+}
+.category-bg {
+  position: absolute;
+  width: 56.125rem;
+  height: 56.125rem;
+  top: 0;
+  right: -28rem;
+  background: #444fc4;
+  opacity: 0.2;
+  filter: blur(15.625rem);
 }
 .scheme {
   background: linear-gradient(140.27deg, #212121 2.55%, #141414 93.93%);
