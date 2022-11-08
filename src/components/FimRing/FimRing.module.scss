@@ -2,6 +2,7 @@
 @layer components {
   .fim-ring {
     @apply flex flex-row;
+    margin-top: 5.125rem;
     .main {
       width: 60%;
     }

@@ -1,6 +1,7 @@
 import e2e from "assets/images/e2e.png";
 import Brand from "components/Brand";
 import Button from "components/Button";
+import CommonBanner from "components/CommonBanner";
 import ContactForm from "components/ContactForm";
 import TrendsIcon from "components/Icons/TrendsIcon";
 import Layout from "components/Layout";
@@ -18,8 +19,8 @@ import { useEffect, useState } from "react";
 import Sticky from "react-stickynode";
 import styles from "styles/Fim.module.scss";
 
-import Category from "./sections/fim/Category";
-import TabSection, { TabData } from "./sections/fim/TabSection";
+import Category from "./components/Category";
+import TabSection, { TabData } from "./components/TabSection";
 gsap.registerPlugin(ScrollTrigger);
 const tabDataList: TabData[] = [
   {
@@ -61,6 +62,23 @@ const Fim: NextPage = () => {
       </Head>
 
       <main>
+        <CommonBanner
+          image="/images/manager.jpg"
+          title={
+            <div className="relative w-80 mx-auto">
+              <Image
+                src={"/images/icon/fim.png"}
+                fill
+                className="image"
+                alt=""
+              />
+            </div>
+          }
+          subtitle="时尚行业首个端到端全链路数字化解决方案"
+          description="FIM（Fashion Information Modelling），即“时尚信息模型”—通过构建企划、设计、制样、生产、销售全生命周期流程，实现端到端全链路的信息协同与数字化管理,助力时尚产业实现可持续发展。"
+          buttonText={["登录Revofim Web端", "下载Revofim PC端"]}
+          buttonClassnames={[styles["banner-primary-btn"]]}
+        />
         <Category />
 
         <div className="bg-rev-bg-contact py-6">
@@ -69,10 +87,10 @@ const Fim: NextPage = () => {
             <Tabbar
               activeIndex={tabActiveIndex}
               items={[
-                { icon: "trends.png", text: "Trends" },
-                { icon: "", text: "Studio" },
-                { icon: "", text: "Manager" },
-                { icon: "", text: "Library" },
+                { icon: "trends", text: "Trends" },
+                { icon: "studio", text: "Studio" },
+                { icon: "manager", text: "Manager" },
+                { icon: "library", text: "Library" },
               ]}
               onItemChange={(index) => {
                 setTabActiveIndex(index);
@@ -83,7 +101,7 @@ const Fim: NextPage = () => {
         </div>
         {/* 全球合作伙伴 */}
         <div className="bg-rev-bg-black-0B pb-32">
-          <div className="container">
+          <div className="container mb-12">
             <h2 className="section-title mt-0">谁选择了FIM？</h2>
           </div>
           <Brand />

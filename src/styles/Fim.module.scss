@@ -1,3 +1,6 @@
+.banner-primary-btn {
+  border-color: rgba(141, 60, 243, 1);
+}
 .scheme {
   background: linear-gradient(140.27deg, #212121 2.55%, #141414 93.93%);
   border-radius: 1.875rem;
@@ -71,12 +74,6 @@
     .image-wrap {
       @apply relative;
       height: 25rem;
-    }
-    .image {
-      object-fit: contain;
-      width: 100% !important;
-      position: relative !important;
-      height: unset !important;
     }
   }
 }

@@ -38,7 +38,9 @@ export default function Tabbar({
                 <div className={styles.bg}></div>
                 {icon && (
                   <Image
-                    src={require(`assets/icons/${icon}`)}
+                    src={require(`assets/icons/${
+                      activeIndex === index ? icon + "-active" : icon
+                    }.png`)}
                     alt=""
                     style={{ width: "2.5rem" }}
                   />
