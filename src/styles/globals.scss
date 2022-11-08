@@ -27,6 +27,9 @@ a {
   position: relative !important;
   height: unset !important;
 }
+.sticky-inner-wrapper {
+  z-index: 99;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

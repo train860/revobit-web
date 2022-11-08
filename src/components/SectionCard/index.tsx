@@ -40,7 +40,7 @@ export default function SectionCard({
           );
         })}
       </div>
-      <div className="w-72"></div>
+      <div className="w-12"></div>
       <div className={styles["section-card-content"]}>{children}</div>
     </div>
   );

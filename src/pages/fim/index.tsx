@@ -1,4 +1,4 @@
-import e2e from "assets/images/e2e.png";
+import cn from "classnames";
 import Brand from "components/Brand";
 import Button from "components/Button";
 import CommonBanner from "components/CommonBanner";
@@ -77,7 +77,10 @@ const Fim: NextPage = () => {
           subtitle="时尚行业首个端到端全链路数字化解决方案"
           description="FIM（Fashion Information Modelling），即“时尚信息模型”—通过构建企划、设计、制样、生产、销售全生命周期流程，实现端到端全链路的信息协同与数字化管理,助力时尚产业实现可持续发展。"
           buttonText={["登录Revofim Web端", "下载Revofim PC端"]}
-          buttonClassnames={[styles["banner-primary-btn"]]}
+          buttonClassnames={[
+            cn(styles["banner-primary-btn"], styles["banner-btn"]),
+            styles["banner-btn"],
+          ]}
         />
         <Category />
 

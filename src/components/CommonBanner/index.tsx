@@ -5,9 +5,10 @@ import React from "react";
 
 import styles from "./CommonBanner.module.scss";
 interface Props {
+  id?: string;
   image: string;
   title?: string | React.ReactNode;
-  subtitle: string;
+  subtitle?: string;
   description?: string;
   buttonText: string | string[];
   buttonClassnames?: string | string[];
@@ -29,12 +30,14 @@ export default function CommonBanner(props: Props) {
   }
 
   return (
-    <div className={styles["common-banner"]}>
+    <div id={props.id} className={styles["common-banner"]}>
       <Image src={props.image} alt="" fill className={styles["image"]} />
       <div className={styles["cover"]}>
         <div className={styles["content"]}>
           {props.title && <div className={styles["title"]}>{props.title}</div>}
-          <h3 className={styles["subtitle"]}>{props.subtitle}</h3>
+          {props.subtitle && (
+            <div className={styles["subtitle"]}>{props.subtitle}</div>
+          )}
           <p>{props.description}</p>
           <div className={styles["buttons"]}>
             {buttons.map((text, index) => (

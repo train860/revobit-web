@@ -1,11 +1,16 @@
-.banner-primary-btn {
-  background-image: url("/images/primary-btn.png");
+.banner-btn {
+  height: 3.75rem;
+  width: 15rem;
+  padding: 0;
+}
+.banner-btn.banner-primary-btn {
   border: 0;
-  background-size: cover;
-  height: 4.0625rem;
+  background-image: url("/images/primary-btn.png");
+  background-size: contain;
+  background-repeat: no-repeat;
   &:hover {
     background-image: url("/images/primary-btn-on.png");
-    background-size: cover;
+    background-size: contain;
   }
 }
 .category-bg {
@@ -61,6 +66,9 @@
   @apply grid grid-cols-2 gap-4;
   padding: 6.25rem 0;
   .left {
+    .center {
+      @apply flex flex-col h-full justify-center;
+    }
     h2 {
       font-weight: 600;
       font-size: 1.875rem;
@@ -90,7 +98,13 @@
   .right {
     .image-wrap {
       @apply relative;
-      height: 25rem;
     }
+  }
+}
+.card-section {
+  @apply mx-10;
+  margin-bottom: 9.125rem;
+  .image-wrap {
+    @apply relative;
   }
 }

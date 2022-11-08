@@ -1,3 +1,4 @@
+import cn from "classnames";
 import Button from "components/Button";
 import Image from "next/future/image";
 import styles from "styles/Fim.module.scss";
@@ -11,12 +12,13 @@ export type TabData = {
 export interface Props {
   data: TabData;
   simple?: boolean;
+  center?: boolean;
 }
-export default function TabSection({ simple, data }: Props) {
+export default function TabSection({ simple, center, data }: Props) {
   return (
     <div className={styles["tab-section"]}>
       <div className={styles["left"]}>
-        <div>
+        <div className={cn({ [styles["center"]]: center })}>
           <h2>{data?.title}</h2>
           <div className={styles["des"]}>
             {data?.des.map((item: string, index: number) => (
