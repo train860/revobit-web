@@ -1,0 +1,14 @@
+.highlight {
+  @apply grid grid-cols-4 gap-8;
+}
+.blur-bg {
+  position: absolute;
+  width: 56.125rem;
+  height: 56.125rem;
+  right: 0;
+  top: 0;
+  background: #444fc4;
+  opacity: 0.2;
+  filter: blur(15.625rem);
+  transform: translate(50%, 0);
+}

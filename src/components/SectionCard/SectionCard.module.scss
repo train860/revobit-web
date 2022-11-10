@@ -57,5 +57,16 @@
       display: flex;
       justify-content: flex-end;
     }
+    &.with-grid {
+      .list {
+        @apply grid grid-cols-2 gap-5;
+      }
+      .section-card-text {
+        flex: 2;
+      }
+      .section-card-content {
+        flex: 3;
+      }
+    }
   }
 }

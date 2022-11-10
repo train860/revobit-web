@@ -14,6 +14,8 @@ export interface Props {
   subtitle?: string;
   list?: DesItem[];
   mode?: "left" | "right";
+  grid?: boolean;
+  gap?: number;
 }
 export default function SectionCard({
   title,
@@ -23,10 +25,13 @@ export default function SectionCard({
   textClassName,
   list,
   mode,
+  grid,
+  gap,
 }: Props) {
   const _className = cn(
     styles["section-card"],
     { [styles.right]: mode === "right" },
+    { [styles["with-grid"]]: grid },
     className
   );
   return (
@@ -34,21 +39,25 @@ export default function SectionCard({
       <div className={cn(styles["section-card-text"], textClassName)}>
         <h2>{title}</h2>
         {subtitle && <p className={styles["subtitle"]}>{subtitle}</p>}
-        {list?.map((item, index) => {
-          const { icon, text } = item;
-          return (
-            <div className={styles["des-item"]} key={index}>
-              {icon && (
-                <span className={styles.icon}>
-                  <Image className="image" src={icon} fill alt={icon} />
-                </span>
-              )}
-              <span>{text}</span>
-            </div>
-          );
-        })}
+        {list && (
+          <div className={styles["list"]}>
+            {list?.map((item, index) => {
+              const { icon, text } = item;
+              return (
+                <div className={styles["des-item"]} key={index}>
+                  {icon && (
+                    <span className={styles.icon}>
+                      <Image className="image" src={icon} fill alt={icon} />
+                    </span>
+                  )}
+                  <span>{text}</span>
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
-      <div className="w-12"></div>
+      <div className={`w-${gap || 12}`}></div>
       <div className={styles["section-card-content"]}>{children}</div>
     </div>
   );

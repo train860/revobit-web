@@ -19,6 +19,10 @@ module.exports = {
         "rev-bg-black-0B": "#0B0A24",
         "rev-bg-contact": "#12122B",
       },
+      padding: {
+        15: "3.75rem",
+        40: "10rem",
+      },
       width: {
         150: "37.5rem",
       },
