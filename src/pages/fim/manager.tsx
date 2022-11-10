@@ -87,7 +87,16 @@ const Manager: NextPage = () => {
         <CommonBanner
           id="manager-banner"
           image="/images/manager.jpg"
-          title="MANAGER"
+          title={
+            <div className="relative w-150">
+              <Image
+                src="/images/manager/revcfim.png"
+                className="image"
+                fill
+                alt=""
+              />
+            </div>
+          }
           description="您身边的进度“管家”，通过打造一站式产品在线协同管理平台，为企业中的不同角色提供实时进度管理与决策方案。"
           buttonText="免费使用"
         />
@@ -136,10 +145,13 @@ const Manager: NextPage = () => {
               className={styles["card-section"]}
               list={[
                 {
-                  icon: "",
+                  icon: "/images/manager/设计高效协同-1.png",
                   text: "随时随地进行在线审样、添加批注",
                 },
-                { icon: "", text: "共享设计文件、设计进度，实现高效协同" },
+                {
+                  icon: "/images/manager/设计高效协同-2.png",
+                  text: "共享设计文件、设计进度，实现高效协同",
+                },
               ]}
             >
               <div className={cn(styles["image-wrap"], " w-4/5")}>
@@ -157,12 +169,15 @@ const Manager: NextPage = () => {
               className={styles["card-section"]}
               list={[
                 {
-                  icon: "",
+                  icon: "/images/manager/开放兼容-1.png",
                   text: "无缝兼容Adob​​e Illustrator®及Photoshop设计软件",
                 },
-                { icon: "", text: "能够打通CLO设计软件，实现线上协同管理" },
                 {
-                  icon: "",
+                  icon: "/images/manager/开放兼容-2.png",
+                  text: "能够打通CLO设计软件，实现线上协同管理",
+                },
+                {
+                  icon: "/images/manager/开放兼容-3.png",
                   text: "与Revofim Studio无缝协作，流畅开展从3D设计样图到实际落地全过程",
                 },
               ]}
@@ -182,10 +197,13 @@ const Manager: NextPage = () => {
               className={styles["card-section"]}
               list={[
                 {
-                  icon: "",
+                  icon: "/images/manager/进度实时管理-1.png",
                   text: "按照企业的产品线、开发模式等维度自定义专属开发流程",
                 },
-                { icon: "", text: "通过流程驱动业务单据" },
+                {
+                  icon: "/images/manager/进度实时管理-2.png",
+                  text: "通过流程驱动业务单据",
+                },
               ]}
             >
               <div className={cn(styles["image-wrap"], " w-4/5")}>
@@ -203,15 +221,15 @@ const Manager: NextPage = () => {
               className={styles["card-section"]}
               list={[
                 {
-                  icon: "",
+                  icon: "/images/manager/信息互通共享-1.png",
                   text: "IM实时通话功能，随时随地进行讨论和决策",
                 },
                 {
-                  icon: "",
+                  icon: "/images/manager/信息互通共享-2.png",
                   text: "2D设计及3D设计二维码动态分享，让商品端和供应链端同步产品开发状态，避免不必要的开发。",
                 },
                 {
-                  icon: "",
+                  icon: "/images/manager/信息互通共享-3.png",
                   text: "通过评审管理功能快速反馈并解决款式、设计环境等问题。",
                 },
               ]}
@@ -231,15 +249,15 @@ const Manager: NextPage = () => {
               className={styles["card-section"]}
               list={[
                 {
-                  icon: "",
+                  icon: "/images/manager/供应商高效管理-1.png",
                   text: "供应商遵循严格的准入机制和审批流程，严控供应商资质；",
                 },
                 {
-                  icon: "",
+                  icon: "/images/manager/供应商高效管理-2.png",
                   text: "帮助供应商实现材料推介、开发、报价、调料、验证等众多业务场景；",
                 },
                 {
-                  icon: "",
+                  icon: "/images/manager/供应商高效管理-3.png",
                   text: "专有的供应商门户轻松实现在线接受任务和状态的实时更新；",
                 },
               ]}
@@ -259,15 +277,15 @@ const Manager: NextPage = () => {
               className={styles["card-section"]}
               list={[
                 {
-                  icon: "",
+                  icon: "/images/manager/成本有效管控-1.png",
                   text: "起始于商品的目标成本规划",
                 },
                 {
-                  icon: "",
+                  icon: "/images/manager/成本有效管控-2.png",
                   text: "实现3D设计环节的成本模拟，提前控制成本开支。",
                 },
                 {
-                  icon: "",
+                  icon: "/images/manager/成本有效管控-3.png",
                   text: "成本预估管理，成本团队可以从材料，工艺，LO等多个纬度全面掌握设计成本。",
                 },
               ]}

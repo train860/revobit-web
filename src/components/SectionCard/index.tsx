@@ -1,8 +1,9 @@
 import cn from "classnames";
+import Image from "next/future/image";
 
 import styles from "./SectionCard.module.scss";
 export type DesItem = {
-  icon?: React.ReactNode;
+  icon?: string;
   text: string;
 };
 export interface Props {
@@ -34,7 +35,11 @@ export default function SectionCard({
           const { icon, text } = item;
           return (
             <div className={styles["des-item"]} key={index}>
-              {icon}
+              {icon && (
+                <span className={styles.icon}>
+                  <Image className="image" src={icon} fill alt={icon} />
+                </span>
+              )}
               <span>{text}</span>
             </div>
           );

@@ -19,6 +19,9 @@ module.exports = {
         "rev-bg-black-0B": "#0B0A24",
         "rev-bg-contact": "#12122B",
       },
+      width: {
+        150: "37.5rem",
+      },
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],
