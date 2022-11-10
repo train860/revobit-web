@@ -108,3 +108,51 @@
     @apply relative;
   }
 }
+
+.tips {
+  background-color: #1c1c36;
+  border-radius: 1.875rem;
+  background-image: url("/images/library/tips-bg.png");
+  background-size: contain;
+  top: -3.75rem;
+  position: relative;
+  z-index: 100;
+  .content {
+    @apply flex flex-row items-center;
+    padding: 3.4375rem 4.375rem;
+  }
+  .content > .icon {
+    @apply relative;
+    width: 6.25rem;
+    height: 6.25rem;
+    margin-right: 2.6875rem;
+  }
+  .content > .body > h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.8125rem;
+    color: #ffffff;
+    margin-bottom: 0.875rem;
+  }
+  .content > .body > p {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
+
+    color: #ffffff;
+
+    mix-blend-mode: hard-light;
+    opacity: 0.4;
+  }
+}
+.lib-bg {
+  position: absolute;
+  width: 56.125rem;
+  height: 56.125rem;
+  right: 0;
+  top: 0;
+  background: #444fc4;
+  opacity: 0.2;
+  filter: blur(15.625rem);
+  transform: translate(50%, 0);
+}

@@ -11,11 +11,13 @@ export interface Props {
   textClassName?: string;
   children?: React.ReactNode;
   title: string;
+  subtitle?: string;
   list?: DesItem[];
   mode?: "left" | "right";
 }
 export default function SectionCard({
   title,
+  subtitle,
   children,
   className,
   textClassName,
@@ -31,6 +33,7 @@ export default function SectionCard({
     <div className={_className}>
       <div className={cn(styles["section-card-text"], textClassName)}>
         <h2>{title}</h2>
+        {subtitle && <p className={styles["subtitle"]}>{subtitle}</p>}
         {list?.map((item, index) => {
           const { icon, text } = item;
           return (
