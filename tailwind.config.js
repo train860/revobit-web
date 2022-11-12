@@ -21,10 +21,15 @@ module.exports = {
       },
       padding: {
         15: "3.75rem",
+        30: "7.5rem",
         40: "10rem",
       },
       width: {
         150: "37.5rem",
+      },
+      flex: {
+        2: "2",
+        3: "3",
       },
     },
   },

@@ -1,0 +1,27 @@
+.brand-service {
+  @apply relative;
+  color: #ffffff;
+  padding: 2.75rem 2.5rem;
+  background-color: #0f0f1f;
+  border-radius: 1.875rem;
+
+  .bg {
+    @apply absolute;
+    background-image: url("/images/verse/service-bg.png");
+    width: 73.0625rem;
+    height: 67.6875rem;
+  }
+  h2.title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2.1875rem;
+    margin-bottom: 3rem;
+  }
+  .brand-service-list {
+    height: 40rem;
+    @apply flex flex-row gap-5;
+    .item {
+      @apply h-full;
+    }
+  }
+}

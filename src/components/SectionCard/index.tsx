@@ -5,6 +5,7 @@ import styles from "./SectionCard.module.scss";
 export type DesItem = {
   icon?: string;
   text: string;
+  description?: string;
 };
 export interface Props {
   className?: string;
@@ -42,15 +43,23 @@ export default function SectionCard({
         {list && (
           <div className={styles["list"]}>
             {list?.map((item, index) => {
-              const { icon, text } = item;
+              const { icon, text, description } = item;
               return (
-                <div className={styles["des-item"]} key={index}>
+                <div
+                  className={cn(styles["des-item"], {
+                    [styles["with-p"]]: !!description,
+                  })}
+                  key={index}
+                >
                   {icon && (
-                    <span className={styles.icon}>
+                    <div className={styles.icon}>
                       <Image className="image" src={icon} fill alt={icon} />
-                    </span>
+                    </div>
                   )}
-                  <span>{text}</span>
+                  <div className={styles.text}>
+                    <span>{text}</span>
+                    {description && <p>{description}</p>}
+                  </div>
                 </div>
               );
             })}
