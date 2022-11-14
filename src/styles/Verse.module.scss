@@ -25,3 +25,57 @@
     }
   }
 }
+.file-type-section {
+  @apply grid grid-cols-3 gap-5;
+}
+.file-type-section > .file-type-card {
+  @apply flex justify-center items-center;
+  background: #14122e;
+  border-radius: 1.556rem;
+  overflow: hidden;
+  @screen md {
+    height: 9.375rem;
+  }
+  .file-type-card-icon {
+    @apply relative;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+.setting {
+  @apply relative overflow-hidden;
+
+  background: linear-gradient(90deg, #8e3cf3 0%, #3d3afc 94.29%);
+  .mask {
+    @apply absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 59.9375rem;
+    height: 17.5rem;
+    &.mask1 {
+      right: 0;
+    }
+    &.mask2 {
+      left: 0;
+    }
+  }
+  .setting-wrap {
+    @apply flex flex-row justify-between relative;
+    padding: 4.375rem 0;
+  }
+  h2.title {
+    font-weight: 400;
+    font-size: 2.125rem;
+    line-height: 3rem;
+    color: #ffffff;
+    margin-bottom: 2.625rem;
+  }
+  .image-wrap {
+    position: absolute;
+    right: 0;
+    top: 0.125rem;
+    width: 34.375rem;
+    height: 24.375rem;
+    z-index: 1;
+  }
+}

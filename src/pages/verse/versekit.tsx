@@ -10,6 +10,9 @@ import Image from "next/future/image";
 import Head from "next/head";
 import styles from "styles/Verse.module.scss";
 
+import FileTypeSection from "./components/FileTypeSection";
+import SettingSection from "./components/SettingSection";
+
 const Versekit: NextPage = () => {
   return (
     <Layout>
@@ -24,10 +27,10 @@ const Versekit: NextPage = () => {
           id="manager-banner"
           image="/images/manager.jpg"
           title={
-            <div className="relative w-150">
+            <div className="relative h-20">
               <Image
-                src="/images/library/library-title.png"
-                className="image"
+                src="/images/verse/versekit.png"
+                className="image__h"
                 fill
                 alt=""
               />
@@ -36,184 +39,90 @@ const Versekit: NextPage = () => {
           description="数字资产存储中枢，多场景赋能产品创意设计，让管资产、玩设计、做产品的方法变得更简单、高效。"
           buttonText="免费使用"
         />
-        {/** 产品亮点 */}
-        <div className="bg-rev-bg-black-0B relative">
-          <div className={styles["blur-bg"]}></div>
-          <div className="container">
-            <h2 className="section-title">产品亮点</h2>
-            <div className={cn(styles.highlight, "container pt-15")}>
-              <BigCard
-                icon="/images/trends/h1.png"
-                title="电商数据分析"
-                description="与阿里官方深度合作，覆盖淘宝/天猫40万+店铺的sku销售数据，提供多维度的分析能力"
-              />
-              <BigCard
-                icon=""
-                title="电商数据分析"
-                description="与阿里官方深度合作，覆盖淘宝/天猫40万+店铺的sku销售数据，提供多维度的分析能力"
-              />
-              <BigCard
-                icon=""
-                title="电商数据分析"
-                description="与阿里官方深度合作，覆盖淘宝/天猫40万+店铺的sku销售数据，提供多维度的分析能力"
-              />
-              <BigCard
-                icon=""
-                title="电商数据分析"
-                description="与阿里官方深度合作，覆盖淘宝/天猫40万+店铺的sku销售数据，提供多维度的分析能力"
-              />
-            </div>
+        <div className="bg-black relative overflow-hidden py-80">
+          <div className="container relative z-10">
             <SectionCard
-              title={"时谛智能 X 天猫TMIC 为商家带来的价值解析"}
-              subtitle=" 是立足于阿里巴巴全渠道的数字化新品研发平台。TMIC结合大数据分析和小样本调研，助力品牌定位目标人群，洞察市场机会，研发创新产品，以及优化营销策略。"
+              title={"数字面料，真实还原"}
+              subtitle="业界领先的AI系统、极简化操作流程。为材料供应与销售打通物理和数字世界间的屏障，真实还原各种织物、皮料与合成材料的质感。"
               mode={"left"}
-              className={"py-40"}
-              list={[
-                {
-                  icon: "/images/library/标签化数据-1.png",
-                  text: "更快捷：速度提升",
-                },
-                {
-                  icon: "/images/library/标签化数据-2.png",
-                  text: "更高效：款式数量",
-                },
-                {
-                  icon: "/images/library/标签化数据-3.png",
-                  text: "更精准：趋势分析",
-                },
-              ]}
             >
-              <div className={cn(styles["image-wrap"], " w-4/5")}>
+              <div className={cn(styles["image-wrap"], " w-4/5")}></div>
+            </SectionCard>
+          </div>
+          <div className="absolute w-1/2 top-0 bottom-0 right-0">
+            <Image
+              src={"/images/verse/数字面料，真实还原.png"}
+              className="image"
+              fill
+              alt="数字面料，真实还原"
+            />
+          </div>
+        </div>
+        <div className="bg-rev-bg-black-10 relative overflow-hidden">
+          <div className="container relative z-10">
+            <SectionCard
+              title={"设计巧妙，极致架构"}
+              subtitle="versekit作为一款桌面级扫描设备，集成先进的世界级工业光学系统辅以机器视觉捕捉配置，可以准确捕捉基于物理纹理的各种面料效果。"
+              mode={"right"}
+            >
+              <div className={cn(styles["image-wrap"], "w-7/10")}>
                 <Image
-                  src="/images/library/标签化数据.png"
+                  src="/images/verse/设计巧妙，极致架构.png"
                   fill
                   className="image"
-                  alt="标签化数据"
+                  alt="设计巧妙，极致架构"
                 />
               </div>
             </SectionCard>
           </div>
         </div>
-        <div className="bg-rev-bg-contact relative">
-          <div className={styles["lib-bg"]}></div>
-
-          <div className="container">
-            <div className="my-10">
-              <h2 className="section-title" style={{ marginTop: 0 }}>
-                三大功能场景&解决方案
-              </h2>
-            </div>
-            <div className="grid grid-cols-3 gap-7">
-              <SmallCard
-                icon="/images/trends/灵感捕捉.png"
-                title="灵感捕捉"
-                description="聚合全网潮搭的海量鞋服款式库"
-              />
-              <SmallCard
-                icon="/images/trends/市场洞察.png"
-                title="市场洞察"
-                description="聚合全网潮搭的海量鞋服款式库"
-              />
-              <SmallCard
-                icon="/images/trends/AI智能创款.png"
-                title="AI智能创款"
-                description="聚合全网潮搭的海量鞋服款式库"
-              />
-            </div>
-            <div className="h-16"></div>
-
+        <div className="bg-black relative overflow-hidden">
+          <div className="container relative z-10">
             <SectionCard
-              grid
-              title={"市场分析，透视历史"}
-              subtitle="基于全网电商市场海量的历史销售数据进行探索，全方位多角度不断深入细分，为企划与设计提供有力的数据支持"
-              mode={"right"}
-              className={styles["card-section"]}
-              list={[
-                {
-                  icon: "/images/library/智能化搜索-1.png",
-                  text: "全方位的市场动向分析",
-                  description: "横向分析行业大盘、竞争对手的布局，掌握市场动向",
-                },
-                {
-                  icon: "/images/library/智能化搜索-2.png",
-                  text: "多层级的品类透视分析",
-                  description:
-                    "纵向分析品类、价格带、品牌、店铺、款式再到颜色、材料等粒度，定位到具体的设计元素",
-                },
-              ]}
-            >
-              <div className={cn(styles["image-wrap"], " w-4/5")}>
-                <Image
-                  src="/images/library/智能化搜索.png"
-                  fill
-                  className="image"
-                  alt="智能化搜索"
-                />
-              </div>
-            </SectionCard>
-            <SectionCard
-              title={"可视化管理"}
-              subtitle="利用AI算法的能力，针对当前市场上最热门的店铺、款式等进行属性的分解与分析，寻找出当下市场上最热销、最受欢迎的款式、颜色、风格、面料等"
+              title={"内外兼修，智有所源"}
+              subtitle="基于物理的渲染（PBR)是渲染引擎的新行业标准，在versekit中，结合AI驱动算法提供完整的PBR工作流支持（高光流&金属流），以重建完美的数字化材料。"
               mode={"left"}
-              className={styles["card-section"]}
             >
-              <div className={cn(styles["image-wrap"], " w-4/5")}>
+              <div className={cn(styles["image-wrap"], "w-7/10")}>
                 <Image
-                  src="/images/library/可视化管理.png"
+                  src="/images/verse/内外兼修，智有所源.png"
                   fill
                   className="image"
-                  alt="可视化管理"
-                />
-              </div>
-            </SectionCard>
-            <SectionCard
-              grid
-              title={"整合数字资产"}
-              subtitle="打通外部软件及工具，整合并沉淀数字资产"
-              mode={"right"}
-              className={styles["card-section"]}
-              list={[
-                {
-                  icon: "/images/library/智能化搜索-1.png",
-                  text: "全方位的市场动向分析",
-                  description: "横向分析行业大盘、竞争对手的布局，掌握市场动向",
-                },
-                {
-                  icon: "/images/library/智能化搜索-2.png",
-                  text: "多层级的品类透视分析",
-                  description:
-                    "纵向分析品类、价格带、品牌、店铺、款式再到颜色、材料等粒度，定位到具体的设计元素",
-                },
-                {
-                  icon: "/images/library/智能化搜索-1.png",
-                  text: "全方位的市场动向分析",
-                  description: "横向分析行业大盘、竞争对手的布局，掌握市场动向",
-                },
-                {
-                  icon: "/images/library/智能化搜索-2.png",
-                  text: "多层级的品类透视分析",
-                  description:
-                    "纵向分析品类、价格带、品牌、店铺、款式再到颜色、材料等粒度，定位到具体的设计元素",
-                },
-                {
-                  icon: "/images/library/智能化搜索-2.png",
-                  text: "多层级的品类透视分析",
-                  description:
-                    "纵向分析品类、价格带、品牌、店铺、款式再到颜色、材料等粒度，定位到具体的设计元素",
-                },
-              ]}
-            >
-              <div className={cn(styles["image-wrap"], " w-4/5")}>
-                <Image
-                  src="/images/library/整合数字资产.png"
-                  fill
-                  className="image"
-                  alt="整合数字资产"
+                  alt="内外兼修，智有所源"
                 />
               </div>
             </SectionCard>
           </div>
         </div>
+        <div className="bg-rev-bg-black-10 relative overflow-hidden">
+          <div className="container relative z-10">
+            <SectionCard
+              title={"急速快扫，不负精彩"}
+              subtitle="3-5分钟极速扫描高品质3D材质，极简化操作流程搭配强大的软件处理能力，轻松实现入门到专业3D面料人才的进阶。"
+              mode={"right"}
+            >
+              <div className={cn(styles["image-wrap"], "w-7/10")}>
+                <Image
+                  src="/images/verse/急速快扫，不负精彩.png"
+                  fill
+                  className="image"
+                  alt="急速快扫，不负精彩"
+                />
+              </div>
+            </SectionCard>
+          </div>
+        </div>
+
+        <div className="bg-rev-bg-black">
+          <div className="container pb-32">
+            <h2 className="section-title">支持多种格式，满足多种需求</h2>
+            <h3 className="section-subtitle">
+              支持导出u3m、u3ma、gift、glb等通用材料格式，支持简易导出模型材质渲染图，数据可用于第三方软件。
+            </h3>
+            <FileTypeSection icons={["1", "2", "3", "1", "2", "3"]} />
+          </div>
+        </div>
+        <SettingSection />
         <div className="bg-rev-bg-black-0B">
           <div className="container pb-32">
             <h2 className="section-title">联系我们</h2>

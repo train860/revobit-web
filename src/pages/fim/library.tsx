@@ -1,16 +1,28 @@
+import e2e from "assets/images/e2e.png";
 import cn from "classnames";
 import CommonBanner from "components/CommonBanner";
 import ContactForm from "components/ContactForm";
 import Layout from "components/Layout";
 import SectionCard from "components/SectionCard";
+import Slider from "components/Slider";
+import Step from "components/Step";
+import Tabbar from "components/Tabbar";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useIsomorphicLayoutEffect } from "hooks/useIsomorphicLayoutEffect";
 import type { NextPage } from "next";
 import Image from "next/future/image";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import styles from "styles/Fim.module.scss";
 
+import TabSection, { TabData } from "./components/TabSection";
 import Tips from "./components/Tips";
+gsap.registerPlugin(ScrollTrigger);
+const tabDataList: TabData[] = [];
 //use sticky
 const Library: NextPage = () => {
+  const [tabActiveIndex, setTabActiveIndex] = useState<number>(0);
   return (
     <Layout>
       <Head>

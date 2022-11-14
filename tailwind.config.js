@@ -17,16 +17,20 @@ module.exports = {
         "rev-bg-black": "#08071B",
         "rev-bg-black-14": "#14142C",
         "rev-bg-black-0B": "#0B0A24",
+        "rev-bg-black-10": "#101025",
         "rev-bg-contact": "#12122B",
       },
       padding: {
         15: "3.75rem",
         30: "7.5rem",
         40: "10rem",
+        80: "20rem",
       },
       width: {
         150: "37.5rem",
+        "7/10": "70%",
       },
+      height: {},
       flex: {
         2: "2",
         3: "3",

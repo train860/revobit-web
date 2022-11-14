@@ -27,7 +27,12 @@ a {
   position: relative !important;
   height: unset !important;
 }
-
+.image__h {
+  object-fit: contain;
+  height: 100% !important;
+  position: relative !important;
+  width: unset !important;
+}
 .sticky-inner-wrapper {
   z-index: 99;
 }

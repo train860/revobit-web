@@ -13,5 +13,9 @@
       background: rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(1.25rem);
     }
+    &.small {
+      height: 3.125rem;
+      line-height: 3.125rem;
+    }
   }
 }
