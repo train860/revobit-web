@@ -48,11 +48,21 @@ a {
 .container {
   overflow: hidden;
 }
+.blur-bg {
+  position: absolute;
+  width: 56.125rem;
+  height: 56.125rem;
+  right: 0;
+  top: 0;
+  background: #444fc4;
+  opacity: 0.4;
+  filter: blur(15.625rem);
+  transform: translateX(50%);
+}
 .section-title {
   @apply text-white text-center;
   font-size: 2.25rem;
   line-height: 3.125rem;
-  margin-top: 6rem;
   margin-bottom: 0.9375rem;
 }
 .section-subtitle {

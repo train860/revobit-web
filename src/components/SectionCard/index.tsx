@@ -7,6 +7,7 @@ export type DesItem = {
   text: string;
   description?: string;
 };
+
 export interface Props {
   className?: string;
   textClassName?: string;
@@ -16,7 +17,7 @@ export interface Props {
   list?: DesItem[];
   mode?: "left" | "right";
   grid?: boolean;
-  gap?: number;
+  gapClassName?: string;
 }
 export default function SectionCard({
   title,
@@ -27,7 +28,7 @@ export default function SectionCard({
   list,
   mode,
   grid,
-  gap,
+  gapClassName,
 }: Props) {
   const _className = cn(
     styles["section-card"],
@@ -66,7 +67,7 @@ export default function SectionCard({
           </div>
         )}
       </div>
-      <div className={`w-${gap || 12}`}></div>
+      <div className={gapClassName || "md:w-12"}></div>
       <div className={styles["section-card-content"]}>{children}</div>
     </div>
   );

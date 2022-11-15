@@ -3,7 +3,7 @@ import Image from "next/future/image";
 
 import styles from "./Tabbar.module.scss";
 export type TabbarItem = {
-  icon: string | React.ReactNode;
+  icon?: string | React.ReactNode;
   text: string;
 };
 export interface Props {

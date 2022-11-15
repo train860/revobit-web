@@ -1,10 +1,7 @@
 @tailwind components;
 @layer components {
   .light-card {
-    @apply relative flex flex-row;
-    background-color: #1a1a33;
-    border-radius: 1.25rem;
-    padding: 1.1875rem 1.5rem;
+    @apply relative flex flex-row items-center;
     overflow: hidden;
 
     .icon {
@@ -15,20 +12,20 @@
     }
     .content {
       @apply flex-1;
-      color: #ffffff;
-
-      mix-blend-mode: hard-light;
-      opacity: 0.3;
     }
     h2 {
       font-weight: 600;
-      font-size: 1.125rem;
-      line-height: 2.125rem;
+      font-size: 1.375rem;
+      line-height: 1.9375rem;
+      opacity: 1;
+      color: #ffffff;
     }
     p {
       font-weight: 400;
-      font-size: 1.125rem;
-      line-height: 2.125rem;
+      font-size: 1rem;
+      line-height: 1.5625rem;
+      opacity: 0.3;
+      color: #ffffff;
     }
   }
 }
