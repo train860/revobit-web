@@ -211,3 +211,173 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+/**** for EN ****/
+.home-en .blur-bg {
+  @apply absolute;
+  width: 39.8125rem;
+  height: 39.8125rem;
+  background: #444fc4;
+  opacity: 0.4;
+  filter: blur(15.625rem);
+  &.left {
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+.home-en .button {
+  font-family: "PingFang SC";
+  text-transform: uppercase;
+}
+.banner-en {
+  @apply relative flex flex-row items-center;
+  padding-top: 5rem;
+  padding-bottom: 6.25rem;
+  .content {
+    flex: 3;
+  }
+  .image-card {
+    flex: 2;
+  }
+
+  h2 {
+    font-family: "Microsoft YaHei";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.125rem;
+    line-height: 4.125rem;
+    color: #ffffff;
+  }
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: #ffffff;
+    mix-blend-mode: hard-light;
+    opacity: 0.3;
+    margin-top: 2rem;
+    margin-bottom: 4.5rem;
+  }
+
+  .image-card > .image-wrap {
+    @apply relative;
+    width: 42.3125rem;
+    height: 42.3125rem;
+  }
+}
+.capability-en {
+  @apply relative flex flex-row items-center;
+  padding: 6.875rem 0;
+  .image-card {
+    flex: 3;
+    .image-wrap {
+      @apply relative;
+      width: 43.75rem;
+      height: 43.75rem;
+      padding: 2rem 4.5rem;
+      background: #17172f;
+      border-radius: 3.75rem;
+    }
+  }
+  .content {
+    flex: 2;
+    h2 {
+      font-weight: 600;
+      font-size: 2.125rem;
+      line-height: 3rem;
+      /* identical to box height */
+
+      color: #ffffff;
+    }
+  }
+  .capability-list {
+    margin-top: 2.1875rem;
+    margin-bottom: 1.4375rem;
+    overflow: hidden;
+  }
+  .capability-list > .capability-item {
+    @apply flex flex-row;
+    margin-bottom: 1.25rem;
+    .capability-icon {
+      @apply relative;
+      width: 1.0625rem;
+      height: 1.0625rem;
+      margin-right: 0.75rem;
+      margin-top: 0.5625rem;
+    }
+    h3 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.125rem;
+      line-height: 2.1875rem;
+      /* identical to box height, or 194% */
+
+      color: #ffffff;
+
+      opacity: 0.7;
+      margin-bottom: 0.1875rem;
+    }
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.875rem;
+      /* or 188% */
+
+      color: #ffffff;
+
+      opacity: 0.3;
+    }
+  }
+}
+.team-en {
+  @apply relative flex flex-row items-center;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  .content {
+    flex: 1;
+  }
+  .image-card {
+    flex: 2;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 2.4375rem;
+
+    color: #ffffff;
+    margin-bottom: 1.875rem;
+  }
+  p {
+    font-style: normal;
+    font-weight: 400;
+
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    margin-bottom: 1.625rem;
+    color: #ffffff;
+    opacity: 0.5;
+  }
+  .button {
+    margin-top: 1.1875rem;
+  }
+  .image-card {
+    @apply flex justify-end;
+  }
+  .image-card > .image-wrap {
+    @apply relative overflow-hidden;
+    width: 40.625rem;
+    height: 36.5625rem;
+    background: #d9d9d9;
+    border-radius: 1.625rem;
+    background-image: url("/images/home/en3.png");
+    background-size: cover;
+  }
+}
+.bg-card-en {
+  padding-top: 6.25rem;
+  padding-bottom: 8.125rem;
+}

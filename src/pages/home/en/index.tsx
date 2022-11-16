@@ -1,6 +1,7 @@
 //const client = new PocketBase("https://pocketbase.io");
 
 import e2e from "assets/images/home/way.png";
+import cn from "classnames";
 import Brand from "components/Brand";
 import Button from "components/Button";
 import ContactForm from "components/ContactForm";
@@ -10,23 +11,14 @@ import SectionCard from "components/SectionCard";
 import Step from "components/Step";
 import Tabbar from "components/Tabbar";
 import type { NextPage } from "next";
-import Image from "next/future/image";
 import Head from "next/head";
-import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import styles from "styles/Home.module.scss";
 
-import Banner from "../components/Banner";
-import Case from "../components/Case";
-import Category from "../components/Category";
-const Home: NextPage = () => {
-  const [tabActiveIndex, setTabActiveIndex] = useState<number>(0);
-  const [bannerIndex, setBannerIndex] = useState<number>(0);
-  const [progress, setProgress] = useState<number>(0);
-  useEffect(() => {
-    //client.records.getList("posts", 1, 20, {});
-  }, []);
+import BgCard from "../components/BgCard";
 
+const Home: NextPage = () => {
   return (
     <Layout>
       <Head>
@@ -35,7 +27,129 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main></main>
+      <main className={styles["home-en"]}>
+        <div className="bg-rev-bg-black-0B relative">
+          <div className={cn(styles["blur-bg"], styles["left"])}></div>
+          <div className={cn("container", styles["banner-en"])}>
+            <div className={styles["content"]}>
+              <h2>
+                Create Better Products Faster & More Efficiently Than Ever
+                Before
+              </h2>
+              <p>We provide digital end-to-end product creation solutions</p>
+              <Button className={styles.button}>Learn More</Button>
+            </div>
+            <div className={styles["image-card"]}>
+              <div className={styles["image-wrap"]}>
+                <Image
+                  src="/images/home/en1.png"
+                  width={1}
+                  height={1}
+                  layout="responsive"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-rev-bg-black-12 relative">
+          <div className={cn("container", styles["capability-en"])}>
+            <div className={styles["image-card"]}>
+              <div className={styles["image-wrap"]}>
+                <Image
+                  src="/images/home/en2.png"
+                  width={1}
+                  height={1}
+                  layout="responsive"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div className={styles["content"]}>
+              <h2>Capability</h2>
+              <div className={styles["capability-list"]}>
+                <div className={styles["capability-item"]}>
+                  <div className={styles["capability-icon"]}>
+                    <Image src="/images/home/Create.png" layout="fill" alt="" />
+                  </div>
+                  <div className={styles["capability-content"]}>
+                    <h3>Create</h3>
+                    <p>
+                      Design in 3D with photo-real quality. Maximize creativity
+                      with instant color and material updates.
+                    </p>
+                  </div>
+                </div>
+                <div className={styles["capability-item"]}>
+                  <div className={styles["capability-icon"]}>
+                    <Image
+                      src="/images/home/Collaborate.png"
+                      layout="fill"
+                      alt=""
+                    />
+                  </div>
+                  <div className={styles["capability-content"]}>
+                    <h3>Collaborate</h3>
+                    <p>
+                      We make collaboration between teams easy. Revobit keeps
+                      everyone engaged and in sync.
+                    </p>
+                  </div>
+                </div>
+                <div className={styles["capability-item"]}>
+                  <div className={styles["capability-icon"]}>
+                    <Image src="/images/home/Share.png" layout="fill" alt="" />
+                  </div>
+                  <div className={styles["capability-content"]}>
+                    <h3>Share</h3>
+                    <p>
+                      Spend less time exporting and more time reviewing.
+                      Maximize communication and minimize mistakes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <Button className={styles.button}>Learn More</Button>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-black relative">
+          <div className={cn("container", styles["team-en"])}>
+            <div className={cn(styles["content"])}>
+              <h2>Our Team</h2>
+              <p>
+                Our team members have experience at the pinnacle of software
+                development and footwear product creation.{" "}
+              </p>
+              <p>
+                We have brought computer scientists together with fashion
+                industry experts and proven enterprise-grade solution providers.
+              </p>
+              <p>Together we are creating the future of product creation. </p>
+              <Button className={styles.button}>Learn More</Button>
+            </div>
+            <div className={styles["image-card"]}>
+              <div className={styles["image-wrap"]}></div>
+            </div>
+          </div>
+        </div>
+
+        {/** contact */}
+
+        <div className="bg-rev-bg-contact relative">
+          <div
+            className={cn(
+              "container grid grid-cols-2 gap-5",
+              styles["bg-card-en"]
+            )}
+          >
+            <BgCard image="/images/home/en4.png" title="China HQ" />
+            <BgCard image="/images/home/en5.png" title="Berlin HQ" />
+          </div>
+        </div>
+      </main>
     </Layout>
   );
 };

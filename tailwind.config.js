@@ -18,8 +18,12 @@ module.exports = {
         "rev-bg-black-14": "#14142C",
         "rev-bg-black-0B": "#0B0A24",
         "rev-bg-black-10": "#101025",
+        "rev-bg-black-12": "#12122B",
+        "rev-bg-black-03": "#030220",
         "rev-bg-contact": "#12122B",
+        "rev-bg-blue-44": "#444FC4",
       },
+
       padding: {
         15: "3.75rem",
         30: "7.5rem",
@@ -30,10 +34,18 @@ module.exports = {
         150: "37.5rem",
         "7/10": "70%",
       },
-      height: {},
+      height: {
+        65: "16.25rem",
+      },
       flex: {
         2: "2",
         3: "3",
+      },
+      borderRadius: {
+        5: "1.25rem",
+      },
+      blur: {
+        60: "15rem",
       },
     },
   },
