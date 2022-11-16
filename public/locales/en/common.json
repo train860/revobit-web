@@ -1,0 +1,34 @@
+{
+  "header": {},
+  "footer": {
+    "location": "Building 15, Wanshenghui Chuangke Park, No. 70 East Xingang Road, Haizhu District, Guangzhou City, Guangdong Province, China",
+    "workTime": "Mon. to Fri., 9:00 AM  to 6:30 PM",
+    "contact": "19928307570",
+    "email": "customer@4dstc.com",
+    "product": {
+      "title": "Product",
+      "values": [
+        {
+          "name": "End-to-end Solutions",
+          "url": ""
+        },
+        {
+          "name": "Material Digitization",
+          "url": ""
+        },
+        {
+          "name": "Design Tools",
+          "url": ""
+        },
+        {
+          "name": "Digital Services",
+          "url": ""
+        },
+        {
+          "name": "XR",
+          "url": ""
+        }
+      ]
+    }
+  }
+}

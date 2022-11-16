@@ -9,9 +9,17 @@ import TiktokIcon from "components/Icons/TiktokIcon";
 import TimeIcon from "components/Icons/TimeIcon";
 import WechatIcon from "components/Icons/WechatIcon";
 import Image from "next/future/image";
+import { useTranslation } from "next-i18next";
 
 import styles from "./Footer.module.scss";
+
+type LinkItem = {
+  name: string;
+  url?: string;
+};
+
 export default function Footer() {
+  const { t } = useTranslation("common");
   return (
     <div className={cn(styles["footer"])}>
       <div className="container grid grid-cols-2">
@@ -21,22 +29,19 @@ export default function Footer() {
           </div>
           <div className={styles["left-section"]}>
             <LocationIcon />
-            <span>
-              中华人民共和国 广东省 广州市 海珠区新港东路70号 万胜汇创客PARK
-              15栋001
-            </span>
+            <span>{t("footer.location")}</span>
           </div>
           <div className={styles["left-section"]}>
             <TimeIcon />
-            <span>星期一 - 星期五 9:30AM - 6:00PM</span>
+            <span>{t("footer.workTime")}</span>
           </div>
           <div className={styles["left-section"]}>
             <PhoneIcon />
-            <span>19928307570</span>
+            <span>{t("footer.contact")}</span>
           </div>
           <div className={styles["left-section"]}>
             <EmailIcon />
-            <span>customer@4dstc.com</span>
+            <span>{t("footer.email")}</span>
           </div>
           <div className={styles["left-section"]}>
             <div className="flex flex-row items-center">
@@ -50,22 +55,14 @@ export default function Footer() {
 
         <div className="grid grid-cols-4">
           <div className={styles["col-card"]}>
-            <h2>产品</h2>
-            <p>
-              <a href="">全链路解决方案</a>
-            </p>
-            <p>
-              <a href="">材料数字化</a>
-            </p>
-            <p>
-              <a href="">设计工具</a>
-            </p>
-            <p>
-              <a href="">数字化服务</a>
-            </p>
-            <p>
-              <a href="">XR</a>
-            </p>
+            <h2>{t("footer.product.title")}</h2>
+            {(
+              t("footer.product.values", {
+                returnObjects: true,
+              }) as LinkItem[]
+            ).map((item: LinkItem, index: number) => (
+              <p key={String(index)}>{item.name}</p>
+            ))}
           </div>
           <div className={styles["col-card"]}>
             <h2>解决方案</h2>

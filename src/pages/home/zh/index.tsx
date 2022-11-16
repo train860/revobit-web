@@ -12,12 +12,13 @@ import Tabbar from "components/Tabbar";
 import type { NextPage } from "next";
 import Image from "next/future/image";
 import Head from "next/head";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "styles/Home.module.scss";
 
-import Banner from "./components/Banner";
-import Case from "./components/Case";
-import Category from "./components/Category";
+import Banner from "../components/Banner";
+import Case from "../components/Case";
+import Category from "../components/Category";
 const Home: NextPage = () => {
   const [tabActiveIndex, setTabActiveIndex] = useState<number>(0);
   const [bannerIndex, setBannerIndex] = useState<number>(0);
