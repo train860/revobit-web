@@ -3,10 +3,13 @@ import "react-toastify/dist/ReactToastify.min.css";
 import cn from "classnames";
 import Button from "components/Button";
 import BuildingIcon from "components/Icons/BuildingIcon";
+import EmailIcon from "components/Icons/EmailIcon";
 import MessageIcon from "components/Icons/MessageIcon";
 import PhoneIcon from "components/Icons/PhoneIcon";
 import UserIcon from "components/Icons/UserIcon";
 import { useApi } from "hooks/useApi";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 import { useRef, useState } from "react";
 import { toast } from "react-toastify";
 
@@ -18,6 +21,9 @@ export interface Props {
   children?: React.ReactNode;
 }
 export default function ContactForm({ page, className }: Props) {
+  const { t } = useTranslation("common");
+  const router = useRouter();
+  const { locale } = router;
   const api = useApi();
   const [values, setValues] = useState<Record<string, string>>({});
   const _className = cn(styles["contact-form"], className);
@@ -56,7 +62,7 @@ export default function ContactForm({ page, className }: Props) {
       <div className="grid grid-cols-3 gap-4">
         <FormItem
           icon={<UserIcon />}
-          label="名字："
+          label={t("contact.name")}
           mode={"horizontal"}
           type={"text"}
           value={values["name"] || ""}
@@ -64,15 +70,15 @@ export default function ContactForm({ page, className }: Props) {
         />
         <FormItem
           icon={<BuildingIcon />}
-          label="公司名称："
+          label={t("contact.company")}
           mode={"horizontal"}
           type={"text"}
           value={values["company"] || ""}
           onChange={(value) => handleChange("company", value)}
         />
         <FormItem
-          icon={<PhoneIcon />}
-          label="电话或邮箱："
+          icon={locale === "en" ? <EmailIcon /> : <PhoneIcon />}
+          label={t("contact.email")}
           mode={"horizontal"}
           type={"text"}
           value={values["contact"] || ""}
@@ -82,15 +88,15 @@ export default function ContactForm({ page, className }: Props) {
 
       <FormItem
         icon={<MessageIcon />}
-        label="留言："
+        label={t("contact.message")}
         mode={"vertical"}
         type={"textarea"}
         value={values["content"] || ""}
         onChange={(value) => handleChange("content", value)}
       />
       <div className="flex justify-center">
-        <Button className="opacity-50" onClick={handleSubmit}>
-          提交
+        <Button className="opacity-50 mt-15/2" onClick={handleSubmit}>
+          {t("contact.submit")}
         </Button>
       </div>
     </div>

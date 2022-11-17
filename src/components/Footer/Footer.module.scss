@@ -4,6 +4,13 @@
     @apply bg-rev-black text-white;
     padding: 4.25rem 0;
   }
+  .logo {
+    position: relative;
+    width: 5.625rem;
+    height: 2.1875rem;
+    opacity: 0.6;
+    overflow: hidden;
+  }
   .col-card {
     margin-top: 0.4375rem;
     h2 {

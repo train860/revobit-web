@@ -7,15 +7,21 @@ import {
   SubMenu,
   useMenuState,
 } from "@szhsin/react-menu";
+import logoEN from "assets/images/logo-en.png";
 import logo from "assets/images/logo-header.svg";
 import cn from "classnames";
 import Image from "next/future/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 import { useRef } from "react";
 import Headroom from "react-headroom";
 
 import styles from "./Header.module.scss";
 export default function Header() {
+  const { t } = useTranslation("common");
+  const router = useRouter();
+  const { locale } = router;
   const ref = useRef(null);
   const id = useRef(0);
   const [menuProps, toggleMenu] = useMenuState({ transition: true });
@@ -35,30 +41,38 @@ export default function Header() {
     <Headroom className={styles["header"]}>
       <div className={cn(styles["header-wrap"], "container")}>
         <div className={styles["logo"]}>
-          <Image alt="" src={logo} />
+          <Image alt="" fill src={locale === "zh" ? logo : logoEN} />
         </div>
         <ul className={styles["menu"]}>
           <li className={styles["active"]}>
-            <Link href="/">首页</Link>
+            <Link href="/">{t("header.home")}</Link>
             <div className={styles.line}></div>
           </li>
           <li>
             <a href="" ref={ref} {...mouseEvents}>
-              产品
+              {t("header.product")}
             </a>
           </li>
-          <li>
-            <a href="">解决方案</a>
-          </li>
-          <li>
-            <a href="">供应链</a>
-          </li>
-          <li>
-            <a href="">下载中心</a>
-          </li>
-          <li>
-            <a href="">关于我们</a>
-          </li>
+          {locale === "zh" ? (
+            <>
+              <li>
+                <a href="">解决方案</a>
+              </li>
+              <li>
+                <a href="">供应链</a>
+              </li>
+              <li>
+                <a href="">下载中心</a>
+              </li>
+              <li>
+                <a href="">关于我们</a>
+              </li>
+            </>
+          ) : (
+            <li>
+              <a href="">Contact</a>
+            </li>
+          )}
         </ul>
       </div>
       <ControlledMenu

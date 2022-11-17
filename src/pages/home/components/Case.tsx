@@ -10,7 +10,7 @@ import styles from "styles/Home.module.scss";
 export default function Case() {
   return (
     <div className="bg-rev-bg-black-0B relative overflow-hidden">
-      <div className="container pb-32">
+      <div className="container py-32">
         <h2 className="section-title">解决方案</h2>
         <h3 className="section-subtitle">
           时谛智能为鞋、服、包等时尚行业提供全链路数字化解决方案

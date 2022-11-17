@@ -39,7 +39,7 @@ const Home: NextPage = () => {
         <Banner />
         <Case />
         {/* 端到端全链路数字化解决方案 */}
-        <div className="bg-rev-bg-black-14">
+        <div className="bg-rev-bg-black-14 pt-32">
           <div className="container">
             <h2 className="section-title">端到端全链路数字化解决方案</h2>
             <h3 className="section-subtitle">
@@ -59,7 +59,7 @@ const Home: NextPage = () => {
           </div>
         </div>
         {/* 全球合作伙伴 */}
-        <div className="bg-rev-bg-black-0B pb-32">
+        <div className="bg-rev-bg-black-0B py-32">
           <div className="container">
             <h2 className="section-title mt-0">全球合作伙伴</h2>
             <h3 className="section-subtitle">
@@ -69,7 +69,7 @@ const Home: NextPage = () => {
           <Brand />
         </div>
         <div className="bg-rev-bg-contact">
-          <div className="container pb-32">
+          <div className="container py-32">
             <h2 className="section-title">联系我们</h2>
             <h3 className="section-subtitle">
               释放设计灵感，即刻开启时尚数字新体验。

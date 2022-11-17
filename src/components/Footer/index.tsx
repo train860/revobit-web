@@ -1,3 +1,4 @@
+import logoEN from "assets/images/logo-en.png";
 import logo from "assets/images/logo-footer.svg";
 import cn from "classnames";
 import BilibliIcon from "components/Icons/BilibiliIcon";
@@ -9,6 +10,7 @@ import TiktokIcon from "components/Icons/TiktokIcon";
 import TimeIcon from "components/Icons/TimeIcon";
 import WechatIcon from "components/Icons/WechatIcon";
 import Image from "next/future/image";
+import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 
 import styles from "./Footer.module.scss";
@@ -20,16 +22,21 @@ type LinkItem = {
 
 export default function Footer() {
   const { t } = useTranslation("common");
+  const router = useRouter();
+  const { locale } = router;
   return (
     <div className={cn(styles["footer"])}>
-      <div className="container grid grid-cols-2">
-        <div className={styles["col-card"]}>
-          <div className="">
-            <Image alt="" src={logo} />
+      <div className="container flex flex-row">
+        <div className={cn(styles["col-card"], "flex-2")}>
+          <div className={styles["logo"]}>
+            <Image alt="" fill src={locale === "zh" ? logo : logoEN} />
           </div>
-          <div className={styles["left-section"]}>
-            <LocationIcon />
-            <span>{t("footer.location")}</span>
+          <div
+            className={cn(styles["left-section"], "relative")}
+            style={{ alignItems: "start" }}
+          >
+            <LocationIcon style={{ width: 30 }} />
+            <span style={{ marginTop: -4 }}>{t("footer.location")}</span>
           </div>
           <div className={styles["left-section"]}>
             <TimeIcon />
@@ -53,7 +60,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="grid grid-cols-4">
+        <div className="flex-3 grid grid-cols-5 gap-1">
           <div className={styles["col-card"]}>
             <h2>{t("footer.product.title")}</h2>
             {(
@@ -65,46 +72,44 @@ export default function Footer() {
             ))}
           </div>
           <div className={styles["col-card"]}>
-            <h2>解决方案</h2>
-            <p>
-              <a href="">品牌商</a>
-            </p>
-            <p>
-              <a href="">材料商</a>
-            </p>
-            <p>
-              <a href="">制造商</a>
-            </p>
-            <p>
-              <a href="">生态合作伙伴</a>
-            </p>
+            <h2>{t("footer.solutions.title")}</h2>
+            {(
+              t("footer.solutions.values", {
+                returnObjects: true,
+              }) as LinkItem[]
+            ).map((item: LinkItem, index: number) => (
+              <p key={String(index)}>{item.name}</p>
+            ))}
           </div>
           <div className={styles["col-card"]}>
-            <h2>供应链</h2>
-            <p>
-              <a href="">美安科技</a>
-            </p>
-            <p>
-              <a href="">智慧生物科技</a>
-            </p>
-            <p>
-              <a href="">美达布料工艺</a>
-            </p>
+            <h2>{t("footer.chains.title")}</h2>
+            {(
+              t("footer.chains.values", {
+                returnObjects: true,
+              }) as LinkItem[]
+            ).map((item: LinkItem, index: number) => (
+              <p key={String(index)}>{item.name}</p>
+            ))}
           </div>
           <div className={styles["col-card"]}>
-            <h2>下载中心</h2>
-            <p>
-              <a href="">Revofim</a>
-            </p>
-            <p>
-              <a href="">Versebook</a>
-            </p>
-            <p>
-              <a href="">Versekit</a>
-            </p>
-            <p>
-              <a href="">KicksCAD</a>
-            </p>
+            <h2>{t("footer.download.title")}</h2>
+            {(
+              t("footer.download.values", {
+                returnObjects: true,
+              }) as LinkItem[]
+            ).map((item: LinkItem, index: number) => (
+              <p key={String(index)}>{item.name}</p>
+            ))}
+          </div>
+          <div className={styles["col-card"]}>
+            <h2>{t("footer.about.title")}</h2>
+            {(
+              t("footer.about.values", {
+                returnObjects: true,
+              }) as LinkItem[]
+            ).map((item: LinkItem, index: number) => (
+              <p key={String(index)}>{item.name}</p>
+            ))}
           </div>
         </div>
       </div>

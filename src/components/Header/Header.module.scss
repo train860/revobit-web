@@ -10,14 +10,20 @@
     }
   }
   .header-wrap {
-    @apply flex;
+    @apply flex items-center;
   }
   .logo {
+    position: relative;
     margin-right: 6rem;
     padding: 18px 0;
+    width: 5.625rem;
+    height: 2.1875rem;
+    opacity: 0.6;
+    overflow: hidden;
   }
   .menu {
     @apply flex flex-row items-center;
+    height: 4.375rem;
     li {
       @apply relative h-full flex justify-center items-center;
       font-size: 0.875rem;

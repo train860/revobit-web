@@ -23,12 +23,22 @@ module.exports = {
         "rev-bg-contact": "#12122B",
         "rev-bg-blue-44": "#444FC4",
       },
-
+      fontSize: {
+        7: "1.75rem",
+        9: "2.25rem",
+      },
       padding: {
+        7: "1.75rem",
+        "15/2": "1.875rem",
+        13: "3.25rem",
         15: "3.75rem",
+        23: "5.75rem",
         30: "7.5rem",
         40: "10rem",
         80: "20rem",
+      },
+      margin: {
+        "15/2": "1.875rem",
       },
       width: {
         150: "37.5rem",
