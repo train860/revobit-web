@@ -5,13 +5,13 @@ import ContactForm from "components/ContactForm";
 import Layout from "components/Layout";
 import SectionCard from "components/SectionCard";
 import SmallCard from "components/SmallCard";
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Image from "next/future/image";
 import Head from "next/head";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import styles from "styles/Verse.module.scss";
-
-import FileTypeSection from "./components/FileTypeSection";
-import SettingSection from "./components/SettingSection";
+import FileTypeSection from "views/verse/FileTypeSection";
+import SettingSection from "views/verse/SettingSection";
 
 const Versekit: NextPage = () => {
   return (
@@ -134,4 +134,11 @@ const Versekit: NextPage = () => {
     </Layout>
   );
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? "zh", ["common"])),
+  },
+});
+
 export default Versekit;

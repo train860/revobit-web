@@ -1,4 +1,3 @@
-import logoEN from "assets/images/logo-en.png";
 import logo from "assets/images/logo-footer.svg";
 import cn from "classnames";
 import BilibliIcon from "components/Icons/BilibiliIcon";
@@ -29,7 +28,11 @@ export default function Footer() {
       <div className="container flex flex-row">
         <div className={cn(styles["col-card"], "flex-2")}>
           <div className={styles["logo"]}>
-            <Image alt="" fill src={locale === "zh" ? logo : logoEN} />
+            <Image
+              alt=""
+              fill
+              src={locale === "zh" ? logo : "/images/logo-en.png"}
+            />
           </div>
           <div
             className={cn(styles["left-section"], "relative")}

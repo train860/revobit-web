@@ -6,15 +6,15 @@ import Layout from "components/Layout";
 import SectionCard from "components/SectionCard";
 import SmallCard from "components/SmallCard";
 import Tabbar from "components/Tabbar";
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Image from "next/future/image";
 import Head from "next/head";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useState } from "react";
 import styles from "styles/Verse.module.scss";
-
-import BrandService from "./components/BrandService";
-import FunctionSection from "./components/FunctionSection";
-import QRcodeSection from "./components/QRcodeSection";
+import BrandService from "views/verse/BrandService";
+import FunctionSection from "views/verse/FunctionSection";
+import QRcodeSection from "views/verse/QRcodeSection";
 
 const Versebook: NextPage = () => {
   const [tabActiveIndex, setTabActiveIndex] = useState<number>(0);
@@ -262,4 +262,11 @@ const Versebook: NextPage = () => {
     </Layout>
   );
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? "zh", ["common"])),
+  },
+});
+
 export default Versebook;

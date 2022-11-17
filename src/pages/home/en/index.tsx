@@ -10,13 +10,14 @@ import Progress from "components/Progress";
 import SectionCard from "components/SectionCard";
 import Step from "components/Step";
 import Tabbar from "components/Tabbar";
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useEffect, useState } from "react";
 import styles from "styles/Home.module.scss";
 
-import BgCard from "../components/BgCard";
+import BgCard from "../../../views/home/BgCard";
 
 const Home: NextPage = () => {
   return (
@@ -165,5 +166,11 @@ const Home: NextPage = () => {
     </Layout>
   );
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? "zh", ["common"])),
+  },
+});
 
 export default Home;

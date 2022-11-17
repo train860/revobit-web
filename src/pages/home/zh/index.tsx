@@ -9,16 +9,17 @@ import Progress from "components/Progress";
 import SectionCard from "components/SectionCard";
 import Step from "components/Step";
 import Tabbar from "components/Tabbar";
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Image from "next/future/image";
 import Head from "next/head";
 import Link from "next/link";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useEffect, useState } from "react";
 import styles from "styles/Home.module.scss";
 
-import Banner from "../components/Banner";
-import Case from "../components/Case";
-import Category from "../components/Category";
+import Banner from "../../../views/home/Banner";
+import Case from "../../../views/home/Case";
+import Category from "../../../views/home/Category";
 const Home: NextPage = () => {
   const [tabActiveIndex, setTabActiveIndex] = useState<number>(0);
   const [bannerIndex, setBannerIndex] = useState<number>(0);
@@ -81,5 +82,11 @@ const Home: NextPage = () => {
     </Layout>
   );
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? "zh", ["common"])),
+  },
+});
 
 export default Home;

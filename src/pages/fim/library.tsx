@@ -10,14 +10,14 @@ import Tabbar from "components/Tabbar";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useIsomorphicLayoutEffect } from "hooks/useIsomorphicLayoutEffect";
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Image from "next/future/image";
 import Head from "next/head";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useEffect, useState } from "react";
 import styles from "styles/Fim.module.scss";
-
-import TabSection, { TabData } from "./components/TabSection";
-import Tips from "./components/Tips";
+import TabSection, { TabData } from "views/fim/TabSection";
+import Tips from "views/fim/Tips";
 gsap.registerPlugin(ScrollTrigger);
 const tabDataList: TabData[] = [];
 //use sticky
@@ -217,4 +217,11 @@ const Library: NextPage = () => {
     </Layout>
   );
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? "zh", ["common"])),
+  },
+});
+
 export default Library;

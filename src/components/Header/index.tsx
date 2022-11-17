@@ -7,7 +7,6 @@ import {
   SubMenu,
   useMenuState,
 } from "@szhsin/react-menu";
-import logoEN from "assets/images/logo-en.png";
 import logo from "assets/images/logo-header.svg";
 import cn from "classnames";
 import Image from "next/future/image";
@@ -41,7 +40,11 @@ export default function Header() {
     <Headroom className={styles["header"]}>
       <div className={cn(styles["header-wrap"], "container")}>
         <div className={styles["logo"]}>
-          <Image alt="" fill src={locale === "zh" ? logo : logoEN} />
+          <Image
+            alt=""
+            fill
+            src={locale === "zh" ? logo : "/images/logo-en.png"}
+          />
         </div>
         <ul className={styles["menu"]}>
           <li className={styles["active"]}>

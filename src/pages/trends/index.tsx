@@ -5,9 +5,10 @@ import ContactForm from "components/ContactForm";
 import Layout from "components/Layout";
 import SectionCard from "components/SectionCard";
 import SmallCard from "components/SmallCard";
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Image from "next/future/image";
 import Head from "next/head";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import styles from "styles/Trends.module.scss";
 
 //use sticky
@@ -226,4 +227,11 @@ const Trends: NextPage = () => {
     </Layout>
   );
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale ?? "zh", ["common"])),
+  },
+});
+
 export default Trends;
