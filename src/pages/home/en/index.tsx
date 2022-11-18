@@ -16,6 +16,7 @@ import Image from "next/image";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useEffect, useState } from "react";
 import styles from "styles/Home.module.scss";
+import Shoe from "views/home/Shoe";
 
 import BgCard from "../../../views/home/BgCard";
 
@@ -58,13 +59,7 @@ const Home: NextPage = () => {
           <div className={cn("container", styles["capability-en"])}>
             <div className={styles["image-card"]}>
               <div className={styles["image-wrap"]}>
-                <Image
-                  src="/images/home/en2.png"
-                  width={1}
-                  height={1}
-                  layout="responsive"
-                  alt=""
-                />
+                <Shoe />
               </div>
             </div>
             <div className={styles["content"]}>

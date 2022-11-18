@@ -6,7 +6,10 @@ import { Suspense, useState, useTransition } from "react";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 const Model = () => {
-  const gltf = useLoader(GLTFLoader, "./gltf/test2.gltf");
+  const gltf = useLoader(
+    GLTFLoader,
+    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/static/shoe.gltf`
+  );
   return (
     <>
       <primitive object={gltf.scene} scale={8} />
