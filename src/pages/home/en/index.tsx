@@ -14,13 +14,20 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import styles from "styles/Home.module.scss";
 import Shoe from "views/home/Shoe";
 
 import BgCard from "../../../views/home/BgCard";
 
 const Home: NextPage = () => {
+  const handleScroll = useCallback(() => {
+    const form = document.getElementById("contact-form");
+    window.scrollTo({
+      top: form?.offsetTop,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <Layout>
       <Head>
@@ -39,7 +46,9 @@ const Home: NextPage = () => {
                 Before
               </h2>
               <p>We provide digital end-to-end product creation solutions</p>
-              <Button className={styles.button}>Learn More</Button>
+              <Button className={styles.button} onClick={handleScroll}>
+                Learn More
+              </Button>
             </div>
             <div className={styles["image-card"]}>
               <div className={styles["image-wrap"]}>
@@ -106,7 +115,9 @@ const Home: NextPage = () => {
                   </div>
                 </div>
               </div>
-              <Button className={styles.button}>Learn More</Button>
+              <Button className={styles.button} onClick={handleScroll}>
+                Learn More
+              </Button>
             </div>
           </div>
         </div>
@@ -124,7 +135,9 @@ const Home: NextPage = () => {
                 industry experts and proven enterprise-grade solution providers.
               </p>
               <p>Together we are creating the future of product creation. </p>
-              <Button className={styles.button}>Learn More</Button>
+              <Button className={styles.button} onClick={handleScroll}>
+                Learn More
+              </Button>
             </div>
             <div className={styles["image-card"]}>
               <div className={styles["image-wrap"]}></div>
@@ -133,7 +146,7 @@ const Home: NextPage = () => {
         </div>
 
         {/** contact */}
-        <div className="bg-rev-bg-contact">
+        <div className="bg-rev-bg-contact" id="contact-form">
           <div className="container pt-23">
             <h2 className="font-semibold text-white text-center text-9 w-2/3 mx-auto">
               We offer a personalized onboarding and development process focused
