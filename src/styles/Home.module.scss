@@ -229,30 +229,34 @@
 .home-en .button {
   font-family: "PingFang SC";
   text-transform: uppercase;
+  font-size: 1.375rem;
+  height: 4.6875rem;
 }
 .banner-en {
   @apply relative flex flex-row items-center;
-  padding-top: 5rem;
   padding-bottom: 6.25rem;
   .content {
     flex: 3;
+    padding-top: 5rem;
   }
   .image-card {
-    flex: 2;
+    flex: 4;
+    display: flex;
+    justify-content: flex-end;
   }
 
   h2 {
     font-family: "Microsoft YaHei";
     font-style: normal;
     font-weight: 700;
-    font-size: 3.125rem;
+    font-size: 3.375rem;
     line-height: 4.125rem;
     color: #ffffff;
   }
   p {
     font-style: normal;
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: 1.625rem;
     line-height: 1.75rem;
     color: #ffffff;
     mix-blend-mode: hard-light;
@@ -266,6 +270,22 @@
     width: 42.3125rem;
     height: 42.3125rem;
   }
+  .image-card > .image-wrap > .blur {
+    position: absolute;
+    width: 42.3125rem;
+    height: 42.3125rem;
+    left: 0;
+    top: 0;
+    left: -30%;
+    top: 0;
+    background-image: url(/images/home/en1-bg.png);
+    background-size: cover;
+  }
+}
+.shoe-wrap {
+  height: 43.75rem;
+  background: #17172f;
+  border-radius: 60px;
 }
 .capability-en {
   @apply relative flex flex-row items-center;
@@ -274,17 +294,15 @@
     flex: 3;
     .image-wrap {
       @apply relative overflow-hidden;
-      width: 43.75rem;
-      height: 43.75rem;
-      background: #17172f;
-      border-radius: 3.75rem;
+      height: 30rem;
+      margin-right: 6.875rem;
     }
   }
   .content {
     flex: 2;
     h2 {
       font-weight: 600;
-      font-size: 2.125rem;
+      font-size: 2.6875rem;
       line-height: 3rem;
       /* identical to box height */
 
@@ -301,15 +319,15 @@
     margin-bottom: 1.25rem;
     .capability-icon {
       @apply relative;
-      width: 1.0625rem;
-      height: 1.0625rem;
+      width: 1.875rem;
+      height: 1.875rem;
       margin-right: 0.75rem;
-      margin-top: 0.5625rem;
+      margin-top: 0.1875rem;
     }
     h3 {
       font-style: normal;
       font-weight: 600;
-      font-size: 1.125rem;
+      font-size: 1.75rem;
       line-height: 2.1875rem;
       /* identical to box height, or 194% */
 
@@ -321,7 +339,7 @@
     p {
       font-style: normal;
       font-weight: 400;
-      font-size: 1rem;
+      font-size: 1.375rem;
       line-height: 1.875rem;
       /* or 188% */
 
@@ -344,7 +362,7 @@
 
   h2 {
     font-weight: 600;
-    font-size: 1.75rem;
+    font-size: 2.6875rem;
     line-height: 2.4375rem;
 
     color: #ffffff;
@@ -354,7 +372,7 @@
     font-style: normal;
     font-weight: 400;
 
-    font-size: 1.125rem;
+    font-size: 1.375rem;
     line-height: 1.875rem;
     margin-bottom: 1.625rem;
     color: #ffffff;

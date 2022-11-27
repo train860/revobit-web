@@ -45,22 +45,26 @@ export default function Footer() {
             <TimeIcon />
             <span>{t("footer.workTime")}</span>
           </div>
-          <div className={styles["left-section"]}>
-            <PhoneIcon />
-            <span>{t("footer.contact")}</span>
-          </div>
+          {locale === "zh" && (
+            <div className={styles["left-section"]}>
+              <PhoneIcon />
+              <span>{t("footer.contact")}</span>
+            </div>
+          )}
           <div className={styles["left-section"]}>
             <EmailIcon />
             <span>{t("footer.email")}</span>
           </div>
-          <div className={styles["left-section"]}>
-            <div className="flex flex-row items-center">
-              <BilibliIcon className="mr-6" />
-              <TiktokIcon className="mr-6" />
-              <WechatIcon className="mr-6" />
-              <QQIcon />
+          {locale === "zh" && (
+            <div className={styles["left-section"]}>
+              <div className="flex flex-row items-center">
+                <BilibliIcon className="mr-6" />
+                <TiktokIcon className="mr-6" />
+                <WechatIcon className="mr-6" />
+                <QQIcon />
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         <div className="flex-3 grid grid-cols-5 gap-1">

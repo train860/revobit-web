@@ -118,6 +118,7 @@
     "name": "Name：",
     "company": "Company Name：",
     "email": "E-mail：",
+    "companySize": "Company Size：",
     "message": "How can we help?",
     "submit": "Submit"
   }

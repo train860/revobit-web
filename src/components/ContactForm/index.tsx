@@ -4,6 +4,7 @@ import cn from "classnames";
 import Button from "components/Button";
 import BuildingIcon from "components/Icons/BuildingIcon";
 import EmailIcon from "components/Icons/EmailIcon";
+import GroupIcon from "components/Icons/GroupIcon";
 import MessageIcon from "components/Icons/MessageIcon";
 import PhoneIcon from "components/Icons/PhoneIcon";
 import UserIcon from "components/Icons/UserIcon";
@@ -59,7 +60,7 @@ export default function ContactForm({ page, className }: Props) {
   };
   return (
     <div className={_className}>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-4 gap-4">
         <FormItem
           icon={<UserIcon />}
           label={t("contact.name")}
@@ -83,6 +84,15 @@ export default function ContactForm({ page, className }: Props) {
           type={"text"}
           value={values["contact"] || ""}
           onChange={(value) => handleChange("contact", value)}
+        />
+        <FormItem
+          className="z-10"
+          icon={<GroupIcon style={{ color: "white" }} />}
+          label={t("contact.companySize")}
+          mode={"horizontal"}
+          type={"select"}
+          value={values["company_size"] || ""}
+          onChange={(value) => handleChange("company_size", value)}
         />
       </div>
 

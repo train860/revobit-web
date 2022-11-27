@@ -50,13 +50,14 @@ const Home: NextPage = () => {
                 Create Better Products Faster & More Efficiently Than Ever
                 Before
               </h2>
-              <p>We provide digital end-to-end product creation solutions</p>
+              <p>Digitize your value chain</p>
               <Button className={styles.button} onClick={handleScroll}>
                 Learn More
               </Button>
             </div>
             <div className={styles["image-card"]}>
               <div className={styles["image-wrap"]}>
+                <div className={styles["blur"]}></div>
                 <Image
                   src="/images/home/en1.png"
                   width={1}
@@ -68,12 +69,21 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-
+        <div className="bg-rev-bg-black-12 relative pt-20">
+          <div className={cn("container", styles["shoe-wrap"])}>
+            <Shoe />
+          </div>
+        </div>
         <div className="bg-rev-bg-black-12 relative">
           <div className={cn("container", styles["capability-en"])}>
             <div className={styles["image-card"]}>
               <div className={styles["image-wrap"]}>
-                <Shoe />
+                <Image
+                  src="/images/home/en001.png"
+                  className="image"
+                  layout="fill"
+                  alt=""
+                />
               </div>
             </div>
             <div className={styles["content"]}>
@@ -81,7 +91,12 @@ const Home: NextPage = () => {
               <div className={styles["capability-list"]}>
                 <div className={styles["capability-item"]}>
                   <div className={styles["capability-icon"]}>
-                    <Image src="/images/home/Create.png" layout="fill" alt="" />
+                    <Image
+                      src="/images/home/Create.png"
+                      className="image"
+                      layout="fill"
+                      alt=""
+                    />
                   </div>
                   <div className={styles["capability-content"]}>
                     <h3>Create</h3>
@@ -95,6 +110,7 @@ const Home: NextPage = () => {
                   <div className={styles["capability-icon"]}>
                     <Image
                       src="/images/home/Collaborate.png"
+                      className="image"
                       layout="fill"
                       alt=""
                     />
@@ -109,20 +125,22 @@ const Home: NextPage = () => {
                 </div>
                 <div className={styles["capability-item"]}>
                   <div className={styles["capability-icon"]}>
-                    <Image src="/images/home/Share.png" layout="fill" alt="" />
+                    <Image
+                      src="/images/home/Automate.png"
+                      layout="fill"
+                      className="image"
+                      alt=""
+                    />
                   </div>
                   <div className={styles["capability-content"]}>
-                    <h3>Share</h3>
+                    <h3>Automate</h3>
                     <p>
-                      Spend less time exporting and more time reviewing.
-                      Maximize communication and minimize mistakes.
+                      Reduce repetitive data input. BOM automation and PLM
+                      integration enable you to focus on creating value.
                     </p>
                   </div>
                 </div>
               </div>
-              <Button className={styles.button} onClick={handleScroll}>
-                Learn More
-              </Button>
             </div>
           </div>
         </div>
