@@ -78,12 +78,15 @@ const Home: NextPage = () => {
           <div className={cn("container", styles["capability-en"])}>
             <div className={styles["image-card"]}>
               <div className={styles["image-wrap"]}>
-                <Image
-                  src="/images/home/en001.png"
-                  className="image"
-                  layout="fill"
-                  alt=""
-                />
+                <video
+                  className={styles["bg-video"]}
+                  autoPlay={true}
+                  loop={true}
+                  muted={true}
+                  controls={false}
+                >
+                  <source src="/videos/en.mp4"></source>
+                </video>
               </div>
             </div>
             <div className={styles["content"]}>

@@ -117,6 +117,9 @@
     "email": "电话或邮箱：",
     "companySize": "公司规模：",
     "message": "留言：",
-    "submit": "提交"
+    "submit": "提交",
+    "submitting": "数据提交中...",
+    "succeed": "操作成功",
+    "failed": "操作失败"
   }
 }

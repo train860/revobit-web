@@ -120,6 +120,9 @@
     "email": "E-mail：",
     "companySize": "Company Size：",
     "message": "How can we help?",
-    "submit": "Submit"
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "succeed": "Form submitted successfully!",
+    "failed": "Form submitted fail!"
   }
 }

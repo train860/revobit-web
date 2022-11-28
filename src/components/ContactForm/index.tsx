@@ -34,14 +34,14 @@ export default function ContactForm({ page, className }: Props) {
   };
   const handleSubmit = () => {
     //todo check empty
-    const id = toast.loading("数据提交中...");
+    const id = toast.loading(t("contact.submitting") as string);
 
     api.records
       .create("message", { ...values, from: page })
       .then((res) => {
         setValues({});
         toast.update(id, {
-          render: "操作成功",
+          render: t("contact.succeed") as string,
           type: toast.TYPE.SUCCESS,
           isLoading: false,
           autoClose: 2000,
@@ -50,7 +50,7 @@ export default function ContactForm({ page, className }: Props) {
       })
       .catch((err) => {
         toast.update(id, {
-          render: "操作失败",
+          render: t("contact.failed") as string,
           type: toast.TYPE.ERROR,
           isLoading: false,
           autoClose: 2000,
