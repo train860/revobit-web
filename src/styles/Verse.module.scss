@@ -1,3 +1,9 @@
+.banner {
+  :global(p) {
+    margin-top: 2.9375rem;
+    margin-bottom: 5rem;
+  }
+}
 .brand-service {
   @apply relative;
   color: #ffffff;
@@ -38,8 +44,8 @@
   }
   .file-type-card-icon {
     @apply relative;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 12.5rem;
+    height: 6.25rem;
   }
 }
 .setting {

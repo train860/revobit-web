@@ -85,7 +85,7 @@ const Fim: NextPage = () => {
         />
         <Category />
 
-        <div className="bg-rev-bg-contact py-6">
+        <div className="bg-rev-bg-contact py-26">
           <div className="container">
             <h2 className="section-title">FIM全链路数字化解决方案</h2>
             <Tabbar
@@ -106,13 +106,13 @@ const Fim: NextPage = () => {
         {/* 全球合作伙伴 */}
         <div className="bg-rev-bg-black-0B pb-32">
           <div className="container mb-12">
-            <h2 className="section-title mt-0">谁选择了FIM？</h2>
+            <h2 className="section-title pt-26">谁选择了FIM？</h2>
           </div>
           <Brand />
         </div>
         <div className="bg-rev-bg-contact">
           <div className="container pb-32">
-            <h2 className="section-title">联系我们</h2>
+            <h2 className="section-title pt-26">联系我们</h2>
             <h3 className="section-subtitle">即刻体验数字时尚创新之旅</h3>
             <ContactForm page="home" />
           </div>

@@ -115,6 +115,7 @@
     "name": "名字：",
     "company": "公司名称：",
     "email": "电话或邮箱：",
+    "companySize": "公司规模：",
     "message": "留言：",
     "submit": "提交"
   }

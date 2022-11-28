@@ -208,7 +208,7 @@ const Library: NextPage = () => {
         </div>
         <div className="bg-rev-bg-black-0B">
           <div className="container pb-32">
-            <h2 className="section-title">联系我们</h2>
+            <h2 className="section-title pt-47/2">联系我们</h2>
             <h3 className="section-subtitle">开启资产数字化之路</h3>
             <ContactForm page="home" />
           </div>

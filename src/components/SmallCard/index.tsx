@@ -10,6 +10,7 @@ export default function SmallCard({ icon, title, description }: Props) {
   return (
     <div className={styles.card}>
       <div className={styles["icon-wrap"]}>
+        <div className={styles["icon-bg"]}></div>
         <div className={styles.icon}>
           <Image src={icon} alt={title} fill className="image" />
         </div>

@@ -6,6 +6,7 @@ import React from "react";
 import styles from "./CommonBanner.module.scss";
 interface Props {
   id?: string;
+  className?: string;
   image: string;
   title?: string | React.ReactNode;
   subtitle?: string;
@@ -30,7 +31,7 @@ export default function CommonBanner(props: Props) {
   }
 
   return (
-    <div id={props.id} className={styles["common-banner"]}>
+    <div id={props.id} className={cn(styles["common-banner"], props.className)}>
       <Image src={props.image} alt="" fill className={styles["image"]} />
       <div className={styles["cover"]}>
         <div className={styles["content"]}>

@@ -13,13 +13,13 @@ export default function QRcodeSection() {
         <div className={styles["qrcode-image"]}>
           <Image src="" fill alt="" className="image" />
         </div>
-        <p>扫码关注官方公众号</p>
+        <p>微信扫码进入小程序</p>
       </div>
       <div className={styles["qrcode-card"]}>
         <div className={styles["qrcode-image"]}>
           <Image src="" fill alt="" className="image" />
         </div>
-        <p>扫码关注官方公众号</p>
+        <p>扫码下载APP</p>
       </div>
     </div>
   );

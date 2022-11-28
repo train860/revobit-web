@@ -23,18 +23,20 @@ const Trends: NextPage = () => {
 
       <main>
         <CommonBanner
-          id="manager-banner"
-          image="/images/manager.jpg"
+          id="trends-banner"
+          className={styles["banner"]}
+          image="/images/trends/banner.png"
           title={
             <div className="relative w-150">
               <Image
-                src="/images/library/library-title.png"
+                src="/images/trends/trends.png"
                 className="image"
                 fill
                 alt=""
               />
             </div>
           }
+          subtitle="基于全网电商大数据，帮助企划人员洞察流行趋势并实现快速创款的AI智能平台"
           description="数字资产存储中枢，多场景赋能产品创意设计，让管资产、玩设计、做产品的方法变得更简单、高效。"
           buttonText="免费使用"
         />
@@ -42,7 +44,7 @@ const Trends: NextPage = () => {
         <div className="bg-rev-bg-black-0B relative">
           <div className={styles["blur-bg"]}></div>
           <div className="container">
-            <h2 className="section-title">产品亮点</h2>
+            <h2 className="section-title pt-47/2">产品亮点</h2>
             <div className={cn(styles.highlight, "container pt-15")}>
               <BigCard
                 icon="/images/trends/h1.png"
@@ -50,19 +52,19 @@ const Trends: NextPage = () => {
                 description="与阿里官方深度合作，覆盖淘宝/天猫40万+店铺的sku销售数据，提供多维度的分析能力"
               />
               <BigCard
-                icon=""
-                title="电商数据分析"
-                description="与阿里官方深度合作，覆盖淘宝/天猫40万+店铺的sku销售数据，提供多维度的分析能力"
+                icon="/images/trends/h2.png"
+                title="流行趋势预测"
+                description="基于全网资源，整合海内外媒体、社交、时装周等款式图片，与阿里达摩院合作共建人工智能工具，预测未来半年的流行趋势"
               />
               <BigCard
-                icon=""
-                title="电商数据分析"
-                description="与阿里官方深度合作，覆盖淘宝/天猫40万+店铺的sku销售数据，提供多维度的分析能力"
+                icon="/images/trends/h4.png"
+                title="爆款图库"
+                description="整合海内外热门电商平台的旺铺/爆款的销售数据，并提供多种AI工具与多种数据维度进行热销因素的拆解与分析"
               />
               <BigCard
-                icon=""
-                title="电商数据分析"
-                description="与阿里官方深度合作，覆盖淘宝/天猫40万+店铺的sku销售数据，提供多维度的分析能力"
+                icon="/images/trends/h3.png"
+                title="AI智能创款"
+                description="业内首创的AI智能创款工具，智能分析当前市面上热销的款式，并结合趋势数据，自动设计并生成趋势款式"
               />
             </div>
             <SectionCard
@@ -100,29 +102,27 @@ const Trends: NextPage = () => {
           <div className={styles["lib-bg"]}></div>
 
           <div className="container">
-            <div className="my-10">
-              <h2 className="section-title" style={{ marginTop: 0 }}>
-                三大功能场景&解决方案
-              </h2>
+            <div className="pt-47/2 pb-31/2">
+              <h2 className="section-title">三大功能场景&解决方案</h2>
             </div>
             <div className="grid grid-cols-3 gap-7">
               <SmallCard
-                icon="/images/trends/灵感捕捉.png"
+                icon="/images/trends/f1.png"
                 title="灵感捕捉"
                 description="聚合全网潮搭的海量鞋服款式库"
               />
               <SmallCard
-                icon="/images/trends/市场洞察.png"
+                icon="/images/trends/f2.png"
                 title="市场洞察"
                 description="聚合全网潮搭的海量鞋服款式库"
               />
               <SmallCard
-                icon="/images/trends/AI智能创款.png"
+                icon="/images/trends/f3.png"
                 title="AI智能创款"
                 description="聚合全网潮搭的海量鞋服款式库"
               />
             </div>
-            <div className="h-16"></div>
+            <div className="h-36"></div>
 
             <SectionCard
               grid
@@ -218,7 +218,7 @@ const Trends: NextPage = () => {
         </div>
         <div className="bg-rev-bg-black-0B">
           <div className="container pb-32">
-            <h2 className="section-title">联系我们</h2>
+            <h2 className="section-title pt-47/2">联系我们</h2>
             <h3 className="section-subtitle">开启资产数字化之路</h3>
             <ContactForm page="home" />
           </div>

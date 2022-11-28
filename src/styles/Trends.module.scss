@@ -1,3 +1,8 @@
+.banner {
+  :global(.cover > .content) {
+    padding: 0 !important;
+  }
+}
 .highlight {
   @apply grid grid-cols-4 gap-8;
 }

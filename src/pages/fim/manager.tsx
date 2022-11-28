@@ -103,7 +103,7 @@ const Manager: NextPage = () => {
         />
         <div className="bg-rev-bg-black">
           <div className="container">
-            <h2 className="section-title">业务主流程</h2>
+            <h2 className="section-title pt-47/2">业务主流程</h2>
             <Sticky enabled={true} top={0} bottomBoundary={"#tab9"}>
               <div className="bg-rev-bg-black">
                 <div style={{ height: 70 }}></div>
@@ -138,7 +138,7 @@ const Manager: NextPage = () => {
         </div>
         <div className="bg-rev-bg-contact">
           <div className="container">
-            <h2 className="section-title">为什么选择Manager</h2>
+            <h2 className="section-title pt-47/2">为什么选择Manager</h2>
             <div className="h-16"></div>
             <SectionCard
               title={"设计高效协同"}
@@ -304,7 +304,7 @@ const Manager: NextPage = () => {
         </div>
         <div className="bg-rev-bg-black-0B">
           <div className="container pb-32">
-            <h2 className="section-title">联系我们</h2>
+            <h2 className="section-title pt-47/2">联系我们</h2>
             <h3 className="section-subtitle">助力产品开发效率倍速提升</h3>
             <ContactForm page="home" />
           </div>

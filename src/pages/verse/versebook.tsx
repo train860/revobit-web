@@ -28,7 +28,8 @@ const Versebook: NextPage = () => {
 
       <main>
         <CommonBanner
-          id="manager-banner"
+          id="versebook-banner"
+          className={styles["banner"]}
           image="/images/manager.jpg"
           title={
             <div className="relative w-150">
@@ -43,7 +44,7 @@ const Versebook: NextPage = () => {
           description="数字资产存储中枢，多场景赋能产品创意设计，让管资产、玩设计、做产品的方法变得更简单、高效。"
           buttonText="免费使用"
         />
-        <div className="bg-black relative py-36">
+        <div className="bg-black relative py-47/2">
           <div className="blur-bg"></div>
           <div className="container">
             <h2 className="section-title">产品功能</h2>
@@ -58,53 +59,53 @@ const Versebook: NextPage = () => {
             <FunctionSection
               items={[
                 {
-                  icon: "",
+                  icon: "/images/verse/数字化材料库.png",
                   title: "数字化材料库",
                   descrption: "专注鞋服行业数字化材料图书馆",
                 },
                 {
-                  icon: "",
-                  title: "数字化材料库",
-                  descrption: "专注鞋服行业数字化材料图书馆",
+                  icon: "/images/verse/3D可视化.png",
+                  title: "3D可视化",
+                  descrption: "虚拟仿真实物效果",
                 },
                 {
-                  icon: "",
-                  title: "数字化材料库",
-                  descrption: "专注鞋服行业数字化材料图书馆",
+                  icon: "/images/verse/标准色彩库.png",
+                  title: "标准色彩库",
+                  descrption: "潘通、Color、建立个人搭配色板",
                 },
                 {
-                  icon: "",
-                  title: "数字化材料库",
-                  descrption: "专注鞋服行业数字化材料图书馆",
+                  icon: "/images/verse/精准搜索.png",
+                  title: "精准搜索",
+                  descrption: "标准化信息便于快速找到材料",
                 },
                 {
-                  icon: "",
-                  title: "数字化材料库",
-                  descrption: "专注鞋服行业数字化材料图书馆",
+                  icon: "/images/verse/助力设计.png",
+                  title: "助力设计",
+                  descrption: "打通2D、3D设计软件",
                 },
                 {
-                  icon: "",
-                  title: "数字化材料库",
-                  descrption: "专注鞋服行业数字化材料图书馆",
+                  icon: "/images/verse/分享.png",
+                  title: "分享",
+                  descrption: "与他人共享材料",
                 },
                 {
-                  icon: "",
-                  title: "数字化材料库",
-                  descrption: "专注鞋服行业数字化材料图书馆",
+                  icon: "/images/verse/收藏.png",
+                  title: "收藏",
+                  descrption: "建立个人灵感素材库,收集灵感素材",
                 },
                 {
-                  icon: "",
-                  title: "数字化材料库",
-                  descrption: "专注鞋服行业数字化材料图书馆",
+                  icon: "/images/verse/样品申请.png",
+                  title: "样品申请",
+                  descrption: "申请实物样品",
                 },
               ]}
             />
           </div>
         </div>
 
-        <div className="bg-rev-bg-black-10 relative py-36">
+        <div className="bg-rev-bg-black-10 relative pb-36">
           <div className="container">
-            <h2 className="section-title">品牌</h2>
+            <h2 className="section-title py-47/2">品牌</h2>
             <SectionCard
               grid
               gapClassName={"w-10"}
@@ -144,9 +145,9 @@ const Versebook: NextPage = () => {
           </div>
         </div>
 
-        <div className="bg-black relative py-36">
+        <div className="bg-black relative pb-36">
           <div className="container">
-            <h2 className="section-title">供应商</h2>
+            <h2 className="section-title py-47/2">供应商</h2>
             <SectionCard
               grid
               gapClassName={"w-10"}
@@ -198,9 +199,9 @@ const Versebook: NextPage = () => {
         <div className="bg-black relative pt-20 pb-30">
           <BrandService />
         </div>
-        <div className="bg-rev-bg-black-10 relative py-36">
+        <div className="bg-rev-bg-black-10 relative pb-36">
           <div className="container">
-            <h2 className="section-title">设计师</h2>
+            <h2 className="section-title py-47/2">设计师</h2>
             <SectionCard
               title={"专注鞋服行业的数字化材料图书馆"}
               subtitle="运用行业领先数字化材料方案，提升时尚创意水平，打破灵感边界，让设计随心所欲。"
@@ -246,14 +247,14 @@ const Versebook: NextPage = () => {
           </div>
         </div>
         <div className="bg-black">
-          <div className="container py-36">
-            <h2 className="section-title">开始你的数字化之旅</h2>
+          <div className="container pb-36">
+            <h2 className="section-title pt-47/2 pb-18">开始你的数字化之旅</h2>
             <QRcodeSection />
           </div>
         </div>
         <div className="bg-rev-bg-black-10">
-          <div className="container py-36">
-            <h2 className="section-title">咨询Versebook</h2>
+          <div className="container pb-36">
+            <h2 className="section-title pt-47/2">咨询Versebook</h2>
             <h3 className="section-subtitle">为数字化设计赋能</h3>
             <ContactForm page="home" />
           </div>

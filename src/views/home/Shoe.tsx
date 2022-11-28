@@ -10,7 +10,7 @@ const Shoe = () => {
   return (
     <model-viewer
       id="transform"
-      scale="0.8 0.8 0.8"
+      scale="0.6 0.6 0.6"
       //orientation="20deg 0 0"
       style={{ width: "100%", height: "100%" }}
       alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"

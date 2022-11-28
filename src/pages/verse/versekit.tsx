@@ -24,7 +24,8 @@ const Versekit: NextPage = () => {
 
       <main>
         <CommonBanner
-          id="manager-banner"
+          id="versekit-banner"
+          className={styles["banner"]}
           image="/images/manager.jpg"
           title={
             <div className="relative h-20">
@@ -37,7 +38,11 @@ const Versekit: NextPage = () => {
             </div>
           }
           description="数字资产存储中枢，多场景赋能产品创意设计，让管资产、玩设计、做产品的方法变得更简单、高效。"
-          buttonText="免费使用"
+          buttonText={["立即购买", "观看介绍视频"]}
+          buttonClassnames={[
+            cn(styles["banner-primary-btn"], styles["banner-btn"]),
+            styles["banner-btn"],
+          ]}
         />
         <div className="bg-black relative overflow-hidden py-80">
           <div className="container relative z-10">
@@ -94,19 +99,24 @@ const Versekit: NextPage = () => {
             </SectionCard>
           </div>
         </div>
-        <div className="bg-rev-bg-black-10 relative overflow-hidden">
+        <div className="bg-rev-bg-black-10 py-37 relative overflow-hidden">
           <div className="container relative z-10">
             <SectionCard
-              title={"急速快扫，不负精彩"}
+              title={"极速快扫，不负精彩"}
               subtitle="3-5分钟极速扫描高品质3D材质，极简化操作流程搭配强大的软件处理能力，轻松实现入门到专业3D面料人才的进阶。"
               mode={"right"}
             >
-              <div className={cn(styles["image-wrap"], "w-7/10")}>
+              <div
+                className={cn(
+                  styles["image-wrap"],
+                  "w-1/2 rounded-15/2 overflow-hidden"
+                )}
+              >
                 <Image
-                  src="/images/verse/急速快扫，不负精彩.png"
+                  src="/images/verse/极速快扫，不负精彩.png"
                   fill
                   className="image"
-                  alt="急速快扫，不负精彩"
+                  alt="极速快扫，不负精彩"
                 />
               </div>
             </SectionCard>
@@ -115,18 +125,27 @@ const Versekit: NextPage = () => {
 
         <div className="bg-rev-bg-black">
           <div className="container pb-32">
-            <h2 className="section-title">支持多种格式，满足多种需求</h2>
+            <h2 className="section-title pt-24">支持多种格式，满足多种需求</h2>
             <h3 className="section-subtitle">
               支持导出u3m、u3ma、gift、glb等通用材料格式，支持简易导出模型材质渲染图，数据可用于第三方软件。
             </h3>
-            <FileTypeSection icons={["1", "2", "3", "1", "2", "3"]} />
+            <FileTypeSection
+              icons={[
+                "/images/verse/t1.png",
+                "/images/verse/t2.png",
+                "/images/verse/t3.png",
+                "/images/verse/t4.png",
+                "/images/verse/t5.png",
+                "/images/verse/t6.png",
+              ]}
+            />
           </div>
         </div>
         <SettingSection />
         <div className="bg-rev-bg-black-0B">
           <div className="container pb-32">
-            <h2 className="section-title">联系我们</h2>
-            <h3 className="section-subtitle">开启资产数字化之路</h3>
+            <h2 className="section-title pt-24">咨询Versekit</h2>
+            <h3 className="section-subtitle">体验全新数字化材料解决方案</h3>
             <ContactForm page="home" />
           </div>
         </div>

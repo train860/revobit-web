@@ -18,7 +18,7 @@ export default function SettingSection() {
         </div>
         <div className={styles["image-wrap"]}>
           <Image
-            src="/images/verse/技术参数与工作站配置要求.png"
+            src="/images/verse/设计巧妙，极致架构.png"
             fill
             alt=""
             className="image"
