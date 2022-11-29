@@ -74,6 +74,9 @@
       justify-content: flex-end;
     }
     &.with-grid {
+      .des-item {
+        margin: 0;
+      }
       .list {
         @apply grid grid-cols-2 gap-5;
       }
@@ -82,6 +85,13 @@
       }
       .section-card-content {
         flex: 3;
+      }
+    }
+    &.with-card {
+      .list > .des-item {
+        background: #17172f;
+        border-radius: 0.75rem;
+        padding: 1.25rem 1.5625rem;
       }
     }
   }

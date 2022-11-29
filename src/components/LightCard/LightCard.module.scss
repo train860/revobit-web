@@ -3,7 +3,11 @@
   .light-card {
     @apply relative flex flex-row items-center;
     overflow: hidden;
-
+    &.medium .icon {
+      width: 4.375rem;
+      height: 4.375rem;
+      margin-right: 2rem;
+    }
     .icon {
       @apply relative;
       width: 2.5rem;

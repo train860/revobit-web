@@ -61,42 +61,42 @@ const Versebook: NextPage = () => {
                 {
                   icon: "/images/verse/数字化材料库.png",
                   title: "数字化材料库",
-                  descrption: "专注鞋服行业数字化材料图书馆",
+                  description: "专注鞋服行业数字化材料图书馆",
                 },
                 {
                   icon: "/images/verse/3D可视化.png",
                   title: "3D可视化",
-                  descrption: "虚拟仿真实物效果",
+                  description: "虚拟仿真实物效果",
                 },
                 {
                   icon: "/images/verse/标准色彩库.png",
                   title: "标准色彩库",
-                  descrption: "潘通、Color、建立个人搭配色板",
+                  description: "潘通、Color、建立个人搭配色板",
                 },
                 {
                   icon: "/images/verse/精准搜索.png",
                   title: "精准搜索",
-                  descrption: "标准化信息便于快速找到材料",
+                  description: "标准化信息便于快速找到材料",
                 },
                 {
                   icon: "/images/verse/助力设计.png",
                   title: "助力设计",
-                  descrption: "打通2D、3D设计软件",
+                  description: "打通2D、3D设计软件",
                 },
                 {
                   icon: "/images/verse/分享.png",
                   title: "分享",
-                  descrption: "与他人共享材料",
+                  description: "与他人共享材料",
                 },
                 {
                   icon: "/images/verse/收藏.png",
                   title: "收藏",
-                  descrption: "建立个人灵感素材库,收集灵感素材",
+                  description: "建立个人灵感素材库,收集灵感素材",
                 },
                 {
                   icon: "/images/verse/样品申请.png",
                   title: "样品申请",
-                  descrption: "申请实物样品",
+                  description: "申请实物样品",
                 },
               ]}
             />

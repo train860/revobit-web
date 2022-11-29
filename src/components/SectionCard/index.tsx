@@ -12,11 +12,12 @@ export interface Props {
   className?: string;
   textClassName?: string;
   children?: React.ReactNode;
-  title: string;
+  title?: string;
   subtitle?: string;
   list?: DesItem[];
   mode?: "left" | "right";
   grid?: boolean;
+  card?: boolean;
   gapClassName?: string;
 }
 export default function SectionCard({
@@ -28,18 +29,20 @@ export default function SectionCard({
   list,
   mode,
   grid,
+  card,
   gapClassName,
 }: Props) {
   const _className = cn(
     styles["section-card"],
     { [styles.right]: mode === "right" },
     { [styles["with-grid"]]: grid },
+    { [styles["with-card"]]: card },
     className
   );
   return (
     <div className={_className}>
       <div className={cn(styles["section-card-text"], textClassName)}>
-        <h2>{title}</h2>
+        {title && <h2>{title}</h2>}
         {subtitle && <p className={styles["subtitle"]}>{subtitle}</p>}
         {list && (
           <div className={styles["list"]}>

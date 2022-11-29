@@ -12,6 +12,9 @@ module.exports = {
       xl: "1600px",
     },
     extend: {
+      gridTemplateColumns: {
+        15: "repeat(15, minmax(0, 1fr))",
+      },
       colors: {
         "rev-black": "#04040E",
         "rev-bg-black": "#08071B",
