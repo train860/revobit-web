@@ -1,0 +1,11 @@
+.blur {
+  position: absolute;
+  width: 56.125rem;
+  height: 56.125rem;
+  background: #444fc4;
+  opacity: 0.2;
+  filter: blur(15.625rem);
+  top: 0;
+  right: 0;
+  transform: translateX(50%);
+}
