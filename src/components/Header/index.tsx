@@ -17,7 +17,10 @@ import { useRef } from "react";
 import Headroom from "react-headroom";
 
 import styles from "./Header.module.scss";
-export default function Header() {
+interface Props {
+  className?: string;
+}
+export default function Header({ className }: Props) {
   const { t } = useTranslation("common");
   const router = useRouter();
   const { locale } = router;
@@ -25,19 +28,22 @@ export default function Header() {
   const id = useRef(0);
   const [menuProps, toggleMenu] = useMenuState({ transition: true });
 
-  const mouseEvents = {
-    onMouseEnter: () => {
-      clearTimeout(id.current);
-      menuProps.state !== "closing" && toggleMenu(true);
-    },
-    onMouseLeave: () => {
-      const timer = setTimeout(() => toggleMenu(false), 100);
-      id.current = Number(timer);
-    },
-  };
+  const mouseEvents =
+    locale === "zh"
+      ? {
+          onMouseEnter: () => {
+            clearTimeout(id.current);
+            menuProps.state !== "closing" && toggleMenu(true);
+          },
+          onMouseLeave: () => {
+            const timer = setTimeout(() => toggleMenu(false), 100);
+            id.current = Number(timer);
+          },
+        }
+      : null;
 
   return (
-    <Headroom className={styles["header"]}>
+    <Headroom className={cn(styles["header"], className)}>
       <div className={cn(styles["header-wrap"], "container")}>
         <div className={styles["logo"]}>
           <Image

@@ -18,13 +18,15 @@ type LinkItem = {
   name: string;
   url?: string;
 };
-
-export default function Footer() {
+interface Props {
+  className?: string;
+}
+export default function Footer({ className }: Props) {
   const { t } = useTranslation("common");
   const router = useRouter();
   const { locale } = router;
   return (
-    <div className={cn(styles["footer"])}>
+    <div className={cn(styles["footer"], className)}>
       <div className="container flex flex-row">
         <div className={cn(styles["col-card"], "flex-2")}>
           <div className={styles["logo"]}>
