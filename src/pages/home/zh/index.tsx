@@ -10,7 +10,7 @@ import SectionCard from "components/SectionCard";
 import Step from "components/Step";
 import Tabbar from "components/Tabbar";
 import type { GetStaticProps, NextPage } from "next";
-import Image from "next/future/image";
+import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";

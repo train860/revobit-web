@@ -1,4 +1,4 @@
-import Image from "next/future/image";
+import Image from "next/image";
 import styles from "styles/Trends.module.scss";
 interface Props {
   icon: string;

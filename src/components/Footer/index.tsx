@@ -8,7 +8,7 @@ import QQIcon from "components/Icons/QQIcon";
 import TiktokIcon from "components/Icons/TiktokIcon";
 import TimeIcon from "components/Icons/TimeIcon";
 import WechatIcon from "components/Icons/WechatIcon";
-import Image from "next/future/image";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 

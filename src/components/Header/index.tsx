@@ -9,7 +9,7 @@ import {
 } from "@szhsin/react-menu";
 import logo from "assets/images/logo-header.svg";
 import cn from "classnames";
-import Image from "next/future/image";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";

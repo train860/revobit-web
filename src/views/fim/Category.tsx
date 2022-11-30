@@ -4,7 +4,7 @@ import s3 from "assets/images/s3.svg";
 import s4 from "assets/images/s4.svg";
 import cn from "classnames";
 import FimRing from "components/FimRing";
-import Image from "next/future/image";
+import Image from "next/image";
 import styles from "styles/Fim.module.scss";
 //解决方案
 export default function Category() {

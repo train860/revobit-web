@@ -41,7 +41,7 @@ const Home: NextPage = () => {
         ></script>
       </Head>
 
-      <main className={styles["home-en"]}>
+      <main className={cn(styles["home-en"], "font-harmony")}>
         <div className="bg-rev-bg-black-0B relative">
           <div className={cn(styles["blur-bg"], styles["left"])}></div>
           <div className={cn("container", styles["banner-en"])}>

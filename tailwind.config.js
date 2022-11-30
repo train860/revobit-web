@@ -12,6 +12,9 @@ module.exports = {
       xl: "1600px",
     },
     extend: {
+      fontFamily: {
+        harmony: ["var(--font-harmony)"],
+      },
       gridTemplateColumns: {
         15: "repeat(15, minmax(0, 1fr))",
       },

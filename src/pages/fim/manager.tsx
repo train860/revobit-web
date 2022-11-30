@@ -11,7 +11,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useIsomorphicLayoutEffect } from "hooks/useIsomorphicLayoutEffect";
 import type { GetStaticProps, NextPage } from "next";
-import Image from "next/future/image";
+import Image from "next/image";
 import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useEffect, useState } from "react";

@@ -1,5 +1,5 @@
 import cn from "classnames";
-import Image from "next/future/image";
+import Image from "next/image";
 import styles from "styles/Fim.module.scss";
 export default function Tips() {
   return (

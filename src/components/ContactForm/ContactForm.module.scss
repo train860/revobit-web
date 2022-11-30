@@ -12,6 +12,7 @@
     label {
       @apply text-white block flex flex-row items-center;
       margin-right: 0.5rem;
+      flex-shrink: 0;
       opacity: 0.5;
     }
     &.vertical {

@@ -4,7 +4,7 @@ import s3 from "assets/images/s3.svg";
 import s4 from "assets/images/s4.svg";
 import cn from "classnames";
 import ArrowRightIcon from "components/Icons/ArrowRightIcon";
-import Image from "next/future/image";
+import Image from "next/image";
 import styles from "styles/Home.module.scss";
 //解决方案
 export default function Category() {

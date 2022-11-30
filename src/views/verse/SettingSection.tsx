@@ -1,6 +1,6 @@
 import cn from "classnames";
 import Button from "components/Button";
-import Image from "next/future/image";
+import Image from "next/image";
 import styles from "styles/Verse.module.scss";
 export default function SettingSection() {
   return (

@@ -1,5 +1,5 @@
 import cn from "classnames";
-import Image from "next/future/image";
+import Image from "next/image";
 import styles from "styles/Verse.module.scss";
 interface FileTypeCardProps {
   icon: string;

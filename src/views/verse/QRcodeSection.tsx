@@ -1,4 +1,4 @@
-import Image from "next/future/image";
+import Image from "next/image";
 import styles from "styles/Verse.module.scss";
 export default function QRcodeSection() {
   return (

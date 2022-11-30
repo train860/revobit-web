@@ -4,7 +4,7 @@ import b3 from "assets/images/home/case-b3.png";
 import b4 from "assets/images/home/case-b4.png";
 import cn from "classnames";
 import RoundArrowRightIcon from "components/Icons/RoundArrowRightIcon";
-import Image from "next/future/image";
+import Image from "next/image";
 import styles from "styles/Home.module.scss";
 //案例
 export default function Case() {
