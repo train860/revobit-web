@@ -6,8 +6,8 @@ import Layout from "components/Layout";
 import SectionCard from "components/SectionCard";
 import SmallCard from "components/SmallCard";
 import type { GetStaticProps, NextPage } from "next";
-import Image from "next/image";
 import Head from "next/head";
+import Image from "next/image";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import styles from "styles/Verse.module.scss";
 import FileTypeSection from "views/verse/FileTypeSection";
@@ -26,7 +26,7 @@ const Versekit: NextPage = () => {
         <CommonBanner
           id="versekit-banner"
           className={styles["banner"]}
-          image="/images/manager.jpg"
+          image="/images/versekit.png"
           title={
             <div className="relative h-20">
               <Image

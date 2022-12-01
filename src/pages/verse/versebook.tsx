@@ -7,8 +7,8 @@ import SectionCard from "components/SectionCard";
 import SmallCard from "components/SmallCard";
 import Tabbar from "components/Tabbar";
 import type { GetStaticProps, NextPage } from "next";
-import Image from "next/image";
 import Head from "next/head";
+import Image from "next/image";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useState } from "react";
 import styles from "styles/Verse.module.scss";
@@ -30,7 +30,7 @@ const Versebook: NextPage = () => {
         <CommonBanner
           id="versebook-banner"
           className={styles["banner"]}
-          image="/images/manager.jpg"
+          image="/images/versebook.png"
           title={
             <div className="relative w-150">
               <Image

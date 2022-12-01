@@ -59,6 +59,7 @@ const Home: NextPage = () => {
               <div className={styles["image-wrap"]}>
                 <div className={styles["blur"]}></div>
                 <Image
+                  className="relative z-10"
                   src="/images/home/en1.png"
                   width={1}
                   height={1}
