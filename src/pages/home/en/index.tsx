@@ -179,7 +179,7 @@ const Home: NextPage = () => {
 
         {/** contact */}
         <div className="bg-rev-bg-contact" id="contact-form">
-          <div className="container pt-23">
+          <div className="container py-23">
             <h2 className="font-semibold text-white text-center text-9 w-2/3 mx-auto">
               We offer a personalized onboarding and development process focused
               on meeting your business needs.

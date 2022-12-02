@@ -59,7 +59,7 @@ export default function ContactForm({ page, className }: Props) {
       });
   };
   return (
-    <div className={_className}>
+    <div className={cn(_className)}>
       <div className="grid grid-cols-4 gap-4">
         <FormItem
           icon={<UserIcon />}

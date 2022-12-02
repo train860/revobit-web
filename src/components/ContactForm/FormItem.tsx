@@ -41,6 +41,8 @@ export default function FormItem(props: Props) {
           onItemClick={(e) => {
             props.onChange?.(e.value);
           }}
+          //direction="bottom"
+          //position="initial"
           menuButton={
             <MenuButton className="flex flex-row justify-between items-center w-full h-full">
               <div>{props.value}</div>
