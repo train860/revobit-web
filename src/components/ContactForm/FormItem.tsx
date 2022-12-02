@@ -68,10 +68,16 @@ export default function FormItem(props: Props) {
             51-250
           </MenuItem>
           <MenuItem
-            className={cn({ active: props.value === "251+" })}
-            value={"251+"}
+            className={cn({ active: props.value === "251-2500" })}
+            value={"251-2500"}
           >
-            251+
+            251-2500
+          </MenuItem>
+          <MenuItem
+            className={cn({ active: props.value === ">2500" })}
+            value={">2500"}
+          >
+            &gt;2500
           </MenuItem>
         </Menu>
       </div>

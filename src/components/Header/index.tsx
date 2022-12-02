@@ -43,7 +43,13 @@ export default function Header({ className }: Props) {
       : null;
 
   return (
-    <Headroom className={cn(styles["header"], className)}>
+    <Headroom
+      className={cn(
+        styles["header"],
+        { [styles["header-en"]]: locale === "en" },
+        className
+      )}
+    >
       <div className={cn(styles["header-wrap"], "container")}>
         <div className={styles["logo"]}>
           <Image
