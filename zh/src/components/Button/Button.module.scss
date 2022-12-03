@@ -1,0 +1,21 @@
+@tailwind components;
+@layer components {
+  .button {
+    @apply text-white font-semibold;
+    line-height: 3.75rem;
+    padding: 0 3.25rem;
+    height: 3.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #ffffff;
+    border-radius: 0.75rem;
+    z-index: 0;
+    &:hover {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(1.25rem);
+    }
+    &.small {
+      height: 3.125rem;
+      line-height: 3.125rem;
+    }
+  }
+}

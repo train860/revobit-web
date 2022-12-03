@@ -1,0 +1,408 @@
+.top-banner {
+  @apply relative bg-rev-bg-black;
+  .mask {
+    @apply absolute left-0 right-0 top-0 bottom-0 flex justify-center items-center;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .banner-wrap {
+    @apply relative w-full;
+    //left: 50%;
+    //transform: translateX(-50%);
+    //width: 120rem;
+    //height: 56.25rem;
+  }
+  .content {
+    @apply flex flex-1 items-center justify-center relative h-full;
+    .title {
+      font-weight: 300;
+      //margin-top: -6.25rem;
+      font-size: 6.25rem;
+      line-height: 8.75rem;
+      color: #ffffff;
+    }
+    .pager {
+      @apply absolute flex justify-center items-center;
+      width: 12.5rem;
+      height: 6.25rem;
+      bottom: 3.125rem;
+      background-image: url("../assets/images/home/pager-bg.png");
+      background-size: cover;
+    }
+    .pager-wrap {
+      @apply grid grid-cols-2 gap-7;
+      height: 4.125rem;
+    }
+    .pager-item {
+      @apply relative overflow-hidden;
+      width: 4.125rem;
+      height: 4.125rem;
+      border-radius: 100%;
+      border: 2px solid transparent;
+      cursor: pointer;
+      &.active {
+        border-color: rgba(255, 255, 255, 0.3);
+      }
+    }
+    .pager-item-cover {
+      @apply absolute left-0 right-0 top-0 bottom-0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .progress {
+      @apply absolute top-0 z-10;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+.bg-video {
+  width: 100%;
+}
+.scheme {
+  background: linear-gradient(140.27deg, #212121 2.55%, #141414 93.93%);
+  border-radius: 1.875rem;
+  height: 12.5rem;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: flex;
+  &:hover {
+    .scheme-icon > img {
+      transform: translate(-50%, -35%) scale(1.4);
+    }
+  }
+  &.s1 {
+    background-image: url("../assets/images/s1-bg.svg");
+    &:hover {
+      background-image: url("../assets/images/s1-bg-active.svg");
+    }
+  }
+  &.s2 {
+    background-image: url("../assets/images/s2-bg.svg");
+    &:hover {
+      background-image: url("../assets/images/s2-bg-active.svg");
+    }
+  }
+  &.s3 {
+    background-image: url("../assets/images/s3-bg.svg");
+    &:hover {
+      background-image: url("../assets/images/s3-bg-active.svg");
+    }
+  }
+  &.s4 {
+    background-image: url("../assets/images/s4-bg.svg");
+    &:hover {
+      background-image: url("../assets/images/s4-bg-active.svg");
+    }
+  }
+  .scheme-icon,
+  .scheme-text {
+    flex: 1;
+  }
+  .scheme-icon {
+    position: relative;
+    img {
+      position: absolute;
+      z-index: 9;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%);
+      margin-top: -60px;
+    }
+  }
+  .scheme-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      font-weight: 600;
+      font-size: 1.625rem;
+      line-height: 2.25rem;
+      color: #ffffff;
+      margin-bottom: 1.25rem;
+    }
+    a {
+      display: flex;
+      color: #ffffff;
+      opacity: 0.5;
+      align-items: center;
+      font-size: 1.125rem;
+    }
+  }
+}
+.casebg {
+  position: absolute;
+  width: 59.75rem;
+  height: 59.75rem;
+  right: 0;
+  bottom: 0;
+  background: #444fc4;
+  opacity: 0.2;
+  filter: blur(15.625rem);
+  transform: translate(50%, 50%);
+}
+.case {
+  position: relative;
+  border-radius: 1.875rem;
+  height: 40rem;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-size: cover;
+  padding: 4.375rem 3.75rem;
+  color: white;
+  overflow: hidden;
+  .bg-image {
+    position: absolute;
+  }
+  &.s1 {
+    background: linear-gradient(180deg, #20334a 0%, #352b45 100%);
+    .bg-image {
+      width: 36.4375rem;
+      height: 36.4375rem;
+      left: 0;
+      top: 7.5rem;
+    }
+  }
+  &.s2 {
+    background: linear-gradient(161.16deg, #182922 1.21%, #3a5347 98.68%);
+    .bg-image {
+      width: 60.4375rem;
+      height: 44.6875rem;
+      top: 7rem;
+      left: -7.5rem;
+    }
+  }
+  &.s3 {
+    background: linear-gradient(161.16deg, #3a2b55 1.21%, #2b4340 98.68%);
+    .bg-image {
+      width: 35.3125rem;
+      height: 49.9375rem;
+      top: 5rem;
+      left: 0;
+      opacity: 0.8;
+    }
+  }
+  &.s4 {
+    background: linear-gradient(180deg, #182350 0%, #342c59 100%);
+    .bg-image {
+      width: 55.4375rem;
+      height: 78.375rem;
+      top: 3.2rem;
+      left: -6rem;
+      opacity: 0.8;
+    }
+  }
+  h2 {
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 2.375rem;
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 2.8125rem;
+    margin-top: 0.75rem;
+    margin-bottom: 2rem;
+  }
+}
+.e2e-wrap {
+  position: relative;
+  width: 120rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/**** for EN ****/
+
+.home-en .blur-bg {
+  @apply absolute;
+  width: 39.8125rem;
+  height: 39.8125rem;
+  background: #444fc4;
+  opacity: 0.4;
+  filter: blur(15.625rem);
+  &.left {
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+.home-en .button {
+  text-transform: uppercase;
+}
+.banner-en {
+  @apply relative flex flex-row items-center;
+  padding-bottom: 6.25rem;
+  .content {
+    flex: 3;
+    padding-top: 5rem;
+  }
+  .image-card {
+    flex: 4;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.375rem;
+    line-height: 4.125rem;
+    color: #ffffff;
+  }
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.625rem;
+    line-height: 1.75rem;
+    color: #ffffff;
+    mix-blend-mode: hard-light;
+    opacity: 0.3;
+    margin-top: 2rem;
+    margin-bottom: 4.5rem;
+  }
+
+  .image-card > .image-wrap {
+    @apply relative;
+    width: 42.3125rem;
+    height: 42.3125rem;
+  }
+  .image-card > .image-wrap > .blur {
+    position: absolute;
+    width: 42.3125rem;
+    height: 42.3125rem;
+    left: 0;
+    top: 0;
+    left: -30%;
+    top: 0;
+    background-image: url(/images/home/en1-bg.png);
+    background-size: cover;
+  }
+}
+.shoe-wrap {
+  height: 43.75rem;
+  background: #17172f;
+  border-radius: 60px;
+  .cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+  }
+}
+.capability-en {
+  @apply relative flex flex-row items-center;
+  padding: 6.875rem 0;
+  .image-card {
+    flex: 3;
+    .image-wrap {
+      @apply relative overflow-hidden;
+      height: 30rem;
+      margin-right: 6.875rem;
+    }
+  }
+  .content {
+    flex: 2;
+    h2 {
+      font-weight: 600;
+      font-size: 2.6875rem;
+      line-height: 3rem;
+      /* identical to box height */
+
+      color: #ffffff;
+    }
+  }
+  .capability-list {
+    margin-top: 2.1875rem;
+    margin-bottom: 1.4375rem;
+    overflow: hidden;
+  }
+  .capability-list > .capability-item {
+    @apply flex flex-row;
+    margin-bottom: 1.25rem;
+    .capability-icon {
+      @apply relative;
+      width: 1.875rem;
+      height: 1.875rem;
+      margin-right: 0.75rem;
+      margin-top: 0.1875rem;
+      :global {
+        .image {
+          top: 50% !important;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    h3 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.75rem;
+      line-height: 2.1875rem;
+      /* identical to box height, or 194% */
+
+      color: #ffffff;
+
+      opacity: 0.7;
+      margin-bottom: 0.1875rem;
+    }
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.375rem;
+      line-height: 1.875rem;
+      /* or 188% */
+
+      color: #ffffff;
+
+      opacity: 0.3;
+    }
+  }
+}
+.team-en {
+  @apply relative flex flex-row items-center;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  .content {
+    flex: 1;
+  }
+  .image-card {
+    flex: 2;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 2.6875rem;
+    line-height: 2.4375rem;
+
+    color: #ffffff;
+    margin-bottom: 1.875rem;
+  }
+  p {
+    font-style: normal;
+    font-weight: 400;
+
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+    margin-bottom: 1.625rem;
+    color: #ffffff;
+    opacity: 0.5;
+  }
+  .button {
+    margin-top: 1.1875rem;
+  }
+  .image-card {
+    @apply flex justify-end;
+  }
+  .image-card > .image-wrap {
+    @apply relative overflow-hidden;
+    width: 40.625rem;
+    height: 36.5625rem;
+    background: #d9d9d9;
+    border-radius: 1.625rem;
+    background-image: url("/images/home/en3.png");
+    background-size: cover;
+  }
+}
+.bg-card-en {
+  padding-top: 0.5rem;
+  padding-bottom: 8.125rem;
+}

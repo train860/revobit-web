@@ -1,0 +1,54 @@
+@tailwind components;
+@layer components {
+  .tabs {
+    @apply flex flex-row justify-center items-center;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 2.125rem;
+    text-align: center;
+    color: #ffffff;
+    mix-blend-mode: hard-light;
+    margin-bottom: 3.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    .tab {
+      @apply relative;
+      padding-bottom: 2rem;
+      padding-left: 1.375rem;
+      padding-right: 1.375rem;
+      opacity: 0.5;
+      cursor: pointer;
+      &.active {
+        opacity: 1;
+        .line {
+          @apply block;
+        }
+      }
+      .line {
+        @apply absolute bottom-0 hidden;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1.25rem;
+        height: 0.1875rem;
+        background: #ffffff;
+        border-radius: 1.25rem;
+      }
+    }
+  }
+  .brand {
+    @apply relative grid grid-cols-5 gap-5;
+    .item {
+      @apply relative flex flex-col justify-center items-center;
+      height: 9.375rem;
+      background: #14122e;
+      border-radius: 1.5rem;
+    }
+    .image-wrap {
+      @apply relative w-full flex justify-center items-center;
+    }
+  }
+  .cover {
+    @apply absolute left-0 right-0 bottom-0 flex justify-center items-end;
+    height: 19rem;
+    background: linear-gradient(180deg, rgba(8, 7, 27, 0) 0%, #08071b 100%);
+  }
+}
