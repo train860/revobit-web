@@ -1,6 +1,9 @@
+import { animated, config, useSpring } from "@react-spring/web";
 import cn from "classnames";
 import Button from "components/Button";
+import useIntersectionObserver from "hooks/useIntersectionObserver";
 import Image from "next/image";
+import { useRef } from "react";
 import styles from "styles/Fim.module.scss";
 export type TabData = {
   title: string;
@@ -15,6 +18,18 @@ export interface Props {
   center?: boolean;
 }
 export default function TabSection({ simple, center, data }: Props) {
+  const triggerRef = useRef(null);
+  const dataRef = useIntersectionObserver(triggerRef, {
+    freezeOnceVisible: false,
+  });
+  const imgStyle = useSpring({
+    config: { ...config.default },
+    from: { opacity: 0, transform: "translateY(50%)" },
+    to: {
+      opacity: dataRef?.isIntersecting ? 1 : 0,
+      transform: dataRef?.isIntersecting ? "translateY(0)" : "translateY(50%)",
+    },
+  });
   return (
     <div className={styles["tab-section"]}>
       <div className={styles["left"]}>
@@ -36,9 +51,10 @@ export default function TabSection({ simple, center, data }: Props) {
         </div>
       </div>
       <div className={styles["right"]}>
-        <div className={styles["image-wrap"]}>
+        <div ref={triggerRef} />
+        <animated.div className={styles["image-wrap"]} style={imgStyle}>
           <Image src={data?.image} alt="" fill className="image" />
-        </div>
+        </animated.div>
       </div>
     </div>
   );

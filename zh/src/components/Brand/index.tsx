@@ -1,7 +1,9 @@
+import { animated, config, useSpring } from "@react-spring/web";
 import cn from "classnames";
 import Button from "components/Button";
+import useIntersectionObserver from "hooks/useIntersectionObserver";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import styles from "./Brand.module.scss";
 
@@ -61,8 +63,44 @@ const items: ListItem[][] = [
   ],
 ];
 const tabItems: string[] = ["品牌", "制造商", "材料商", "生态合作伙伴"];
+
+function BrandSection({ index }: { index: number }) {
+  const triggerRef = useRef(null);
+  const dataRef = useIntersectionObserver(triggerRef, {
+    freezeOnceVisible: false,
+  });
+  const imgStyle = useSpring({
+    config: { ...config.default },
+    from: { opacity: 0, scale: 0 },
+    to: {
+      opacity: dataRef?.isIntersecting ? 1 : 0,
+      scale: dataRef?.isIntersecting ? 1 : 0,
+    },
+  });
+  return (
+    <div
+      className={cn(styles.brand, "container")}
+      ref={triggerRef}
+      key={String(tabItems[index])}
+    >
+      {items[index].map((item: ListItem, index: number) => {
+        return (
+          <div className={styles.item} key={String(index)}>
+            <animated.div
+              className={styles["image-wrap"]}
+              style={{ width: item.width, height: item.height, ...imgStyle }}
+            >
+              <Image src={require(`./images/${item.icon}.png`)} alt="" fill />
+            </animated.div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
 export default function Brand() {
   const [activeIndex, setActiveIndex] = useState(0);
+
   const renderTabs = () => {
     return tabItems.map((item, index) => {
       return (
@@ -82,20 +120,7 @@ export default function Brand() {
   return (
     <div className="relative">
       <div className={cn(styles.tabs, "container")}>{renderTabs()}</div>
-      <div className={cn(styles.brand, "container")}>
-        {items[activeIndex].map((item: ListItem, index: number) => {
-          return (
-            <div className={styles.item} key={String(index)}>
-              <div
-                className={styles["image-wrap"]}
-                style={{ width: item.width, height: item.height }}
-              >
-                <Image src={require(`./images/${item.icon}.png`)} alt="" fill />
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      <BrandSection key={String(activeIndex)} index={activeIndex} />
     </div>
   );
 }

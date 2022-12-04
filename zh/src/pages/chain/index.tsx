@@ -9,8 +9,6 @@ import SectionCard from "components/SectionCard";
 import Slider from "components/Slider";
 import Step from "components/Step";
 import Tabbar from "components/Tabbar";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useIsomorphicLayoutEffect } from "hooks/useIsomorphicLayoutEffect";
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
@@ -21,7 +19,6 @@ import Sticky, { Status } from "react-stickynode";
 import styles from "styles/SupplyChain.module.scss";
 import TabSection, { TabData } from "views/fim/TabSection";
 
-gsap.registerPlugin(ScrollTrigger);
 const tabDataList: TabData[] = [
   {
     title: "Trends",

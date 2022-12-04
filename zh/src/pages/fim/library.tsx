@@ -7,8 +7,6 @@ import SectionCard from "components/SectionCard";
 import Slider from "components/Slider";
 import Step from "components/Step";
 import Tabbar from "components/Tabbar";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useIsomorphicLayoutEffect } from "hooks/useIsomorphicLayoutEffect";
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
@@ -18,7 +16,6 @@ import { useEffect, useState } from "react";
 import styles from "styles/Fim.module.scss";
 import TabSection, { TabData } from "views/fim/TabSection";
 import Tips from "views/fim/Tips";
-gsap.registerPlugin(ScrollTrigger);
 const tabDataList: TabData[] = [];
 //use sticky
 const Library: NextPage = () => {
