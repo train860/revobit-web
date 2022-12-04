@@ -11,6 +11,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import styles from "styles/Trends.module.scss";
+import VideoSection from "views/trends/VideoSection";
 import FunctionSection from "views/verse/FunctionSection";
 
 //use sticky
@@ -452,6 +453,7 @@ const Trends: NextPage = () => {
             </SectionCard>
           </div>
         </div>
+        <VideoSection />
         {/** 他们正在使用 */}
         <div className="bg-rev-bg-black-0B">
           <div className="container pb-32">

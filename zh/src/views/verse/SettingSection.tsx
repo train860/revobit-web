@@ -6,10 +6,14 @@ export default function SettingSection() {
   return (
     <div className={styles.setting}>
       <div className={cn(styles.mask, styles.mask1)}>
-        <Image src="/images/verse/mask1.png" fill alt="" className="image" />
+        <div className="relative h-full w-full">
+          <Image src="/images/verse/mask1.png" fill alt="" />
+        </div>
       </div>
       <div className={cn(styles.mask, styles.mask2)}>
-        <Image src="/images/verse/mask2.png" fill alt="" className="image" />
+        <div className="relative h-full w-full">
+          <Image src="/images/verse/mask2.png" fill alt="" />
+        </div>
       </div>
       <div className={cn(styles["setting-wrap"], "container")}>
         <div className={styles.main}>

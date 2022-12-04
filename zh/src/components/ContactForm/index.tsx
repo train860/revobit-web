@@ -3,7 +3,6 @@ import "react-toastify/dist/ReactToastify.min.css";
 import cn from "classnames";
 import Button from "components/Button";
 import BuildingIcon from "components/Icons/BuildingIcon";
-import EmailIcon from "components/Icons/EmailIcon";
 import GroupIcon from "components/Icons/GroupIcon";
 import MessageIcon from "components/Icons/MessageIcon";
 import PhoneIcon from "components/Icons/PhoneIcon";

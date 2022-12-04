@@ -17,3 +17,64 @@
   filter: blur(15.625rem);
   transform: translate(50%, 0);
 }
+.video {
+  @apply relative overflow-hidden;
+
+  background: #1c1c3b;
+  .mask {
+    @apply absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 59.9375rem;
+    height: 17.5rem;
+    &.mask1 {
+      right: 0;
+    }
+    &.mask2 {
+      left: 0;
+    }
+  }
+  .video-wrap {
+    @apply flex flex-row justify-between relative;
+    padding: 4.375rem 0;
+  }
+  .main {
+    @apply flex flex-row items-center;
+    .image-wrap {
+      position: relative;
+      width: 15.5rem;
+      border-radius: 1.125rem;
+      overflow: hidden;
+      margin-right: 2.375rem;
+    }
+    .play-cover {
+      @apply absolute flex justify-center items-center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      .play-btn {
+        @apply relative;
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+    h2 {
+      font-size: 2rem;
+      line-height: 2.375rem;
+
+      color: #ffffff;
+    }
+    p {
+      margin-top: 0.9375rem;
+      font-size: 1.125rem;
+      line-height: 1.5625rem;
+
+      color: #ffffff;
+
+      mix-blend-mode: hard-light;
+      opacity: 0.4;
+    }
+  }
+}

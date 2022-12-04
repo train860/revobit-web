@@ -44,21 +44,23 @@ const Versekit: NextPage = () => {
             styles["banner-btn"],
           ]}
         />
-        <div className="bg-black relative overflow-hidden py-80">
+        <div className="bg-black relative overflow-hidden ">
           <div className="container relative z-10">
             <SectionCard
               title={"数字面料，真实还原"}
               subtitle="业界领先的AI系统、极简化操作流程。为材料供应与销售打通物理和数字世界间的屏障，真实还原各种织物、皮料与合成材料的质感。"
               mode={"left"}
+              className="flex flex-row justify-center h-195"
             >
               <div className={cn(styles["image-wrap"], " w-4/5")}></div>
             </SectionCard>
           </div>
-          <div className="absolute w-1/2 top-0 bottom-0 right-0">
+          <div className="absolute w-full top-0 bottom-0 right-0">
             <Image
               src={"/images/verse/数字面料，真实还原.png"}
-              className="image"
-              fill
+              className="float-right"
+              height={780}
+              width={1250}
               alt="数字面料，真实还原"
             />
           </div>

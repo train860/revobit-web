@@ -60,6 +60,7 @@ module.exports = {
       },
       height: {
         65: "16.25rem",
+        195: "48.75rem",
       },
       flex: {
         2: "2",
