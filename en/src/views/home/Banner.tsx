@@ -1,7 +1,4 @@
-import pager1 from "assets/images/home/pager-1.png";
-import pager2 from "assets/images/home/pager-2.png";
 import cn from "classnames";
-import Progress from "components/Progress";
 import Image from "next/image";
 import { useState } from "react";
 import styles from "styles/Home.module.scss";
