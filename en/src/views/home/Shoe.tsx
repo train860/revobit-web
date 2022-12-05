@@ -7,6 +7,7 @@ declare global {
   }
 }
 const Shoe = () => {
+  const src=`${process.env.NEXT_PUBLIC_API_ENDPOINT}/static/shoe.gltf`
   return (
     <model-viewer
       id="transform"
@@ -14,7 +15,7 @@ const Shoe = () => {
       //orientation="20deg 0 0"
       style={{ width: "100%", height: "100%" }}
       alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
-      src="https://test-20221101.revobit.cn/static/shoe.gltf"
+      src={src}
       ar
       shadow-intensity="1"
       camera-controls
