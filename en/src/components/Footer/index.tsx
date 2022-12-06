@@ -140,19 +140,21 @@ export default function Footer({ className }: Props) {
             className={cn(styles["left-section"], "relative")}
             style={{ alignItems: "start" }}
           >
-            <LocationIcon style={{ width: 30 }} />
+            <LocationIcon />
             <span style={{ marginTop: -4 }}>{footer.location}</span>
           </div>
           <div className={styles["left-section"]}>
             <TimeIcon />
             <span>{footer.workTime}</span>
           </div>
+          {/**
           <div className={styles["left-section"]}>
             <EmailIcon />
             <span>{footer.email}</span>
           </div>
+          */}
         </div>
-
+        {/**
         <div className="flex-3 grid grid-cols-5 gap-1">
           <div className={styles["col-card"]}>
             <h2>{footer.product.title}</h2>
@@ -184,7 +186,7 @@ export default function Footer({ className }: Props) {
               <p key={String(index)}>{item.name}</p>
             ))}
           </div>
-        </div>
+            </div>*/}
       </div>
     </div>
   );
