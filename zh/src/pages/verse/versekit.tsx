@@ -44,7 +44,10 @@ const Versekit: NextPage = () => {
             styles["banner-btn"],
           ]}
         />
-        <div className="bg-black relative overflow-hidden ">
+        <div
+          className="relative overflow-hidden "
+          style={{ background: "#06051d" }}
+        >
           <div className="container relative z-10">
             <SectionCard
               title={"数字面料，真实还原"}
@@ -56,13 +59,15 @@ const Versekit: NextPage = () => {
             </SectionCard>
           </div>
           <div className="absolute w-full top-0 bottom-0 right-0">
-            <Image
-              src={"/images/verse/数字面料，真实还原.png"}
-              className="float-right"
-              height={780}
-              width={1250}
-              alt="数字面料，真实还原"
-            />
+            <video
+              className={styles["kit-video"]}
+              autoPlay={true}
+              loop={true}
+              muted={true}
+              controls={false}
+            >
+              <source src="/videos/verse.mp4"></source>
+            </video>
           </div>
         </div>
         <div className="bg-rev-bg-black-10 relative overflow-hidden">

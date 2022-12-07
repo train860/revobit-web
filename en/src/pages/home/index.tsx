@@ -22,6 +22,7 @@ const Home: NextPage = () => {
       behavior: "smooth",
     });
   }, []);
+
   return (
     <Layout
       className={{
@@ -74,7 +75,7 @@ const Home: NextPage = () => {
             <Shoe />
           </div>
         </div>
-        <div className="bg-rev-bg-black-12 relative">
+        <div className="bg-rev-bg-black-12 relative" id="capability">
           <div className={cn("container", styles["capability-en"])}>
             <div className={styles["image-card"]}>
               <div className={styles["image-wrap"]}>
@@ -173,7 +174,7 @@ const Home: NextPage = () => {
 
         {/** contact */}
         <div className="bg-rev-bg-contact" id="contact-form">
-          <div className="container py-23">
+          <div className="container py-23" style={{ overflow: "initial" }}>
             <h2 className="font-semibold text-white text-center text-9 w-2/3 mx-auto">
               We offer a personalized onboarding and development process focused
               on meeting your business needs.

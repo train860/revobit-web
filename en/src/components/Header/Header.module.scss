@@ -1,21 +1,18 @@
 @tailwind components;
 @layer components {
   .header {
-    @apply fixed top-0 left-0 w-full text-white;
-
+    @apply absolute top-0 left-0 w-full text-white;
     z-index: 9999;
-    &.header-en {
-      .header-wrap .menu li {
-        font-size: 1.75rem;
-        &.active {
-          font-weight: 900;
-        }
+    .header-wrap .menu li {
+      font-size: 1.75rem;
+      &.active {
+        font-weight: 900;
       }
-      .logo {
-        width: 11.25rem;
-        height: 4.375rem;
-        opacity: 1;
-      }
+    }
+    .logo {
+      width: 11.25rem;
+      height: 4.375rem;
+      opacity: 1;
     }
     :global(.headroom--pinned) {
       background: rgba(8, 7, 27, 0.7);

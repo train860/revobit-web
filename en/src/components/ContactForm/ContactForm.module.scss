@@ -7,7 +7,7 @@
     background: #1e1e3a;
     opacity: 0.7;
     border-radius: 0.75rem;
-    padding: 1.1875rem 1.5rem;
+    padding: 0 1.5rem;
     margin-bottom: 1.25rem;
     label {
       @apply text-white block flex flex-row items-center;
@@ -17,34 +17,42 @@
     }
     &.vertical {
       @apply flex-col;
+      padding: 1.1875rem 1.5rem;
       label {
         margin-bottom: 0.5rem;
       }
+      .form-item-input {
+        padding: 0;
+      }
     }
-    .select {
-      position: absolute !important;
-      :global {
-        .szh-menu {
-          background: rgba(255, 255, 255, 0.1);
-          backdrop-filter: blur(1.6477rem);
-          border-radius: 1rem;
-          color: rgba(255, 255, 255, 0.3);
-          padding: 0;
-          overflow: hidden;
-          min-width: 24.0625rem;
-          .szh-menu__item {
-            padding: 1rem 1.625rem;
-          }
-          .szh-menu__item.active,
-          .szh-menu__item.szh-menu__item--hover {
-            background: rgba(255, 255, 255, 0.05);
-            color: white;
-          }
-        }
+    .form-item-label {
+    }
+    .form-item-input {
+      @apply bg-transparent border-none outline-none text-white flex-1;
+      padding: 1.1875rem 0;
+      span {
+        display: inline-block;
       }
     }
   }
-  .form-item-input {
-    @apply bg-transparent border-none outline-none text-white flex-1;
+  .select {
+    position: absolute;
+    z-index: 99;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1.6477rem);
+    border-radius: 1rem;
+    color: rgba(255, 255, 255, 0.3);
+    padding: 0;
+    overflow: hidden;
+    min-width: 24.0625rem;
+    li {
+      padding: 1rem 1.625rem;
+      cursor: pointer;
+    }
+    li.active,
+    li.highlight {
+      background: rgba(255, 255, 255, 0.05);
+      color: white;
+    }
   }
 }

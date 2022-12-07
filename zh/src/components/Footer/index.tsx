@@ -20,70 +20,52 @@ interface Props {
   className?: string;
 }
 const footer = {
-  location:
-    "中华人民共和国 广东省 广州市 海珠区新港东路70号 万胜汇创客PARK 15栋001",
   workTime: "星期一 - 星期五 9:30AM - 6:00PM",
   contact: "19928307570",
   email: "customer@4dstc.com",
   product: {
-    title: "产品",
+    title: "数字化解决方案",
     values: [
       {
-        name: "全链路解决方案",
+        name: "Revofim概览",
+        url: "/fim.html",
+      },
+      {
+        name: "Revofim studio",
         url: "",
       },
       {
-        name: "材料数字化",
-        url: "",
+        name: "Revofim library",
+        url: "/fim/library.html",
       },
       {
-        name: "设计工具",
-        url: "",
+        name: "Revofim manager",
+        url: "/fim/manager.html",
       },
       {
-        name: "数字化服务",
-        url: "",
-      },
-      {
-        name: "XR",
-        url: "",
+        name: "Revofim trends",
+        url: "/trends.html",
       },
     ],
   },
   solutions: {
-    title: "解决方案",
+    title: "材料数字化",
     values: [
       {
-        name: "品牌商",
-        url: "",
+        name: "Versekit",
+        url: "/versekit.html",
       },
       {
-        name: "材料商",
-        url: "",
-      },
-      {
-        name: "制造商",
-        url: "",
-      },
-      {
-        name: "生态合作伙伴",
-        url: "",
+        name: "Versebook",
+        url: "/versebook.html",
       },
     ],
   },
   chains: {
-    title: "供应链",
+    title: "设计工具",
     values: [
       {
-        name: "美安科技",
-        url: "",
-      },
-      {
-        name: "智慧生物科技",
-        url: "",
-      },
-      {
-        name: "美达布料工艺",
+        name: "KicksCAD",
         url: "",
       },
     ],
@@ -96,15 +78,15 @@ const footer = {
         url: "",
       },
       {
-        name: "Versebook",
+        name: "KicksCAD 2D",
         url: "",
       },
       {
-        name: "Versekit",
+        name: "KicksCAD 3D",
         url: "",
       },
       {
-        name: "KicksCAD",
+        name: "Verseset",
         url: "",
       },
     ],
@@ -117,7 +99,7 @@ const footer = {
         url: "",
       },
       {
-        name: "时谛动态",
+        name: "资讯动态",
         url: "",
       },
       {
@@ -126,6 +108,10 @@ const footer = {
       },
       {
         name: "商务合作",
+        url: "",
+      },
+      {
+        name: "隐私政策",
         url: "",
       },
     ],
@@ -143,8 +129,12 @@ export default function Footer({ className }: Props) {
             className={cn(styles["left-section"], "relative")}
             style={{ alignItems: "start" }}
           >
-            <LocationIcon style={{ width: 30 }} />
-            <span style={{ marginTop: -4 }}>{footer.location}</span>
+            <LocationIcon />
+            <span style={{ marginTop: -4 }}>
+              中华人民共和国 广东省 广州市 海珠区新港东路70号
+              <br />
+              万胜汇创客PARK 15栋001
+            </span>
           </div>
           <div className={styles["left-section"]}>
             <TimeIcon />
@@ -152,12 +142,13 @@ export default function Footer({ className }: Props) {
           </div>
           <div className={styles["left-section"]}>
             <PhoneIcon />
-            <span>{footer.contact}</span>
+            <span>{footer.contact}（微信同号）</span>
           </div>
           <div className={styles["left-section"]}>
             <EmailIcon />
             <span>{footer.email}</span>
           </div>
+          {/*
           <div className={styles["left-section"]}>
             <div className="flex flex-row items-center">
               <BilibliIcon className="mr-6" />
@@ -165,38 +156,52 @@ export default function Footer({ className }: Props) {
               <WechatIcon className="mr-6" />
               <QQIcon />
             </div>
-          </div>
+          </div>*/}
         </div>
 
         <div className="flex-3 grid grid-cols-5 gap-1">
           <div className={styles["col-card"]}>
             <h2>{footer.product.title}</h2>
             {footer.product.values.map((item: LinkItem, index: number) => (
-              <p key={String(index)}>{item.name}</p>
+              <p key={String(index)}>
+                <a href={item.url}>{item.name}</a>
+              </p>
             ))}
           </div>
           <div className={styles["col-card"]}>
             <h2>{footer.solutions.title}</h2>
             {footer.solutions.values.map((item: LinkItem, index: number) => (
-              <p key={String(index)}>{item.name}</p>
+              <p key={String(index)}>
+                {" "}
+                <a href={item.url}>{item.name}</a>
+              </p>
             ))}
           </div>
           <div className={styles["col-card"]}>
             <h2>{footer.chains.title}</h2>
             {footer.chains.values.map((item: LinkItem, index: number) => (
-              <p key={String(index)}>{item.name}</p>
+              <p key={String(index)}>
+                {" "}
+                <a href={item.url}>{item.name}</a>
+              </p>
             ))}
           </div>
           <div className={styles["col-card"]}>
             <h2>{footer.download.title}</h2>
             {footer.download.values.map((item: LinkItem, index: number) => (
-              <p key={String(index)}>{item.name}</p>
+              <p key={String(index)}>
+                {" "}
+                <a href={item.url}>{item.name}</a>
+              </p>
             ))}
           </div>
           <div className={styles["col-card"]}>
             <h2>{footer.about.title}</h2>
             {footer.about.values.map((item: LinkItem, index: number) => (
-              <p key={String(index)}>{item.name}</p>
+              <p key={String(index)}>
+                {" "}
+                <a href={item.url}>{item.name}</a>
+              </p>
             ))}
           </div>
         </div>

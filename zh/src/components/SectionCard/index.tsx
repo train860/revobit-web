@@ -1,5 +1,8 @@
+import { animated, config, useSpring } from "@react-spring/web";
 import cn from "classnames";
+import useIntersectionObserver from "hooks/useIntersectionObserver";
 import Image from "next/image";
+import { useRef } from "react";
 
 import styles from "./SectionCard.module.scss";
 export type DesItem = {
@@ -39,6 +42,19 @@ export default function SectionCard({
     { [styles["with-card"]]: card },
     className
   );
+
+  const triggerRef = useRef(null);
+  const dataRef = useIntersectionObserver(triggerRef, {
+    freezeOnceVisible: false,
+  });
+  const imgStyle = useSpring({
+    config: { ...config.default },
+    from: { opacity: 0, transform: "translateY(50%)" },
+    to: {
+      opacity: dataRef?.isIntersecting ? 1 : 0,
+      transform: dataRef?.isIntersecting ? "translateY(0)" : "translateY(50%)",
+    },
+  });
   return (
     <div className={_className}>
       <div className={cn(styles["section-card-text"], textClassName)}>
@@ -71,7 +87,10 @@ export default function SectionCard({
         )}
       </div>
       <div className={gapClassName || "md:w-12"}></div>
-      <div className={styles["section-card-content"]}>{children}</div>
+      <animated.div style={imgStyle} className={styles["section-card-content"]}>
+        <div ref={triggerRef} />
+        {children}
+      </animated.div>
     </div>
   );
 }

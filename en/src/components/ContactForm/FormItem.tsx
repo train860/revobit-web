@@ -1,9 +1,11 @@
 import { Menu, MenuButton, MenuItem } from "@szhsin/react-menu";
 import cn from "classnames";
 import ArrowDownIcon from "components/Icons/ArrowDownIcon";
-import { useRef } from "react";
+import Downshift from "downshift";
+import { useEffect, useRef } from "react";
 
 import styles from "./ContactForm.module.scss";
+import Select from "./Select";
 interface Props {
   className?: string;
   icon?: React.ReactNode;
@@ -13,11 +15,28 @@ interface Props {
   value: string;
   onChange?: (value: string) => void;
 }
+
+const options = [
+  {
+    value: "1-10",
+    title: "1-10",
+  },
+  { value: "11-50", title: "11-50" },
+  { value: "51-250", title: "51-250" },
+  { value: "251-2k", title: "251-2k" },
+  { value: "2k-5k", title: "2k-5k" },
+  { value: "5k-10k", title: "5k-10k" },
+  { value: "10k-50k", title: "10k-50k" },
+  { value: "50k-100k", title: "50k-100k" },
+  { value: "100k+", title: "100k+" },
+];
+
 export default function FormItem(props: Props) {
   const renderItem = () => {
     if (props.type === "textarea") {
       return (
         <textarea
+          rows={4}
           className={styles["form-item-input"]}
           value={props.value}
           onChange={(e) => props.onChange?.(e.target.value)}
@@ -34,57 +53,27 @@ export default function FormItem(props: Props) {
         />
       );
     }
-    return (
-      <div className="text-white flex-1" style={{ margin: "-1.1875rem 0" }}>
-        <Menu
-          className={styles["select"]}
-          onItemClick={(e) => {
-            props.onChange?.(e.value);
-          }}
-          //direction="bottom"
-          //position="initial"
-          menuButton={
-            <MenuButton className="flex flex-row justify-between items-center w-full h-full">
-              <div>{props.value}</div>
-              <ArrowDownIcon />
-            </MenuButton>
-          }
-          transition
-        >
-          <MenuItem
-            className={cn({ active: props.value === "1-10" })}
-            value={"1-10"}
-          >
-            1-10
-          </MenuItem>
-          <MenuItem
-            className={cn({ active: props.value === "11-50" })}
-            value={"11-50"}
-          >
-            11-50
-          </MenuItem>
-          <MenuItem
-            className={cn({ active: props.value === "51-250" })}
-            value={"51-250"}
-          >
-            51-250
-          </MenuItem>
-          <MenuItem
-            className={cn({ active: props.value === "251-2500" })}
-            value={"251-2500"}
-          >
-            251-2500
-          </MenuItem>
-          <MenuItem
-            className={cn({ active: props.value === ">2500" })}
-            value={">2500"}
-          >
-            &gt;2500
-          </MenuItem>
-        </Menu>
-      </div>
-    );
+    return null;
   };
+  if (props.type === "select") {
+    return (
+      <Select
+        className={cn(
+          styles["form-item"],
+          { [styles["vertical"]]: props.mode === "vertical" },
+          props.className
+        )}
+        items={options}
+        label={
+          <label className={styles["form-item-label"]}>
+            {props.icon && <span className="mr-2">{props.icon}</span>}
+            <span>{props.label}</span>
+          </label>
+        }
+        onChange={(val) => props.onChange?.(val)}
+      ></Select>
+    );
+  }
   return (
     <div
       className={cn(

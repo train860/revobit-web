@@ -62,7 +62,7 @@ const Fim: NextPage = () => {
 
       <main>
         <CommonBanner
-          image="/images/manager.jpg"
+          image="/images/fim.png"
           title={
             <div className="relative w-80 mx-auto">
               <Image
