@@ -16,8 +16,14 @@ export interface Props {
   data: TabData;
   simple?: boolean;
   center?: boolean;
+  onButtonClick?: () => void;
 }
-export default function TabSection({ simple, center, data }: Props) {
+export default function TabSection({
+  simple,
+  center,
+  data,
+  onButtonClick,
+}: Props) {
   const triggerRef = useRef(null);
   const dataRef = useIntersectionObserver(triggerRef, {
     freezeOnceVisible: false,
@@ -42,10 +48,13 @@ export default function TabSection({ simple, center, data }: Props) {
           </div>
           {!simple && (
             <>
+              {/*
               <a className={styles["more"]} href="">
                 了解更多
-              </a>
-              <Button className="mt-16">免费使用</Button>
+          </a>*/}
+              <Button className="mt-16" onClick={onButtonClick}>
+                了解更多
+              </Button>
             </>
           )}
         </div>

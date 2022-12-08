@@ -136,10 +136,11 @@ export default function Footer({ className }: Props) {
               万胜汇创客PARK 15栋001
             </span>
           </div>
+          {/*
           <div className={styles["left-section"]}>
             <TimeIcon />
             <span>{footer.workTime}</span>
-          </div>
+          </div>*/}
           <div className={styles["left-section"]}>
             <PhoneIcon />
             <span>{footer.contact}（微信同号）</span>

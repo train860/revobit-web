@@ -42,7 +42,7 @@ export default function Case() {
           </div>
           <div className={cn(styles.case, styles.s4)}>
             <h2>04</h2>
-            <h3>生态合作伙伴</h3>
+            <h3>生态合作</h3>
             <RoundArrowRightIcon />
             <div className={styles["bg-image"]}>
               <Image src={b4} alt="" fill />

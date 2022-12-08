@@ -22,53 +22,58 @@ import Category from "../../views/fim/Category";
 
 const tabDataList: TabData[] = [
   {
+    title: "创意企划",
+    des: ["洞察流行趋势，锁定企划方向"],
+    image: "/images/manager/计划下达.png",
+  },
+  {
     title: "计划下达",
-    des: ["一段文字内容一段文字内容一段文字内容"],
+    des: ["在线开始产品研发计划"],
     image: "/images/manager/计划下达.png",
   },
   {
     title: "设计任务分配",
-    des: ["一段文字内容一段文字内容一段文字内容"],
+    des: ["将具体任务通过线上分配至不同角色"],
     image: "/images/manager/设计任务分配.png",
   },
   {
     title: "材料开发",
-    des: ["一段文字内容一段文字内容一段文字内容"],
+    des: ["根据产品要求寻找或研发合适的材料"],
     image: "/images/manager/材料开发.png",
   },
   {
     title: "2D造型设计",
-    des: ["一段文字内容一段文字内容一段文字内容"],
+    des: ["设计师绘制2D设计图并上传系统"],
     image: "/images/manager/2D造型设计.png",
   },
   {
     title: "3D模型设计",
-    des: ["一段文字内容一段文字内容一段文字内容"],
+    des: ["配合建模、渲染软件构建3D模型"],
     image: "/images/manager/3D模型设计.png",
   },
   {
     title: "评审管理",
-    des: ["一段文字内容一段文字内容一段文字内容"],
+    des: ["进行线上评审以筛选合格产品"],
     image: "/images/manager/评审管理.png",
   },
   {
     title: "数字选品",
-    des: ["一段文字内容一段文字内容一段文字内容"],
+    des: ["对不同款式、不同颜色的作品进行在线选品。"],
     image: "/images/manager/数字选品.png",
   },
   {
     title: "商品资料包管理",
-    des: ["一段文字内容一段文字内容一段文字内容"],
+    des: ["对选定的产品进行资料包的生成和导出"],
     image: "/images/manager/商品资料包管理.png",
   },
   {
     title: "实样验证",
-    des: ["一段文字内容一段文字内容一段文字内容"],
+    des: ["线下打样判定产品的实际效果"],
     image: "/images/manager/实样验证.png",
   },
   {
     title: "大货技转",
-    des: ["一段文字内容一段文字内容一段文字内容"],
+    des: ["对于合格的产品进行生成资料的输出和生成的对接"],
     image: "/images/manager/大货技转.png",
   },
 ];
@@ -117,7 +122,7 @@ const Manager: NextPage = () => {
       <main>
         <CommonBanner
           id="manager-banner"
-          image="/images/manager.jpg"
+          image="/images/manager.png"
           title={
             <div className="relative w-150">
               <Image
@@ -140,15 +145,16 @@ const Manager: NextPage = () => {
                 <Step
                   selectedIndex={selectedIndex}
                   list={[
-                    { index: 1, text: "计划下达" },
-                    { index: 2, text: "设计任务分配" },
-                    { index: 3, text: "材料开发" },
-                    { index: [4, 5], text: ["2D造型设计", "3D模型设计"] },
-                    { index: 6, text: "评审管理" },
-                    { index: 7, text: "数字选品" },
-                    { index: 8, text: "商品资料包管理" },
-                    { index: 9, text: "实样验证" },
-                    { index: 10, text: "大货技转" },
+                    { index: 1, text: "创意企划" },
+                    { index: 2, text: "计划下达" },
+                    { index: 3, text: "设计任务分配" },
+                    { index: 4, text: "材料开发" },
+                    { index: [5, 6], text: ["2D造型设计", "3D模型设计"] },
+                    { index: 7, text: "评审管理" },
+                    { index: 8, text: "数字选品" },
+                    { index: 9, text: "商品资料包管理" },
+                    { index: 10, text: "实样验证" },
+                    { index: 11, text: "大货技转" },
                   ]}
                 ></Step>
               </div>
@@ -201,7 +207,7 @@ const Manager: NextPage = () => {
               list={[
                 {
                   icon: "/images/manager/开放兼容-1.png",
-                  text: "无缝兼容Adob​​e Illustrator®及Photoshop设计软件",
+                  text: "无缝兼容Adob​​e Illustrator及Photoshop设计软件",
                 },
                 {
                   icon: "/images/manager/开放兼容-2.png",

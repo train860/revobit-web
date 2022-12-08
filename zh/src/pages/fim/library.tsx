@@ -26,7 +26,7 @@ const Library: NextPage = () => {
       <main>
         <CommonBanner
           id="manager-banner"
-          image="/images/manager.jpg"
+          image="/images/library.png"
           title={
             <div className="relative w-150">
               <Image

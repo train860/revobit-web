@@ -62,7 +62,7 @@ const items: ListItem[][] = [
     { width: "160px", height: "54px", icon: "华为云" },
   ],
 ];
-const tabItems: string[] = ["品牌", "制造商", "材料商", "生态合作伙伴"];
+const tabItems: string[] = ["品牌", "制造商", "材料商", "生态合作"];
 
 function BrandSection({ index }: { index: number }) {
   const triggerRef = useRef(null);

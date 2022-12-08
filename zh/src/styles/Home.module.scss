@@ -206,7 +206,8 @@
 }
 .e2e-wrap {
   position: relative;
-  width: 120rem;
+  max-width: 120rem;
+  width: 100%;
   left: 50%;
   transform: translateX(-50%);
 }

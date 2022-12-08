@@ -37,7 +37,7 @@ const Home: NextPage = () => {
           <div className="container">
             <h2 className="section-title">端到端全链路数字化解决方案</h2>
             <h3 className="section-subtitle">
-              时谛智能为时尚行业鞋、服、包等全品类提供“设计-制造-生产-销售”全链路数字化服务。
+              时谛智能为时尚行业鞋、服、包等全品类提供“设计-研发-生产-销售”全链路数字化服务
             </h3>
           </div>
           <div className={styles["e2e-wrap"]}>
@@ -57,7 +57,7 @@ const Home: NextPage = () => {
           <div className="container">
             <h2 className="section-title mt-0">全球合作伙伴</h2>
             <h3 className="section-subtitle">
-              时谛智能已服务全球20多个国家地区，超40家一流时尚品牌，100多家供应商。
+              时谛智能已服务全球20多个国家及地区，超40家一流时尚品牌，100多家供应商
             </h3>
           </div>
           <Brand />
@@ -66,7 +66,7 @@ const Home: NextPage = () => {
           <div className="container py-32">
             <h2 className="section-title">联系我们</h2>
             <h3 className="section-subtitle">
-              释放设计灵感，即刻开启时尚数字新体验。
+              释放设计灵感，即刻开启时尚数字新体验
             </h3>
             <ContactForm page="home" />
           </div>
