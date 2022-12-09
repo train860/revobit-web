@@ -14,6 +14,7 @@ interface Props {
   buttonText: string | string[];
   buttonClassnames?: string | string[];
   buttonLink?: string;
+  onButtonClick?: (index: number) => void;
 }
 
 export default function CommonBanner(props: Props) {
@@ -43,6 +44,7 @@ export default function CommonBanner(props: Props) {
           <div className={styles["buttons"]}>
             {buttons.map((text, index) => (
               <Button
+                onClick={() => props.onButtonClick?.(index)}
                 className={cn(styles["btn"], btnClassnames[index] || "")}
                 key={String(index)}
               >

@@ -9,11 +9,19 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useCallback } from "react";
 import styles from "styles/Verse.module.scss";
 import FileTypeSection from "views/verse/FileTypeSection";
 import SettingSection from "views/verse/SettingSection";
 
 const Versekit: NextPage = () => {
+  const handleScroll = useCallback(() => {
+    const form = document.getElementById("contact-form");
+    window.scrollTo({
+      top: form?.offsetTop,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <Layout>
       <Head>
@@ -37,12 +45,17 @@ const Versekit: NextPage = () => {
               />
             </div>
           }
-          description="数字资产存储中枢，多场景赋能产品创意设计，让管资产、玩设计、做产品的方法变得更简单、高效。"
+          description="业界首款自主研发新一代数字化材料扫描仪，结合AI驱动算法与顶尖工业光学系统，为材料商提供行业领先的数字化解决方案。"
           buttonText={["立即购买", "观看介绍视频"]}
           buttonClassnames={[
             cn(styles["banner-primary-btn"], styles["banner-btn"]),
             styles["banner-btn"],
           ]}
+          onButtonClick={(index) => {
+            if (index === 0) {
+              handleScroll();
+            }
+          }}
         />
         <div
           className="relative overflow-hidden "
@@ -74,7 +87,7 @@ const Versekit: NextPage = () => {
           <div className="container relative z-10">
             <SectionCard
               title={"设计巧妙，极致架构"}
-              subtitle="versekit作为一款桌面级扫描设备，集成先进的世界级工业光学系统辅以机器视觉捕捉配置，可以准确捕捉基于物理纹理的各种面料效果。"
+              subtitle="Versekit作为一款桌面级扫描设备，集成先进的世界级工业光学系统辅以机器视觉捕捉配置，可以准确捕捉基于物理纹理的各种面料效果。"
               mode={"right"}
             >
               <div className={cn(styles["image-wrap"], "w-7/10")}>
@@ -92,7 +105,7 @@ const Versekit: NextPage = () => {
           <div className="container relative z-10">
             <SectionCard
               title={"内外兼修，智有所源"}
-              subtitle="基于物理的渲染（PBR)是渲染引擎的新行业标准，在versekit中，结合AI驱动算法提供完整的PBR工作流支持（高光流&金属流），以重建完美的数字化材料。"
+              subtitle="基于物理的渲染（PBR)是渲染引擎的新行业标准，在Versekit中，结合AI驱动算法提供完整的PBR工作流支持（高光流&金属流），以重建完美的数字化材料。"
               mode={"left"}
             >
               <div className={cn(styles["image-wrap"], "w-7/10")}>
@@ -149,7 +162,7 @@ const Versekit: NextPage = () => {
           </div>
         </div>
         <SettingSection />
-        <div className="bg-rev-bg-black-0B">
+        <div className="bg-rev-bg-black-0B" id="contact-form">
           <div className="container pb-32">
             <h2 className="section-title pt-24">咨询Versekit</h2>
             <h3 className="section-subtitle">体验全新数字化材料解决方案</h3>
