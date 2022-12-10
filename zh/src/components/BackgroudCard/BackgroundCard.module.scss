@@ -34,6 +34,12 @@
       color: #ffffff;
       opacity: 0.5;
       margin-top: 0.4375rem;
+      &::before {
+        content: "·";
+        font-size: 1.25rem;
+        opacity: 0.5;
+        margin-right: 0.4375rem;
+      }
     }
   }
   .bg-card.vertical {

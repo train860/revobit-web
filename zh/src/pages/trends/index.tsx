@@ -9,13 +9,17 @@ import SmallCard from "components/SmallCard";
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useState } from "react";
 import styles from "styles/Trends.module.scss";
+import AISection from "views/trends/AISection";
+import InspirationSection from "views/trends/InspirationSection";
+import MarketingSection from "views/trends/MarketingSection";
 import VideoSection from "views/trends/VideoSection";
 import FunctionSection from "views/verse/FunctionSection";
 
 //use sticky
 const Trends: NextPage = () => {
+  const [tabIndex, setTabIndex] = useState(1);
   return (
     <Layout>
       <Head>
@@ -40,8 +44,8 @@ const Trends: NextPage = () => {
             </div>
           }
           subtitle="基于全网电商大数据，帮助企划人员洞察流行趋势并实现快速创款的AI智能平台"
-          description="数字资产存储中枢，多场景赋能产品创意设计，让管资产、玩设计、做产品的方法变得更简单、高效。"
-          buttonText="免费使用"
+          description="主要包括灵感图库、数据洞察、潮流趋势预测、AI智能创款、企划案制作等功能，为企业提供从企划-设计-测款-销售全链路的数字化解决方案，提升鞋服行业商品快反的效率与爆款几率"
+          buttonText={["款式平台", "趋势中心"]}
         />
         {/** 产品亮点 */}
         <div className="bg-rev-bg-black-0B relative">
@@ -71,8 +75,8 @@ const Trends: NextPage = () => {
               />
             </div>
             <SectionCard
-              title={"时谛智能 X 天猫TMIC 为商家带来的价值解析"}
-              subtitle=" 是立足于阿里巴巴全渠道的数字化新品研发平台。TMIC结合大数据分析和小样本调研，助力品牌定位目标人群，洞察市场机会，研发创新产品，以及优化营销策略。"
+              title={"时谛智能 X 天猫TMIC创新“爆款”打造链路"}
+              subtitle="时谛智能在行业纵深、技术积累的优势能够有效适配天猫基于海量消费数据而形成的深刻消费者需求洞察，将爆款打造链路通过数字化方式形成可复制的标准化打法，让爆款的落地有“据”可循。"
               mode={"left"}
               className={"py-40"}
               list={[
@@ -110,115 +114,37 @@ const Trends: NextPage = () => {
             </div>
             <div className="grid grid-cols-3 gap-7">
               <SmallCard
+                onClick={() => {
+                  tabIndex !== 0 && setTabIndex(0);
+                }}
+                active={tabIndex === 0}
                 icon="/images/trends/f1.png"
                 title="灵感捕捉"
                 description="聚合全网潮搭的海量鞋服款式库"
               />
               <SmallCard
+                onClick={() => {
+                  tabIndex !== 1 && setTabIndex(1);
+                }}
+                active={tabIndex === 1}
                 icon="/images/trends/f2.png"
                 title="市场洞察"
                 description="聚合全网潮搭的海量鞋服款式库"
               />
               <SmallCard
+                onClick={() => {
+                  tabIndex !== 2 && setTabIndex(2);
+                }}
+                active={tabIndex === 2}
                 icon="/images/trends/f3.png"
                 title="AI智能创款"
                 description="聚合全网潮搭的海量鞋服款式库"
               />
             </div>
             <div className="h-36"></div>
-
-            <SectionCard
-              grid
-              title={"市场分析，透视历史"}
-              subtitle="基于全网电商市场海量的历史销售数据进行探索，全方位多角度不断深入细分，为企划与设计提供有力的数据支持"
-              mode={"right"}
-              className="pb-37"
-              list={[
-                {
-                  icon: "/images/trends/i1.png",
-                  text: "全方位的市场动向分析",
-                  description: "横向分析行业大盘、竞争对手的布局，掌握市场动向",
-                },
-                {
-                  icon: "/images/trends/i2.png",
-                  text: "多层级的品类透视分析",
-                  description:
-                    "纵向分析品类、价格带、品牌、店铺、款式再到颜色、材料等粒度，定位到具体的设计元素",
-                },
-              ]}
-            >
-              <div className={cn(styles["image-wrap"], " w-4/5")}>
-                <Image
-                  src="/images/library/智能化搜索.png"
-                  fill
-                  className="image"
-                  alt="智能化搜索"
-                />
-              </div>
-            </SectionCard>
-            <SectionCard
-              title={"流行榜单，洞察当下"}
-              subtitle="利用AI算法的能力，针对当前市场上最热门的店铺、款式等进行属性的分解与分析，寻找出当下市场上最热销、最受欢迎的款式、颜色、风格、面料等"
-              mode={"left"}
-              className="pb-37"
-            >
-              <div className={cn(styles["image-wrap"], " w-4/5")}>
-                <Image
-                  src="/images/library/可视化管理.png"
-                  fill
-                  className="image"
-                  alt="可视化管理"
-                />
-              </div>
-            </SectionCard>
-            <SectionCard
-              grid
-              title={"趋势预测未来"}
-              subtitle="通过知识图谱与NLP自然语言技术对当前社会上的流行信息进行捕捉并加工，提炼出社交、媒体、机构、电商、品牌五大指数，对未来一段时间可能流行的款式、风格等进行预测，指导品牌进行企划定位"
-              mode={"right"}
-              className="pb-37"
-              list={[
-                {
-                  icon: "/images/trends/i3.png",
-                  text: "社交指数",
-                  description:
-                    "以小红书、instagram、微博等社交软件上的文本、图片等内容进行分析得出",
-                },
-                {
-                  icon: "/images/trends/i4.png",
-                  text: "媒体指数",
-                  description:
-                    "以市面上各种媒体的公开文章或报道等内容进行分析得出",
-                },
-                {
-                  icon: "/images/trends/i5.png",
-                  text: "机构指数",
-                  description:
-                    "以wgsn、蝶讯、贝恩等外部趋势研究结构的研究内容进行分析得出",
-                },
-                {
-                  icon: "/images/trends/i6.png",
-                  text: "电商指数",
-                  description:
-                    "以淘系、抖音、得物等电商平台的热卖情况进行分析得出",
-                },
-                {
-                  icon: "/images/trends/i7.png",
-                  text: "品牌指数",
-                  description:
-                    "以Farfetch、巴黎世家、Gucci、爱马仕等对流行有较大影响力的品牌方的款式设计方向进行分析得出",
-                },
-              ]}
-            >
-              <div className={cn(styles["image-wrap"], " w-4/5")}>
-                <Image
-                  src="/images/library/整合数字资产.png"
-                  fill
-                  className="image"
-                  alt="整合数字资产"
-                />
-              </div>
-            </SectionCard>
+            {tabIndex === 0 && <InspirationSection />}
+            {tabIndex === 1 && <MarketingSection />}
+            {tabIndex === 2 && <AISection />}
           </div>
         </div>
 
@@ -235,10 +161,10 @@ const Trends: NextPage = () => {
             >
               <div className={cn(styles["image-wrap"], " w-4/5")}>
                 <Image
-                  src="/images/library/智能化搜索.png"
+                  src="/images/trends/t1.png"
                   fill
                   className="image"
-                  alt="智能化搜索"
+                  alt="款式平台"
                 />
               </div>
             </SectionCard>
@@ -275,11 +201,11 @@ const Trends: NextPage = () => {
             />
           </div>
         </div>
-        {/** 对于鞋企 */}
+        {/** 鞋企 */}
         <div className="bg-rev-bg-black-0B">
           <div className="container">
             <h2 className="section-title py-47/2" style={{ margin: 0 }}>
-              对于鞋企
+              鞋企
             </h2>
             <SectionCard
               title="传统鞋企痛点"
@@ -310,10 +236,10 @@ const Trends: NextPage = () => {
             >
               <div className={cn(styles["image-wrap"], " w-4/5")}>
                 <Image
-                  src="/images/library/智能化搜索.png"
+                  src="/images/trends/t2.png"
                   fill
                   className="image"
-                  alt="智能化搜索"
+                  alt="传统材料商痛点"
                 />
               </div>
             </SectionCard>
@@ -351,20 +277,20 @@ const Trends: NextPage = () => {
             >
               <div className={cn(styles["image-wrap"], " w-4/5")}>
                 <Image
-                  src="/images/library/智能化搜索.png"
+                  src="/images/trends/t3.png"
                   fill
                   className="image"
-                  alt="智能化搜索"
+                  alt="传统材料商痛点"
                 />
               </div>
             </SectionCard>
           </div>
         </div>
-        {/** 对于传统材料商 */}
+        {/** 传统材料商 */}
         <div className="bg-rev-bg-black-12">
           <div className="container">
             <h2 className="section-title py-47/2" style={{ margin: 0 }}>
-              对于传统材料商
+              传统材料商
             </h2>
             <SectionCard
               title="传统材料商痛点"
@@ -391,10 +317,10 @@ const Trends: NextPage = () => {
             >
               <div className={cn(styles["image-wrap"], " w-4/5")}>
                 <Image
-                  src="/images/library/智能化搜索.png"
+                  src="/images/trends/t4.png"
                   fill
                   className="image"
-                  alt="智能化搜索"
+                  alt="传统材料商痛点"
                 />
               </div>
             </SectionCard>
@@ -444,10 +370,10 @@ const Trends: NextPage = () => {
             >
               <div className={cn(styles["image-wrap"], " w-4/5")}>
                 <Image
-                  src="/images/library/智能化搜索.png"
+                  src="/images/trends/t5.png"
                   fill
                   className="image"
-                  alt="智能化搜索"
+                  alt="材料商解决方案"
                 />
               </div>
             </SectionCard>

@@ -4,6 +4,7 @@ import "@szhsin/react-menu/dist/transitions/slide.css";
 import {
   ControlledMenu,
   MenuItem,
+  MenuState,
   SubMenu,
   useMenuState,
 } from "@szhsin/react-menu";
@@ -17,6 +18,11 @@ import { useRef, useState } from "react";
 import Headroom from "react-headroom";
 
 import styles from "./Header.module.scss";
+
+type MyMenuState = {
+  [key: number]: MenuState;
+};
+
 interface Props {
   className?: string;
 }
@@ -24,20 +30,34 @@ export default function Header({ className }: Props) {
   const ref0 = useRef(null);
   const ref1 = useRef(null);
   const ref2 = useRef(null);
-  const [active, setActive] = useState(-1);
-  const id = useRef(0);
+  const [menuState, setMenuState] = useState<MyMenuState>({
+    0: "closed",
+    1: "closed",
+    2: "closed",
+  });
+  const timer = useRef<Record<number, number>>({
+    0: 0,
+    1: 0,
+    2: 0,
+  });
 
   //const [menuProps, toggleMenu] = useMenuState({ transition: true });
 
   const mouseEvents = (index: number) => ({
     onMouseEnter: () => {
-      clearTimeout(id.current);
       //menuProps.state !== "closing" && toggleMenu(true);
-      active !== index && setActive(index);
+      if (menuState[index] !== "closing") {
+        clearTimeout(timer.current[index]);
+        setMenuState({ ...menuState, [index]: "opening" });
+      }
     },
     onMouseLeave: () => {
-      const timer = setTimeout(() => setActive(-1), 100);
-      id.current = Number(timer);
+      setMenuState({ ...menuState, [index]: "closing" });
+      const t = setTimeout(
+        () => setMenuState({ ...menuState, [index]: "closed" }),
+        1
+      );
+      timer.current[index] = Number(t);
     },
   });
 
@@ -80,7 +100,7 @@ export default function Header({ className }: Props) {
       </div>
       <ControlledMenu
         {...mouseEvents(0)}
-        state={active == 0 ? "opening" : "closing"}
+        state={menuState[0]}
         transition={true}
         className={styles["menu-dropdown"]}
         anchorRef={ref0}
@@ -111,7 +131,7 @@ export default function Header({ className }: Props) {
       </ControlledMenu>
       <ControlledMenu
         {...mouseEvents(1)}
-        state={active == 1 ? "opening" : "closing"}
+        state={menuState[1]}
         transition={true}
         className={styles["menu-dropdown"]}
         anchorRef={ref1}
@@ -133,7 +153,7 @@ export default function Header({ className }: Props) {
       </ControlledMenu>
       <ControlledMenu
         {...mouseEvents(2)}
-        state={active == 2 ? "opening" : "closing"}
+        state={menuState[2]}
         transition={true}
         className={styles["menu-dropdown"]}
         anchorRef={ref2}

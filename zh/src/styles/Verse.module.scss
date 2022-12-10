@@ -96,6 +96,9 @@
     border-radius: 1.875rem;
     padding: 2.25rem 2.5rem;
     margin: 0 1.5625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     p {
       font-weight: 400;
       font-size: 1.125rem;
@@ -110,6 +113,7 @@
     }
   }
   .qrcode-image {
+    @apply relative;
     width: 9.375rem;
     height: 9.375rem;
   }

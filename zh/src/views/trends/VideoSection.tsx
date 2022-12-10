@@ -26,14 +26,15 @@ export default function VideoSection() {
                 alt=""
               />
               <div className={styles["play-cover"]}>
+                {/*
                 <div className={styles["play-btn"]}>
                   <Image src={"/images/trends/play.png"} fill alt="" />
-                </div>
+                </div>*/}
               </div>
             </div>
             <div className={styles["content-wrap"]}>
-              <h2>原创新款</h2>
-              <p>每月更新百款以上 线上直接预览操作 降低企业成本</p>
+              <h2>月度百款原创新品更新</h2>
+              {/*<p>每月更新百款以上 线上直接预览操作 降低企业成本</p>*/}
             </div>
           </div>
           <div className={styles.main}>
@@ -45,14 +46,14 @@ export default function VideoSection() {
                 alt=""
               />
               <div className={styles["play-cover"]}>
+                {/*
                 <div className={styles["play-btn"]}>
                   <Image src={"/images/trends/play.png"} fill alt="" />
-                </div>
+                </div>*/}
               </div>
             </div>
             <div className={styles["content-wrap"]}>
-              <h2>在线材料/色彩搭配</h2>
-              <p>一段话的介绍一段话的介绍一段话的介绍一段话的介绍</p>
+              <h2>在线材料及色彩搭配</h2>
             </div>
           </div>
         </div>
