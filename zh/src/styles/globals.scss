@@ -69,3 +69,15 @@ a {
   line-height: 1.5625rem;
   margin-bottom: 4.25rem;
 }
+
+.modal {
+  z-index: 999;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ReactModal__Overlay {
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}

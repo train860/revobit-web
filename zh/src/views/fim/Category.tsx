@@ -1,7 +1,3 @@
-import s1 from "assets/images/s1.svg";
-import s2 from "assets/images/s2.svg";
-import s3 from "assets/images/s3.svg";
-import s4 from "assets/images/s4.svg";
 import cn from "classnames";
 import FimRing from "components/FimRing";
 import Image from "next/image";

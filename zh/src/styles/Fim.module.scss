@@ -1,18 +1,3 @@
-.banner-btn {
-  height: 3.75rem;
-  width: 15rem;
-  padding: 0;
-}
-.banner-btn.banner-primary-btn {
-  border: 0;
-  background-image: url("/images/primary-btn.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  &:hover {
-    background-image: url("/images/primary-btn-on.png");
-    background-size: contain;
-  }
-}
 .category-bg {
   position: absolute;
   width: 56.125rem;

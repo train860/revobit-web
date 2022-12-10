@@ -35,4 +35,15 @@
       margin-left: 0.8125rem;
     }
   }
+  .copyright {
+    @apply flex flex-row justify-between;
+    margin-top: 4.8125rem;
+    padding: 2.375rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    span {
+      @apply text-white;
+      font-size: 0.875rem;
+      opacity: 0.3;
+    }
+  }
 }

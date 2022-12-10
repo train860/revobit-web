@@ -207,6 +207,14 @@ export default function Footer({ className }: Props) {
           </div>
         </div>
       </div>
+      <div className="container">
+        <div className={styles["copyright"]}>
+          <span>Copyright © 2022 Revobit 时谛智能 版权所有</span>
+          <span>
+            粤公网安备 44010502002158号|<a href="">粤ICP备17078055号</a>
+          </span>
+        </div>
+      </div>
     </div>
   );
 }

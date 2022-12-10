@@ -29,7 +29,9 @@ const tabDataList: TabData[] = [
   },
   {
     title: "Studio",
-    des: ["交互式3D实时查看与设计，帮助信息无缝沟通传达"],
+    des: [
+      "国内领先的基于3D产品模型进行协同设计的工业软件，满足设计师实时“云修改”，实现跨部门高效协作",
+    ],
     image: "/images/fim/fim-studio.png",
   },
   {
@@ -76,10 +78,7 @@ const Fim: NextPage = () => {
           subtitle="时尚行业首个端到端全链路数字化解决方案"
           description="FIM（Fashion Information Modelling），即“时尚信息模型”—通过构建企划、设计、研发、生产、销售全生命周期流程，实现端到端全链路的信息协同与数字化管理,助力时尚产业实现可持续发展。"
           buttonText={["登录Revofim Web端", "下载Revofim PC端"]}
-          buttonClassnames={[
-            cn(styles["banner-primary-btn"], styles["banner-btn"]),
-            styles["banner-btn"],
-          ]}
+          primaryButton={[0]}
         />
         <Category />
 

@@ -96,10 +96,10 @@ const Trends: NextPage = () => {
             >
               <div className={cn(styles["image-wrap"], " w-4/5")}>
                 <Image
-                  src="/images/library/标签化数据.png"
+                  src="/images/trends/时谛智能 X 天猫TMIC.png"
                   fill
                   className="image"
-                  alt="标签化数据"
+                  alt="时谛智能 X 天猫TMIC"
                 />
               </div>
             </SectionCard>

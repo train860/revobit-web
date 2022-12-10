@@ -2,19 +2,22 @@ import cn from "classnames";
 import BigCard from "components/BigCard";
 import CommonBanner from "components/CommonBanner";
 import ContactForm from "components/ContactForm";
+import PlayIcon from "components/Icons/PlayIcon";
 import Layout from "components/Layout";
 import SectionCard from "components/SectionCard";
-import SmallCard from "components/SmallCard";
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useCallback } from "react";
+import React from "react";
+import Modal from "react-modal";
 import styles from "styles/Verse.module.scss";
 import FileTypeSection from "views/verse/FileTypeSection";
 import SettingSection from "views/verse/SettingSection";
 
 const Versekit: NextPage = () => {
+  const [modalIsOpen, setIsOpen] = React.useState(false);
   const handleScroll = useCallback(() => {
     const form = document.getElementById("contact-form");
     window.scrollTo({
@@ -46,14 +49,20 @@ const Versekit: NextPage = () => {
             </div>
           }
           description="业界首款自主研发新一代数字化材料扫描仪，结合AI驱动算法与顶尖工业光学系统，为材料商提供行业领先的数字化解决方案。"
-          buttonText={["立即购买", "观看介绍视频"]}
-          buttonClassnames={[
-            cn(styles["banner-primary-btn"], styles["banner-btn"]),
-            styles["banner-btn"],
+          buttonText={[
+            "立即购买",
+            <div key="v" className="flex items-center">
+              <PlayIcon className="mr-2" />
+              <span>观看介绍视频</span>
+            </div>,
           ]}
+          buttonClassnames={[cn(styles["banner-btn"]), styles["banner-btn"]]}
+          primaryButton={[0]}
           onButtonClick={(index) => {
             if (index === 0) {
               handleScroll();
+            } else {
+              setIsOpen(true);
             }
           }}
         />
@@ -169,6 +178,26 @@ const Versekit: NextPage = () => {
             <ContactForm page="home" />
           </div>
         </div>
+
+        {/** video */}
+        <Modal
+          className={"modal"}
+          isOpen={modalIsOpen}
+          contentLabel="onRequestClose Example"
+          onRequestClose={() => setIsOpen(false)}
+          shouldCloseOnOverlayClick={true}
+        >
+          <div className="w-22">
+            <video
+              className={styles["bg-video"]}
+              autoPlay={false}
+              muted={false}
+              controls={true}
+            >
+              <source src="/videos/versekit.mp4"></source>
+            </video>
+          </div>
+        </Modal>
       </main>
     </Layout>
   );

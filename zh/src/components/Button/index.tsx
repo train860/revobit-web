@@ -6,11 +6,18 @@ export interface Props {
   children?: React.ReactNode;
   size?: "small" | "medium" | "large";
   onClick?: () => void;
+  style?: React.CSSProperties;
 }
-export default function Button({ children, className, size, onClick }: Props) {
+export default function Button({
+  children,
+  className,
+  size,
+  style,
+  onClick,
+}: Props) {
   const _className = cn(styles["button"], className, styles[size || "medium"]);
   return (
-    <button className={_className} onClick={onClick}>
+    <button className={_className} style={style} onClick={onClick}>
       {children}
     </button>
   );

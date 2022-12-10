@@ -7,6 +7,10 @@
   .image {
     object-fit: cover;
   }
+  .btn-bg {
+    @apply absolute left-0 top-0 right-0 bottom-0;
+    z-index: -1;
+  }
   .cover {
     @apply absolute left-0 top-0 right-0 bottom-0 flex flex-col justify-center items-center text-white;
     background: rgba(3, 2, 32, 0.5);
@@ -40,6 +44,9 @@
       margin-top: 0.8125rem;
       margin-bottom: 2.875rem;
     }
+  }
+  .buttons {
+    @apply flex flex-row items-center justify-center;
   }
   .buttons > .btn {
     margin: 0 1.25rem;

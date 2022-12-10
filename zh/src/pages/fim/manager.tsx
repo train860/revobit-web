@@ -24,7 +24,7 @@ const tabDataList: TabData[] = [
   {
     title: "创意企划",
     des: ["洞察流行趋势，锁定企划方向"],
-    image: "/images/manager/计划下达.png",
+    image: "/images/manager/创意企划.png",
   },
   {
     title: "计划下达",

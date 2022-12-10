@@ -79,6 +79,7 @@
       }
       .list {
         @apply grid grid-cols-2 gap-5;
+        margin-top: 1.875rem;
       }
       .section-card-text {
         flex: 2;
