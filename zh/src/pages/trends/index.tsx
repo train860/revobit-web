@@ -400,7 +400,7 @@ const Trends: NextPage = () => {
               {Array.from({ length: 45 }).map((item, index) => {
                 return (
                   <Avatar
-                    url="https://img2.doubanio.com/icon/u1605435-1.jpg"
+                    url={`/images/avatar/头像${index + 1}.png`}
                     key={String(index)}
                   ></Avatar>
                 );
