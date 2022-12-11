@@ -12,8 +12,8 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { CSSProperties, useEffect, useRef, useState } from "react";
-import Sticky, { Status, StatusCode } from "react-stickynode";
+import { useEffect, useRef, useState } from "react";
+import Sticky from "react-stickynode";
 import { useScroll, useWindowScroll } from "react-use";
 import styles from "styles/Fim.module.scss";
 import TabSection, { TabData } from "views/fim/TabSection";
@@ -76,17 +76,9 @@ const tabDataList: TabData[] = [
   },
 ];
 
-const commonTextStyle: CSSProperties = {
-  position: "relative",
-  transform: "translate3d(0px, 0px, 0px)",
-  top: 0,
-};
-
 //use sticky
 const Manager: NextPage = () => {
-  const barRef = useRef<Sticky>(null);
   const stickyRef = useRef<number>(0);
-  const [textStyle, setTextStyle] = useState<CSSProperties>(commonTextStyle);
   const [selectedIndex, setSelectedIndex] = useState(1);
   const [tricker, setTricker] = useState<number[][]>([]);
   const { y } = useWindowScroll();
@@ -95,26 +87,19 @@ const Manager: NextPage = () => {
       const range: number[][] = [];
       const barHeight =
         document.getElementById("sticky-bar")?.clientHeight || 0;
-      const offsetTop = 1260;
       tabDataList.forEach((item, index) => {
         const el = document.getElementById(`tab${index}`);
-        //const top = el?.offsetTop;
-        let top = offsetTop;
-        if (index > 0) {
-          top = range[index - 1][1];
-        }
+        const top = el?.offsetTop;
         const height = el?.clientHeight;
         const offsetWindowTop = top || 0; //+ y;
         range.push([offsetWindowTop, offsetWindowTop + (height || 0)]);
       });
       stickyRef.current = barHeight;
-      console.log(range);
       setTricker(range);
-    }, 100);
+    }, 50);
   }, []);
   useEffect(() => {
-    // 352 是左侧文字的padding-top 距离
-    const h = y + stickyRef.current + 352;
+    const h = y + stickyRef.current;
     const index = tricker.findIndex((item) => {
       return h >= item[0] && h < item[1];
     });
@@ -123,26 +108,7 @@ const Manager: NextPage = () => {
     }
     setSelectedIndex(index + 1);
   }, [y]);
-  const handleStateChange = (status: Status) => {
-    const _state = barRef.current?.state as {
-      pos: number;
-    };
-    if (status.status === 1) {
-      setTextStyle({
-        position: "relative",
-        transform: `translate3d(0px, ${_state.pos}px, 0px)`,
-        top: 0,
-      });
-    } else if (status.status === 2) {
-      setTextStyle({
-        ...commonTextStyle,
-        position: "fixed",
-        top: "13.4375rem",
-      });
-    } else {
-      setTextStyle({ ...commonTextStyle, top: 0 });
-    }
-  };
+
   return (
     <Layout>
       <Head>
@@ -154,7 +120,6 @@ const Manager: NextPage = () => {
       <main>
         <CommonBanner
           id="manager-banner"
-          className={styles.banner}
           image="/images/manager.png"
           title={
             <div className="relative w-150">
@@ -172,13 +137,7 @@ const Manager: NextPage = () => {
         <div className="bg-rev-bg-black">
           <div className="container">
             <h2 className="section-title pt-47/2">业务主流程</h2>
-            <Sticky
-              ref={barRef}
-              enabled={true}
-              top={0}
-              bottomBoundary={"#tab9"}
-              onStateChange={handleStateChange}
-            >
+            <Sticky enabled={true} top={0} bottomBoundary={"#tab9"}>
               <div className="bg-rev-bg-black" id="sticky-bar">
                 <div style={{ height: 70 }}></div>
                 <Step
@@ -200,15 +159,18 @@ const Manager: NextPage = () => {
             </Sticky>
             <div className={styles["sticky-content"]}>
               <div className="flex-2 text-white">
-                <div
-                  className={styles["sticky-content-text"]}
-                  style={textStyle}
+                <Sticky
+                  enabled={true}
+                  top={"#sticky-bar"}
+                  bottomBoundary={"#tab9"}
                 >
-                  <div className={styles["sticky-content-text-wrap"]}>
-                    <h2>{tabDataList[selectedIndex - 1]["title"]}</h2>
-                    <p>{tabDataList[selectedIndex - 1]["des"]}</p>
+                  <div className={styles["sticky-content-text"]}>
+                    <div className={styles["sticky-content-text-wrap"]}>
+                      <h2>{tabDataList[selectedIndex - 1]["title"]}</h2>
+                      <p>{tabDataList[selectedIndex - 1]["des"]}</p>
+                    </div>
                   </div>
-                </div>
+                </Sticky>
               </div>
               <div className="flex-3">
                 {tabDataList.map((item, index) => {
@@ -218,7 +180,6 @@ const Manager: NextPage = () => {
                       key={String(index)}
                       className={styles["tab-image"]}
                     >
-                      <div className="h-40 w-2"></div>
                       <div className={styles["tab-image-wrap"]}>
                         <Image
                           src={item.image}

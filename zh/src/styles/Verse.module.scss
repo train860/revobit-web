@@ -4,6 +4,7 @@
     margin-bottom: 5rem;
   }
 }
+
 .brand-service {
   @apply relative;
   color: #ffffff;
@@ -125,4 +126,32 @@
   float: right;
   height: 780px;
   width: auto;
+}
+.attr-modal {
+  height: 80%;
+  min-width: 60%;
+  max-width: 90%;
+  outline: none;
+  border-radius: 1.25rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: none;
+  -ms-overlow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .modal-wrap {
+    background: #171733;
+
+    padding: 2.1875rem 1.6875rem;
+  }
+  h1 {
+    font-size: 1.625rem;
+    line-height: 2.25rem;
+
+    color: #ffffff;
+    margin-left: 0.8125rem;
+    margin-bottom: 1.625rem;
+  }
 }

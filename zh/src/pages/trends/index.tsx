@@ -46,6 +46,15 @@ const Trends: NextPage = () => {
           subtitle="基于全网电商大数据，帮助企划人员洞察流行趋势并实现快速创款的AI智能平台"
           description="主要包括灵感图库、数据洞察、潮流趋势预测、AI智能创款、企划案制作等功能，为企业提供从企划-设计-测款-销售全链路的数字化解决方案，提升鞋服行业商品快反的效率与爆款几率"
           buttonText={["款式平台", "趋势中心"]}
+          onButtonClick={(index) => {
+            if (index == 0) {
+              window.open("https://style.revofim.co/");
+            } else {
+              window.open(
+                "https://trend.4dshoetech.com/style/3/?__t=1661169201395&__history__index__=2"
+              );
+            }
+          }}
         />
         {/** 产品亮点 */}
         <div className="bg-rev-bg-black-0B relative">

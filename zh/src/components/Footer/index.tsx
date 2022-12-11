@@ -75,19 +75,19 @@ const footer = {
     values: [
       {
         name: "Revofim",
-        url: "",
+        url: "https://download.revofim.co/download/IdeationInstaller-latest.exe",
       },
       {
         name: "KicksCAD 2D",
-        url: "",
+        url: "https://download.revofim.co/download/KicksCAD/KicksCAD2D-win-Installer-latest.exe",
       },
       {
         name: "KicksCAD 3D",
-        url: "",
+        url: "https://download.revofim.co/download/KicksCAD/KicksCAD3D-win-Installer-latest.exe",
       },
       {
         name: "Verseset",
-        url: "",
+        url: "https://download.revofim.co/download/VersesetInstaller_CN_latest.exe",
       },
     ],
   },
@@ -173,7 +173,6 @@ export default function Footer({ className }: Props) {
             <h2>{footer.solutions.title}</h2>
             {footer.solutions.values.map((item: LinkItem, index: number) => (
               <p key={String(index)}>
-                {" "}
                 <a href={item.url}>{item.name}</a>
               </p>
             ))}
@@ -182,7 +181,6 @@ export default function Footer({ className }: Props) {
             <h2>{footer.chains.title}</h2>
             {footer.chains.values.map((item: LinkItem, index: number) => (
               <p key={String(index)}>
-                {" "}
                 <a href={item.url}>{item.name}</a>
               </p>
             ))}
@@ -191,7 +189,6 @@ export default function Footer({ className }: Props) {
             <h2>{footer.download.title}</h2>
             {footer.download.values.map((item: LinkItem, index: number) => (
               <p key={String(index)}>
-                {" "}
                 <a href={item.url}>{item.name}</a>
               </p>
             ))}
@@ -200,7 +197,6 @@ export default function Footer({ className }: Props) {
             <h2>{footer.about.title}</h2>
             {footer.about.values.map((item: LinkItem, index: number) => (
               <p key={String(index)}>
-                {" "}
                 <a href={item.url}>{item.name}</a>
               </p>
             ))}

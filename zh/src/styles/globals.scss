@@ -81,3 +81,36 @@ a {
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
+.rev-table {
+  @apply table-auto;
+  font-weight: 300;
+  font-size: 18px;
+  color: #ffffff;
+
+  tr > td {
+    padding: 0.75rem 0.8125rem;
+    vertical-align: top;
+    &.label {
+      opacity: 0.6;
+      min-width: 100px;
+    }
+    &.value {
+      width: 40%;
+    }
+    &.title {
+      font-size: 1.5rem;
+      line-height: 2.125rem;
+      /* identical to box height */
+
+      color: #ffffff;
+    }
+    > p {
+      font-size: 16px;
+      line-height: 1.375rem;
+
+      color: #ffffff;
+
+      opacity: 0.3;
+    }
+  }
+}

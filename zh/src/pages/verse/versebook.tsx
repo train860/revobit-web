@@ -43,6 +43,9 @@ const Versebook: NextPage = () => {
           }
           description="时尚产业高质量数字化面料平台：脱离冗杂的实物材料和平面信息，让Versebook带你沉浸式体验数字化面料的生命力。"
           buttonText="免费使用"
+          onButtonClick={() => {
+            window.open("https://www.versebook.co/buyer/main/home");
+          }}
         />
         <div className="bg-black relative py-47/2">
           <div className="blur-bg"></div>
