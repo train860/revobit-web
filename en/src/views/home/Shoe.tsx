@@ -7,7 +7,7 @@ declare global {
   }
 }
 const Shoe = () => {
-  const src=`${process.env.NEXT_PUBLIC_API_ENDPOINT}/static/shoe.gltf`
+  const src = `/static/shoe.glb`;
   return (
     <model-viewer
       id="transform"

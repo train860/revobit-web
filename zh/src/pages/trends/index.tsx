@@ -394,9 +394,9 @@ const Trends: NextPage = () => {
           <div className="container pb-32">
             <h2 className="section-title pt-47/2">他们正在使用</h2>
             <h3 className="section-subtitle">
-              一段话的介绍一段话的介绍一段话的介绍一段话的介绍
+              Trends&款式平台，让创作变得更简单
             </h3>
-            <div className="grid grid-cols-15 gap-5">
+            <div className="grid grid-cols-5 md:grid-cols-7 lg:grid-cols-12 2xl:grid-cols-15 gap-5">
               {Array.from({ length: 45 }).map((item, index) => {
                 return (
                   <Avatar

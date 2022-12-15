@@ -53,11 +53,11 @@ const footer = {
     values: [
       {
         name: "Versekit",
-        url: "/versekit.html",
+        url: "/verse/versekit.html",
       },
       {
         name: "Versebook",
-        url: "/versebook.html",
+        url: "/verse/versebook.html",
       },
     ],
   },

@@ -1,0 +1,232 @@
+.cad {
+  background-image: url("/images/cad/grid.png");
+  background-repeat: repeat;
+}
+
+.banner {
+  @apply relative;
+  height: 75rem;
+  .image {
+    object-fit: cover;
+  }
+  .cover {
+    @apply absolute left-0 top-0 right-0 bottom-0 flex flex-col justify-center items-center text-white;
+    background: rgba(3, 2, 32, 0.38);
+    .content {
+      @apply container;
+      text-align: center;
+    }
+    .title {
+      @apply flex flex-row items-center justify-center;
+      font-weight: 400;
+      font-size: 3.75rem;
+      line-height: 5.25rem;
+      /* identical to box height */
+
+      color: #ffffff;
+      > span.line {
+        color: rgba(255, 255, 255, 0.5);
+        display: inline-block;
+        margin: 0 1.875rem;
+        font-size: 3rem;
+      }
+    }
+    h2 {
+      font-weight: 300;
+      font-size: 3.125rem;
+      line-height: 4.375rem;
+      /* identical to box height */
+      margin-top: 1.6875rem;
+      color: #ffffff;
+    }
+  }
+}
+
+.highlights {
+  .highlights-content {
+    @apply container;
+    h2 {
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+      /* identical to box height */
+
+      text-align: center;
+
+      color: #ffffff;
+      margin: 6.25rem 0;
+    }
+    .items {
+      @apply grid grid-cols-2 gap-31;
+    }
+    .items > .item {
+      @apply flex flex-col items-center;
+      .item-icon {
+        @apply relative flex justify-center items-center;
+        width: 9.375rem;
+        height: 9.375rem;
+        background: #5b7af3;
+        border-radius: 100%;
+      }
+      .image {
+        position: unset !important;
+        width: 3.75rem !important;
+        height: unset !important;
+      }
+      p {
+        font-weight: 400;
+        font-size: 1.875rem;
+        line-height: 2.625rem;
+        /* identical to box height */
+
+        color: #ffffff;
+        margin-top: 3.125rem;
+      }
+    }
+  }
+}
+
+.design {
+  margin-top: 11.25rem;
+  .design-content {
+    @apply container relative flex flex-row justify-center items-center;
+  }
+  .bg-image {
+    @apply relative;
+    width: 82.9375rem;
+    height: 60.5rem;
+  }
+  .text {
+    @apply left-0 top-0 w-full h-full absolute flex flex-row justify-center items-center;
+    font-weight: 600;
+    font-size: 4.375rem;
+    line-height: 6.125rem;
+    text-align: center;
+
+    color: #ffffff;
+  }
+}
+
+.eco {
+  background-image: url("/images/cad/dot_grid.png");
+  background-repeat: repeat;
+  .eco-content {
+    @apply container relative;
+    h2 {
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+      /* identical to box height */
+
+      text-align: center;
+
+      color: #ffffff;
+      padding-top: 11.25rem;
+    }
+  }
+  .eco-items {
+    @apply flex flex-row;
+    padding: 12.5rem 0 18.75rem 0;
+    .eco-item {
+      @apply flex flex-col flex-1 items-center;
+    }
+    .eco-item-icon {
+      @apply relative;
+      &.i1 {
+        width: 11.75rem;
+        height: 13.125rem;
+      }
+      &.i2 {
+        width: 14.625rem;
+        height: 11.5rem;
+        margin-top: 1.625rem;
+      }
+    }
+    h3 {
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+      /* identical to box height */
+
+      color: #5b7af3;
+      margin-top: 6rem;
+    }
+    p {
+      font-weight: 300;
+      font-size: 1.5rem;
+      line-height: 2.125rem;
+      /* identical to box height */
+
+      color: #ffffff;
+      margin: 1.5rem 0;
+    }
+    button {
+      background: #ffffff;
+      border-radius: 4px;
+      width: 11.25rem;
+      height: 3.125rem;
+      line-height: 3.125rem;
+      font-weight: 300;
+      font-size: 1.125rem;
+      text-align: center;
+
+      color: #000000;
+    }
+  }
+}
+
+.library {
+  background-image: url("/images/cad/dot_grid.png");
+  padding: 11.25rem 0;
+  h2 {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #ffffff;
+    padding: 0 0 4.25rem 0;
+  }
+  .library-items {
+    @apply relative;
+    width: 120.1875rem;
+    height: 45.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.process {
+  .process-content {
+    @apply container flex;
+    .process-step {
+      width: 20.6875rem;
+      h2 {
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        /* identical to box height */
+
+        text-align: center;
+
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 1.4375rem;
+      }
+      .step-wrap {
+        width: 20.6875rem;
+      }
+    }
+    .process-items {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: center;
+      .process-item {
+        margin-bottom: 4.125rem;
+      }
+      .process-item > .image-wrap {
+        position: relative;
+        width: 33.9375rem;
+        height: 18.375rem;
+      }
+    }
+  }
+}
