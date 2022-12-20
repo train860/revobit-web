@@ -52,6 +52,7 @@ module.exports = {
         80: "20rem",
       },
       gap: {
+        25: "6.25rem",
         31: "7.75rem",
       },
       margin: {

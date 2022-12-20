@@ -29,6 +29,7 @@
     "react-toastify": "^9.1.1",
     "react-use": "^17.4.0",
     "smooth-scrollbar": "^8.8.1",
+    "swiper": "^8.4.5",
     "three": "^0.146.0"
   },
   "devDependencies": {
