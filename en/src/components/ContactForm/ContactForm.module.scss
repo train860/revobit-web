@@ -55,4 +55,45 @@
       color: white;
     }
   }
+  .confirm {
+    text-align: center;
+    margin-bottom: 1.25rem;
+    span {
+      font-weight: 400;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      /* identical to box height */
+
+      text-align: center;
+
+      color: #aca8a8;
+    }
+    a {
+      color: #9e6aff;
+    }
+    :global(.ant-checkbox) {
+      top: 2px;
+    }
+    :global(.ant-checkbox-wrapper:not(.ant-checkbox-wrapper-disabled):hover
+        .ant-checkbox-checked:not(.ant-checkbox-disabled)
+        .ant-checkbox-inner) {
+      background-color: #9e6aff;
+      border-color: #9e6aff;
+    }
+    :global(.ant-checkbox-wrapper:not(.ant-checkbox-wrapper-disabled):hover
+        .ant-checkbox-checked:not(.ant-checkbox-disabled):after) {
+      border-color: #9e6aff;
+    }
+    :global(.ant-checkbox-inner) {
+      border-radius: 0;
+      outline: none;
+    }
+    :global(.ant-checkbox-checked .ant-checkbox-inner) {
+      background-color: #9e6aff;
+      border-color: #9e6aff;
+    }
+    :global(.ant-checkbox-checked:after) {
+      border-color: #9e6aff;
+    }
+  }
 }

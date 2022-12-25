@@ -1,0 +1,104 @@
+.modal__content {
+  background-color: white;
+  padding: 32px 35px;
+  p {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
+    letter-spacing: -0.03em;
+
+    color: #545454;
+    margin-bottom: 1.25rem;
+  }
+  p.content {
+    font-size: 0.75rem;
+    line-height: 1.0625rem;
+    padding: 18px 28px;
+    background: #f2f2f2;
+    border-radius: 10px;
+    margin: 0 -1rem;
+  }
+  .icon__wrap {
+    width: 2.25rem;
+    height: 2.25rem;
+    position: relative;
+  }
+  .panel__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .switch__wrap {
+      display: flex;
+      align-items: center;
+    }
+    .lock__icon {
+      position: relative;
+      width: 1.875rem;
+      height: 1.875rem;
+      margin-right: 1rem;
+    }
+  }
+  :global(.my__collapse) {
+    background-color: transparent;
+  }
+  :global(.my__collapse__panel) {
+    border: 0;
+  }
+  :global(.my__collapse .ant-collapse-header) {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 1.3125rem;
+    border: 1px solid #1e1e36;
+    border-radius: 0.75rem !important;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+
+    color: #1e1e36;
+  }
+
+  :global(.my__switch) {
+    background: #cecece;
+  }
+  :global(.my__switch.ant-switch.ant-switch-checked) {
+    background: #7a50c8;
+  }
+}
+.cookies__modal .footer {
+  padding: 26px 35px;
+  display: flex;
+  background-color: white;
+  border-top: 1px solid #dbdbdb;
+  .btn__outline {
+    height: 45px;
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #7a50c8;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.03em;
+
+    color: #7a50c8;
+
+    border: 0.25px solid #7a50c8;
+  }
+  .btn {
+    height: 45px;
+    margin-left: 12px;
+    flex: 1;
+    background: #7a50c8;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.03em;
+
+    color: #ffffff;
+
+    border: 0.25px solid #ffffff;
+  }
+}

@@ -2,6 +2,7 @@
 @layer components {
   .header {
     @apply absolute top-0 left-0 w-full text-white;
+
     z-index: 9999;
     .header-wrap .menu li {
       font-size: 1.75rem;

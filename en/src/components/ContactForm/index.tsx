@@ -1,5 +1,7 @@
 import "react-toastify/dist/ReactToastify.min.css";
 
+import { Checkbox } from "antd";
+import { CheckboxChangeEvent } from "antd/es/checkbox";
 import cn from "classnames";
 import Button from "components/Button";
 import BuildingIcon from "components/Icons/BuildingIcon";
@@ -8,6 +10,7 @@ import GroupIcon from "components/Icons/GroupIcon";
 import MessageIcon from "components/Icons/MessageIcon";
 import PhoneIcon from "components/Icons/PhoneIcon";
 import UserIcon from "components/Icons/UserIcon";
+import Privacy from "components/Privacy";
 import { useApi } from "hooks/useApi";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
@@ -35,6 +38,8 @@ const contact = {
 };
 export default function ContactForm({ page, className }: Props) {
   const api = useApi();
+  const [checked, setChecked] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [values, setValues] = useState<Record<string, string>>({});
   const _className = cn(styles["contact-form"], className);
   const handleChange = (key: string, value: string) => {
@@ -42,6 +47,11 @@ export default function ContactForm({ page, className }: Props) {
     setValues({ ...values });
   };
   const handleSubmit = () => {
+    if (!checked) {
+      toast.warn("Please check the privacy policy");
+      return;
+    }
+
     //todo check empty
     const id = toast.loading(contact.submitting);
 
@@ -113,11 +123,27 @@ export default function ContactForm({ page, className }: Props) {
         value={values["content"] || ""}
         onChange={(value) => handleChange("content", value)}
       />
+      <div className={styles.confirm}>
+        <Checkbox
+          checked={checked}
+          onChange={(e: CheckboxChangeEvent) => setChecked(e.target.checked)}
+        >
+          <span>
+            I consent to the use of my personal information in accordance with
+            the{" "}
+            <a href="javascript:;" onClick={() => setIsOpen(true)}>
+              Privacy Policy
+            </a>
+            .
+          </span>
+        </Checkbox>
+      </div>
       <div className="flex justify-center">
         <Button className="opacity-50 mt-15/2" onClick={handleSubmit}>
           {contact.submit}
         </Button>
       </div>
+      <Privacy open={isOpen} onCancel={() => setIsOpen(false)} />
     </div>
   );
 }

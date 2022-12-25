@@ -9,6 +9,7 @@ body {
   font-size: 16px;
   overflow-x: hidden;
   font-family: "PingFang SC";
+  width: 100% !important;
 }
 
 * {
@@ -68,4 +69,64 @@ a {
   font-size: 1.125rem;
   line-height: 1.5625rem;
   margin-bottom: 4.25rem;
+}
+
+.custom-notification {
+  background-color: transparent;
+  .notification-header {
+    display: flex;
+    align-items: center;
+    background: rgba(18, 18, 43, 0.95);
+    border-radius: 0.9375rem 0.9375rem 0px 0px;
+    font-size: 2.375rem;
+    line-height: 3.3125rem;
+    letter-spacing: -0.03em;
+    padding: 1.0625rem 2.1875rem;
+    color: #ffffff;
+    .notification-header__icon {
+      width: 3.125rem;
+      height: 3.125rem;
+      position: relative;
+      margin-left: 0.9375rem;
+    }
+  }
+  .ant-notification-notice-message {
+    padding-inline-end: 0 !important;
+    margin: 0;
+  }
+  .ant-notification-notice-close {
+    color: white;
+    top: 1.875rem;
+    &:hover {
+      color: white;
+      opacity: 0.8;
+    }
+  }
+  .ant-notification-close-icon {
+    font-size: 1.5rem;
+  }
+}
+.privacy__modal {
+  padding: 0;
+
+  .ant-modal-header {
+    border-radius: 15px 15px 0px 0px;
+    overflow: hidden;
+    background-color: transparent;
+    margin: 0;
+  }
+  .ant-modal-content {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  .ant-modal-close {
+    color: white;
+    top: 1.875rem;
+    &:hover {
+      color: white;
+      opacity: 0.8;
+    }
+  }
 }

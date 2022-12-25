@@ -10,9 +10,11 @@ import Highlights from "views/cad/Highlights";
 import Library from "views/cad/Library";
 import Process from "views/cad/Process";
 import Card from "views/studio/Card";
+import Download from "views/studio/Download";
 import Number from "views/studio/Number";
 import Slider, { SlideItem } from "views/studio/Slider";
 import TabView from "views/studio/TabView";
+import TextBanner from "views/studio/TextBanner";
 
 const s1: SlideItem[] = [
   {
@@ -95,7 +97,28 @@ const Studio: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.studio}>
-        <div className="container">
+        <TextBanner
+          items={[
+            {
+              title: "即时",
+              subTitle: "所见即所得",
+              description:
+                "您的数字设计助手，可随时随地与团队进行可视化、清晰快速的沟通。",
+            },
+            {
+              title: "协同",
+              subTitle: "协作式设计审查",
+              description:
+                "汇总各地团队的设计变更、评论和标注意见，轻松查看项目信息，实现高效决策。",
+            },
+            {
+              title: "可追溯",
+              subTitle: "版本存储管理",
+              description: "便于刷新和恢复任何范围的颜色和材料组合。",
+            },
+          ]}
+        />
+        <div className="container py-20">
           <div className="grid grid-cols-3 gap-25">
             <Card icon="/images/studio/messages.png" title="协同" />
             <Card icon="/images/studio/cpu-charge.png" title="渲染" />
@@ -104,7 +127,7 @@ const Studio: NextPage = () => {
           <div className={styles.power}>POWERFUL</div>
         </div>
 
-        <div className="container">
+        <div className="container py-20">
           <div className="flex">
             <div className={styles["card-wrap"]}>
               <Card icon="/images/studio/messages.png" title="协同" />
@@ -115,7 +138,7 @@ const Studio: NextPage = () => {
           </div>
         </div>
 
-        <div className="container">
+        <div className="container py-20">
           <div className="flex">
             <div className={styles["card-wrap"]}>
               <Card icon="/images/studio/cpu-charge.png" title="渲染" />
@@ -130,6 +153,7 @@ const Studio: NextPage = () => {
 
         <TabView />
 
+        <Download />
         <div className="bg-black">
           <div className="container py-32">
             <h2 className="section-title">联系我们</h2>
