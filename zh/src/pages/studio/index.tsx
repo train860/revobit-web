@@ -1,6 +1,7 @@
 import ContactForm from "components/ContactForm";
 import Layout from "components/Layout";
 import { NextPage } from "next";
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import styles from "styles/Studio.module.scss";
 import Banner from "views/cad/Banner";
@@ -15,7 +16,7 @@ import Number from "views/studio/Number";
 import Slider, { SlideItem } from "views/studio/Slider";
 import TabView from "views/studio/TabView";
 import TextBanner from "views/studio/TextBanner";
-
+const Relation = dynamic(() => import("views/studio/Relation"), { ssr: false });
 const s1: SlideItem[] = [
   {
     title: "多端应用",
@@ -154,6 +155,10 @@ const Studio: NextPage = () => {
         <TabView />
 
         <Download />
+        <div className={styles.relation}>
+          <h2>如何使用RevoFIM加速商品开发？</h2>
+          <Relation />
+        </div>
         <div className="bg-black">
           <div className="container py-32">
             <h2 className="section-title">联系我们</h2>

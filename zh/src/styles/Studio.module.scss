@@ -366,3 +366,20 @@
     }
   }
 }
+.relation {
+  background: black;
+  padding: 5rem 0;
+  height: 1000px;
+  overflow: hidden;
+  h2 {
+    margin-bottom: 5rem;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #ffffff;
+  }
+}

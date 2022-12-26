@@ -10,6 +10,7 @@
     "lint": "eslint ./ --ext js,jsx,ts,tsx --fix"
   },
   "dependencies": {
+    "@antv/g6": "^4.8.1",
     "@next/font": "^13.0.5",
     "@react-spring/web": "^9.5.5",
     "@react-three/drei": "^9.40.4",
