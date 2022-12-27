@@ -5,7 +5,9 @@ import EmailIcon from "components/Icons/EmailIcon";
 import LocationIcon from "components/Icons/LocationIcon";
 import TimeIcon from "components/Icons/TimeIcon";
 import WechatIcon from "components/Icons/WechatIcon";
+import Privacy from "components/Privacy";
 import Image from "next/image";
+import { useState } from "react";
 
 import styles from "./Footer.module.scss";
 
@@ -21,7 +23,7 @@ const footer = {
     "Building 15, Wanshenghui Chuangke Park, No. 70 East Xingang Road, Haizhu District, Guangzhou City, Guangdong Province, China",
   workTime: "Mon. to Fri., 9:00 AM  to 6:30 PM",
   contact: "19928307570",
-  email: "customer@4dstc.com",
+  email: "customer@revobit.ai",
   product: {
     title: "Product",
     values: [
@@ -129,6 +131,7 @@ const footer = {
   },
 };
 export default function Footer({ className }: Props) {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className={cn(styles["footer"], className)}>
       <div className="container flex flex-row">
@@ -147,12 +150,11 @@ export default function Footer({ className }: Props) {
             <TimeIcon />
             <span>{footer.workTime}</span>
           </div>
-          {/**
+
           <div className={styles["left-section"]}>
             <EmailIcon />
             <span>{footer.email}</span>
           </div>
-          */}
         </div>
         {/**
         <div className="flex-3 grid grid-cols-5 gap-1">
@@ -188,6 +190,17 @@ export default function Footer({ className }: Props) {
           </div>
             </div>*/}
       </div>
+      <div className="container">
+        <div className={styles["copyright"]}>
+          <span>Copyright © 2022 Revobit Inc. All Rights Reserved.</span>
+          <span>
+            <a href="javascript:;" onClick={() => setIsOpen(true)}>
+              Privacy Policy
+            </a>
+          </span>
+        </div>
+      </div>
+      <Privacy open={isOpen} onCancel={() => setIsOpen(false)} />
     </div>
   );
 }

@@ -71,8 +71,11 @@ export default function Privacy(props: Props) {
         <h2>Contact</h2>
         <p>
           If you have any questions or concerns about our privacy policy or the
-          processing of your personal data, please contact us at
-          customer@revobit.ai.
+          processing of your personal data, please contact us at &nbsp;
+          <a href="mailto:customer@revobit.ai" style={{ color: "#9e6aff" }}>
+            customer@revobit.ai
+          </a>
+          .
         </p>
       </div>
     </Modal>

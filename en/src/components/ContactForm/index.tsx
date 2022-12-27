@@ -48,7 +48,9 @@ export default function ContactForm({ page, className }: Props) {
   };
   const handleSubmit = () => {
     if (!checked) {
-      toast.warn("Please check the privacy policy");
+      toast.warn(
+        "Submission failed because your consent is required to submit this form"
+      );
       return;
     }
 
