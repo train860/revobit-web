@@ -14,7 +14,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
-import { useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import Headroom from "react-headroom";
 
 import styles from "./Header.module.scss";
@@ -27,6 +27,8 @@ interface Props {
   className?: string;
 }
 export default function Header({ className }: Props) {
+  const router = useRouter();
+
   const ref0 = useRef(null);
   const ref1 = useRef(null);
   const ref2 = useRef(null);
@@ -64,6 +66,26 @@ export default function Header({ className }: Props) {
   const handleMenuItemClick = (url: string) => {
     location.href = url;
   };
+
+  const isActive = useCallback(
+    (key: string) => {
+      switch (key) {
+        case "index":
+          return router.pathname === "/";
+        case "1":
+          return (
+            router.pathname.indexOf("fim") > -1 ||
+            router.pathname.indexOf("studio") > -1
+          );
+        case "2":
+          return router.pathname.indexOf("verse") > -1;
+        case "3":
+          return router.pathname.indexOf("cad") > -1;
+      }
+      return false;
+    },
+    [router.pathname]
+  );
   return (
     <Headroom className={cn(styles["header"], className)}>
       <div className={cn(styles["header-wrap"], "container")}>
@@ -71,24 +93,27 @@ export default function Header({ className }: Props) {
           <Image alt="" fill src={logo} />
         </div>
         <ul className={styles["menu"]}>
-          <li className={styles["active"]}>
+          <li className={cn({ [styles["active"]]: isActive("index") })}>
             <Link href="/">首页</Link>
-            <div className={styles.line}></div>
+            {isActive("index") && <div className={styles.line}></div>}
           </li>
-          <li>
+          <li className={cn({ [styles["active"]]: isActive("1") })}>
             <a href="javascript:;" ref={ref0} {...mouseEvents(0)}>
               数字化解决方案
             </a>
+            {isActive("1") && <div className={styles.line}></div>}
           </li>
-          <li>
+          <li className={cn({ [styles["active"]]: isActive("2") })}>
             <a href="javascript:;" ref={ref1} {...mouseEvents(1)}>
               材料数字化
             </a>
+            {isActive("2") && <div className={styles.line}></div>}
           </li>
-          <li>
+          <li className={cn({ [styles["active"]]: isActive("3") })}>
             <a href="javascript:;" ref={ref2} {...mouseEvents(2)}>
               设计工具
             </a>
+            {isActive("3") && <div className={styles.line}></div>}
           </li>
           <li>
             <a href="">品牌案例</a>
@@ -112,7 +137,7 @@ export default function Header({ className }: Props) {
           >
             Revofim概览
           </MenuItem>
-          <MenuItem onClick={() => handleMenuItemClick("/")}>
+          <MenuItem onClick={() => handleMenuItemClick("/studio.html")}>
             Revofim studio
           </MenuItem>
           <MenuItem onClick={() => handleMenuItemClick("/fim/library.html")}>
@@ -159,7 +184,10 @@ export default function Header({ className }: Props) {
         anchorRef={ref2}
       >
         <div className={styles["menu-dropdown__wrap"]}>
-          <MenuItem className={cn(styles["first"], styles["last"])}>
+          <MenuItem
+            className={cn(styles["first"], styles["last"])}
+            onClick={() => handleMenuItemClick("/cad.html")}
+          >
             KicksCAD
           </MenuItem>
         </div>

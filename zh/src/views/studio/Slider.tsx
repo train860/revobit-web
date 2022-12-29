@@ -1,6 +1,7 @@
 import "swiper/css";
 import "swiper/css/pagination";
 
+import cn from "classnames";
 import Image from "next/image";
 import styles from "styles/Studio.module.scss";
 import { Pagination } from "swiper";
@@ -40,7 +41,11 @@ export default function Slider(props: Props) {
                   dangerouslySetInnerHTML={{ __html: item.subTitle }}
                 ></div>
               )}
-              <div className={styles["slide-item__image"]}>
+              <div
+                className={cn(styles["slide-item__image"], {
+                  [styles["small"]]: item.subTitle,
+                })}
+              >
                 <Image src={item.image} alt="" fill className={styles.image} />
               </div>
             </div>

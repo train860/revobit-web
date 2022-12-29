@@ -108,7 +108,6 @@ const Manager: NextPage = () => {
         range.push([offsetWindowTop, offsetWindowTop + (height || 0)]);
       });
       stickyRef.current = barHeight;
-      console.log(range);
       setTricker(range);
     }, 100);
   }, []);
@@ -121,7 +120,7 @@ const Manager: NextPage = () => {
     if (index < 0) {
       return;
     }
-    setSelectedIndex(index + 1);
+    index + 1 !== selectedIndex && setSelectedIndex(index + 1);
   }, [y]);
   const handleStateChange = (status: Status) => {
     const _state = barRef.current?.state as {

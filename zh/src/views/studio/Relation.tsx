@@ -11,7 +11,7 @@ export default function Relation() {
       return;
     }
     const width = container?.scrollWidth;
-    const height = container?.scrollHeight || 800;
+    const height = 800;
 
     G6.registerNode(
       "dom-node",
@@ -141,7 +141,7 @@ export default function Relation() {
           description: "获取海量素材",
           align: "right",
           x: 200,
-          y: 500,
+          y: 450,
         },
       ],
       edges: [

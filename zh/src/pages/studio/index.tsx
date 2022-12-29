@@ -51,31 +51,31 @@ const s1: SlideItem[] = [
 const s2: SlideItem[] = [
   {
     title: "RTX实时光线追踪",
-    subTitle: "利用RTX硬件的加速性能，在短时间内输出<br>高质量的图片和视频。",
+    subTitle: "利用RTX硬件的加速性能，在短时间内输出<br/>高质量的图片和视频。",
     image: "/images/studio/RTX实时光线追踪.png",
   },
   {
     title: "可编辑的材质",
     subTitle:
-      "为时尚设计精选材质库，可自由编辑材料参数和贴图，支持导出和保存自定义库，让设计拥有无限变化。",
+      "为时尚设计精选材质库，可自由编辑材料参数和贴图，支持<br/>导出和保存自定义库，让设计拥有无限变化。",
     image: "/images/studio/可编辑的材质.png",
   },
   {
     title: "AI配色",
     subTitle:
-      "根据色彩意向图或预定颜色组，自动生成配色，实时判断多种颜色组合的可能性，激发创意灵感，节省重复枯燥的操作时间。",
+      "根据色彩意向图或预定颜色组，自动生成配色，实时判断多种颜色<br/>组合的可能性，激发创意灵感，节省重复枯燥的操作时间。",
     image: "/images/studio/AI配色.png",
   },
   {
     title: "照片级渲染出图",
     subTitle:
-      "最高4K质量和720度全景展示，满足你对精度的极致要求。云端渲染，智能队列管理，让本地设备资源释放，不妨碍其他工作。",
+      "最高4K质量和720度全景展示，满足你对精度的极致要求。云<br/>端渲染，智能队列管理，让本地设备资源释放，不妨碍其他工作。",
     image: "/images/studio/照片级渲染出图.png",
   },
   {
     title: "灯光环境系统",
     subTitle:
-      "高动态范围图像全景环境图外，支持自定义添加 HDR 资源，改进性的采样，精准还原光照效果。",
+      "高动态范围图像全景环境图外，支持自定义添加<br/>HDR资源，改进性的采样，精准还原光照效果。",
     image: "/images/studio/灯光环境系统.png",
   },
   {
@@ -87,6 +87,28 @@ const s2: SlideItem[] = [
     title: "3D素材库",
     subTitle: "Versebook、款式模型库、咬花库、HDR环境素材库。",
     image: "/images/studio/3D素材库.png",
+  },
+];
+const s3: SlideItem[] = [
+  {
+    title: "尖端的速度和性能",
+    subTitle: "Apple M2芯片、Surface",
+    image: "/images/studio/RTX实时光线追踪.png",
+  },
+  {
+    title: "专业的合作伙伴",
+    subTitle: "Pantone、Coloro、NIVIDIA",
+    image: "/images/studio/可编辑的材质.png",
+  },
+  {
+    title: "插件生态",
+    subTitle: "Adobe、CLO",
+    image: "/images/studio/AI配色.png",
+  },
+  {
+    title: "数据生态",
+    subTitle: "GITF/USD转换",
+    image: "/images/studio/数据生态.png",
   },
 ];
 const Studio: NextPage = () => {
@@ -142,10 +164,21 @@ const Studio: NextPage = () => {
         <div className="container py-20">
           <div className="flex">
             <div className={styles["card-wrap"]}>
-              <Card icon="/images/studio/cpu-charge.png" title="渲染" />
+              <Card icon="/images/studio/tree.png" title="渲染" />
             </div>
             <div className={styles["slider-wrap"]}>
               <Slider items={s2} />
+            </div>
+          </div>
+        </div>
+
+        <div className="container py-20">
+          <div className="flex">
+            <div className={styles["card-wrap"]}>
+              <Card icon="/images/studio/cpu-charge.png" title="生态合作" />
+            </div>
+            <div className={styles["slider-wrap"]}>
+              <Slider items={s3} />
             </div>
           </div>
         </div>
@@ -155,6 +188,7 @@ const Studio: NextPage = () => {
         <TabView />
 
         <Download />
+
         <div className={styles.relation}>
           <h2>如何使用RevoFIM加速商品开发？</h2>
           <Relation />

@@ -32,7 +32,7 @@ const footer = {
       },
       {
         name: "Revofim studio",
-        url: "",
+        url: "/studio.html",
       },
       {
         name: "Revofim library",
@@ -66,7 +66,7 @@ const footer = {
     values: [
       {
         name: "KicksCAD",
-        url: "",
+        url: "/cad.html",
       },
     ],
   },

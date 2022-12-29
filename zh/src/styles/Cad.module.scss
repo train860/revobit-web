@@ -195,6 +195,7 @@
 }
 
 .process {
+  padding: 5rem 0;
   .process-content {
     @apply container flex;
     .process-step {
@@ -220,7 +221,7 @@
       flex-direction: column;
       align-items: center;
       .process-item {
-        margin-bottom: 4.125rem;
+        padding-bottom: 4.125rem;
       }
       .process-item > .image-wrap {
         position: relative;
