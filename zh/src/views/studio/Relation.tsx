@@ -57,7 +57,7 @@ export default function Relation() {
             name: "dom-node-keyShape",
             draggable: false,
           });
-          return g;
+          return g!;
         },
       },
       "single-node"
