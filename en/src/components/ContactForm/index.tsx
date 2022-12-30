@@ -34,7 +34,7 @@ const contact = {
   submit: "Submit",
   submitting: "Submitting...",
   succeed: "Form submitted successfully!",
-  failed: "Form submitted fail!",
+  failed: "Submission failed, please provide all required information.",
 };
 export default function ContactForm({ page, className }: Props) {
   const api = useApi();

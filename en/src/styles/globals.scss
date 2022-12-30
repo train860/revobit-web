@@ -108,7 +108,7 @@ a {
 }
 .privacy__modal {
   padding: 0;
-
+  max-width: 80% !important;
   .ant-modal-header {
     border-radius: 15px 15px 0px 0px;
     overflow: hidden;
