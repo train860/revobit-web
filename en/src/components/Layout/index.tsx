@@ -32,7 +32,11 @@ export default function Layout({ children, className }: Props) {
       <div className="layout">{children}</div>
       <Footer className={className?.footer} />
       <ToastContainer position="top-center" theme="dark" />
-      <CookiesModal open={isOpen} onCancel={() => setIsOpen(false)} />
+      <CookiesModal
+        open={isOpen}
+        onCancel={() => setIsOpen(false)}
+        onBtnClick={() => setIsOpen(false)}
+      />
     </CookiesProvider>
   );
 }
