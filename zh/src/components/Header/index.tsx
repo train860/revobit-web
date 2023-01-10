@@ -138,19 +138,19 @@ export default function Header({ className }: Props) {
             Revofim概览
           </MenuItem>
           <MenuItem onClick={() => handleMenuItemClick("/studio.html")}>
-            Revofim studio
+            Revofim Studio
           </MenuItem>
           <MenuItem onClick={() => handleMenuItemClick("/fim/library.html")}>
-            Revofim library
+            Revofim Library
           </MenuItem>
           <MenuItem onClick={() => handleMenuItemClick("/fim/manager.html")}>
-            Revofim manager
+            Revofim Manager
           </MenuItem>
           <MenuItem
             className={styles["last"]}
             onClick={() => handleMenuItemClick("/trends.html")}
           >
-            Revofim trends
+            Revofim Trends
           </MenuItem>
         </div>
       </ControlledMenu>

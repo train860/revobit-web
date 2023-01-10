@@ -2,6 +2,51 @@
   background-image: url("/images/cad/grid.png");
   background-repeat: repeat;
 }
+.top-banner {
+  .top-banner-content {
+    max-width: 42.3125rem;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 12.1875rem;
+    .top-banner-text {
+      position: relative;
+      width: 37.875rem;
+      height: 8.25rem;
+    }
+    p {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 34px;
+      line-height: 48px;
+      /* identical to box height */
+
+      text-align: center;
+
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 1.125rem;
+    }
+    .shoe {
+      margin-top: 2.625rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .shoe-gif,
+      .shoe-under {
+        position: relative;
+      }
+      .shoe-gif {
+        width: 37.5rem;
+        height: 26.8125rem;
+      }
+      .shoe-under {
+        width: 36.1875rem;
+        height: 15.875rem;
+      }
+    }
+  }
+}
 .text__banner {
   min-height: 75rem;
   background-color: black;

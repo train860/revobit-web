@@ -5,7 +5,7 @@ import "swiper/css/navigation";
 import Image from "next/image";
 import { useState } from "react";
 import styles from "styles/Studio.module.scss";
-import { Navigation, Pagination } from "swiper";
+import { Autoplay, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export type TextItem = {
@@ -42,7 +42,11 @@ export default function TextBanner(props: Props) {
           pagination={pagination}
           navigation={true}
           loop={true}
-          modules={[Pagination, Navigation]}
+          //autoplay={true}
+          autoplay={{
+            delay: 5000,
+          }}
+          modules={[Autoplay, Pagination, Navigation]}
         >
           {props.items.map((item, index) => {
             return (

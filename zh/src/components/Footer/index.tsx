@@ -9,6 +9,7 @@ import TiktokIcon from "components/Icons/TiktokIcon";
 import TimeIcon from "components/Icons/TimeIcon";
 import WechatIcon from "components/Icons/WechatIcon";
 import Image from "next/image";
+import { useCallback } from "react";
 
 import styles from "./Footer.module.scss";
 
@@ -118,6 +119,12 @@ const footer = {
   },
 };
 export default function Footer({ className }: Props) {
+  const handleDownload = useCallback((url: string) => {
+    if (!url) {
+      return;
+    }
+    confirm("是否下载？") && window.open(url);
+  }, []);
   return (
     <div className={cn(styles["footer"], className)}>
       <div className="container flex flex-row">
@@ -189,7 +196,12 @@ export default function Footer({ className }: Props) {
             <h2>{footer.download.title}</h2>
             {footer.download.values.map((item: LinkItem, index: number) => (
               <p key={String(index)}>
-                <a href={item.url}>{item.name}</a>
+                <a
+                  href="javascript:;"
+                  onClick={() => handleDownload(item.url || "")}
+                >
+                  {item.name}
+                </a>
               </p>
             ))}
           </div>

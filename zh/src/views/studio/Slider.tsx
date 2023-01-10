@@ -4,7 +4,7 @@ import "swiper/css/pagination";
 import cn from "classnames";
 import Image from "next/image";
 import styles from "styles/Studio.module.scss";
-import { Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 export type SlideItem = {
   title: string;
@@ -26,9 +26,8 @@ export default function Slider(props: Props) {
     <Swiper
       className={styles.slider}
       pagination={pagination}
-      modules={[Pagination]}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
+      modules={[Autoplay, Pagination]}
+      autoplay={true}
     >
       {props.items.map((item, index) => {
         return (

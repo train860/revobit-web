@@ -8,6 +8,7 @@ import Eco from "views/cad/Eco";
 import Highlights from "views/cad/Highlights";
 import Library from "views/cad/Library";
 import Process from "views/cad/Process";
+import TopBanner from "views/studio/TopBanner";
 const Cad: NextPage = () => {
   return (
     <Layout>

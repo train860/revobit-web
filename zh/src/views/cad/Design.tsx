@@ -8,7 +8,7 @@ export default function Design() {
           <Image src="/images/cad/design.png" alt="" fill />
         </div>
         <div className={styles["text"]}>
-          <p>设计、创建和修改鞋类模型及其图案，以绝对精确度在3D或2D中</p>
+          <p>设计、创建和修改鞋类模型及工艺，在3D或2D中实现高精准度的模型</p>
         </div>
       </div>
     </div>

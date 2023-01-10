@@ -80,8 +80,8 @@ const Step = ({ activeIndex }: { activeIndex: number }) => {
         fill={activeIndex == 14 ? "#5B7AF3" : "white"}
       />
       <line x1="93.5" y1="22" x2="93.5" y2="519" stroke="white" />
-      <line x1="7.5" y1="519" x2="7.49999" y2="790" stroke="white" />
-      <line x1="185.5" y1="519" x2="185.5" y2="790" stroke="white" />
+      <line x1="7.5" y1="519" x2="7.49999" y2="730" stroke="white" />
+      <line x1="185.5" y1="519" x2="185.5" y2="630" stroke="white" />
       <line x1="185" y1="519.5" x2="7" y2="519.5" stroke="white" />
       <circle
         cx="93"
@@ -220,12 +220,14 @@ export default function Process() {
             bottomBoundary={"#p-item-14"}
           >
             <div className={styles["step-wrap"]}>
+              <div style={{ height: 80 }}></div>
               <h2>建模流程</h2>
               <Step activeIndex={activeIndex} />
             </div>
           </Sticky>
         </div>
         <div className={styles["process-items"]}>
+          <div style={{ height: 80 }}></div>
           {Array.from({ length: 15 }).map((_, index) => (
             <div
               id={`p-item-${index}`}

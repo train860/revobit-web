@@ -16,6 +16,7 @@ import Number from "views/studio/Number";
 import Slider, { SlideItem } from "views/studio/Slider";
 import TabView from "views/studio/TabView";
 import TextBanner from "views/studio/TextBanner";
+import TopBanner from "views/studio/TopBanner";
 const Relation = dynamic(() => import("views/studio/Relation"), { ssr: false });
 const s1: SlideItem[] = [
   {
@@ -120,6 +121,7 @@ const Studio: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.studio}>
+        <TopBanner />
         <TextBanner
           items={[
             {
