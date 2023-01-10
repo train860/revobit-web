@@ -1,0 +1,13 @@
+@tailwind components;
+@layer components {
+  .title-banner {
+    position: relative;
+    .cover {
+      @apply absolute left-0 top-0 w-full h-full flex justify-center items-center;
+    }
+    .image {
+      width: 100%;
+      height: auto !important;
+    }
+  }
+}
