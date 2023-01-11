@@ -1,9 +1,14 @@
+import ContactForm from "components/ContactForm";
 import Layout from "components/Layout";
 import TitleBanner from "components/TitleBanner";
 import { NextPage } from "next";
 import Head from "next/head";
 import styles from "styles/About.module.scss";
+import Card from "views/about/Card";
+import History from "views/about/History";
+import Info from "views/about/Info";
 import Map from "views/about/Map";
+import SimpleCard from "views/about/SimpleCard";
 const About: NextPage = () => {
   return (
     <Layout>
@@ -13,8 +18,37 @@ const About: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.about}>
-        <TitleBanner title="" backgroundImage="/images/abount/banner.png" />
+        <TitleBanner title="关于我们" backgroundImage="/images/about/banner.png" />
+        <Info />
+        <div className={styles.culture}>
+          <div className="container">
+            <h2>企业文化</h2>
+            <div className={styles.content}>
+              <SimpleCard icon="/images/about/email.png" title="愿景" description="让数字创意改变时尚未来" />
+              <SimpleCard icon="/images/about/email.png" title="使命" description="致力于成为全球时尚产业数字创意与智能互联的首选伙伴" />
+              <SimpleCard icon="/images/about/email.png" title="价值观" description="客户为本、诚实守信、团队协作、追求极致、开放共赢" />
+            </div>
+          </div>
+        </div>
+        <History />
+        <div className={styles.news}>
+          <div className="container">
+            <h1>资讯动态</h1>
+            <div className={styles.list}>
+              <Card title="喜讯|时谛智能X安踏荣获中纺联“2022年度十大类纺织创新产品”" time="2022-12-09" image="" />
+
+              <Card title="喜讯|时谛智能X安踏荣获中纺”" time="2022-12-09" image="" />
+            </div>
+          </div>
+        </div>
         <Map />
+        <div className="bg-rev-bg-black-0B">
+          <div className="container pb-32">
+            <h2 className="section-title pt-47/2">商务合作</h2>
+            <h3 className="section-subtitle">即刻体验数字时尚创新之旅</h3>
+            <ContactForm page="about" />
+          </div>
+        </div>
       </div>
     </Layout>
   );

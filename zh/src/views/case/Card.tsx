@@ -20,7 +20,7 @@ export default function Card(props: Props) {
         </div>
         <h2>{props.title}</h2>
         <div className={styles.icon}>
-          <Image src={"/images/icons/btn-next.png"} alt="" fill />
+          <Image src={"/icons/btn-next.png"} alt="" fill />
         </div>
       </div>
     </div>

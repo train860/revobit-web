@@ -9,6 +9,7 @@ interface Props {
 export default function SimpleCard(props: Props) {
   return (
     <div className={styles["simple-card"]}>
+      <div className={styles.bg}></div>
       <div className={styles["icon"]}>
         <Image src={props.icon} alt="" fill />
       </div>

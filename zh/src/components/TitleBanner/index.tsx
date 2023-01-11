@@ -9,7 +9,7 @@ interface Props {
 export default function TitleBanner(props: Props) {
   return (
     <div className={styles["title-banner"]}>
-      <Image src={props.backgroundImage} alt="" className={styles.image} />
+      <Image src={props.backgroundImage} fill alt="" className={styles.image} />
       <div className={styles.cover}>
         <h2>{props.title}</h2>
       </div>

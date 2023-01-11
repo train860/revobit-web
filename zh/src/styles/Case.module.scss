@@ -1,0 +1,51 @@
+.list {
+    background-color: #0B0A24;
+    padding: 160px 0;
+
+    .wrap {
+        @apply grid grid-cols-3 gap-4;
+    }
+
+    .card {
+        background: rgba(53, 43, 69, 0.8);
+        border-radius: 30px;
+        background-size: cover;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        max-width: 385px;
+        height: 420px;
+        cursor: pointer;
+
+        color: #FFFFFF;
+
+        &:hover {
+            color: #BF99FF;
+
+            h2 {
+                border-bottom: 1px solid #BF99FF;
+            }
+        }
+
+        @screen xl {
+            height: 640px;
+        }
+
+        .content {
+            padding: 36px 58px;
+        }
+
+        h2 {
+            padding: 12px 0 25px 0;
+            border-bottom: 1px solid #FFFFFF;
+        }
+
+        .icon {
+            position: relative;
+            width: 38px;
+            height: 38px;
+            margin-top: 23px;
+        }
+    }
+}

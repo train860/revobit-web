@@ -1,13 +1,30 @@
 @tailwind components;
+
 @layer components {
   .title-banner {
     position: relative;
+
     .cover {
       @apply absolute left-0 top-0 w-full h-full flex justify-center items-center;
+      background-color: rgba(0, 0, 0, .5);
     }
+
     .image {
+      position: relative !important;
       width: 100%;
       height: auto !important;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 80px;
+      line-height: 34px;
+      /* or 42% */
+
+      text-align: center;
+      letter-spacing: 0.04em;
+
+      color: #FFFFFF;
     }
   }
 }
