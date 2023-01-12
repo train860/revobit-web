@@ -87,7 +87,7 @@ export default function Map() {
           itemStyle: {
             borderWidth: 3,
             normal: {
-              areaColor: "#2e2e43",
+              areaColor: "#e5e5e5",
               borderColor: "rgba(0,0,0,0.3)",
             },
             emphasis: {
@@ -109,8 +109,8 @@ export default function Map() {
             symbolSize: 60,
             itemStyle: {
               normal: {
-                borderColor: "#18184A",
-                color: "#18184A",
+                borderColor: "#7e3989",
+                color: "#7e3989",
                 borderWidth: 1, // 标注边线线宽，单位px，默认为1
                 label: {
                   show: true,
@@ -193,7 +193,7 @@ export default function Map() {
     myChart.setOption(options);
     myChart.on("click", function (params) {
       if (params.componentType != "markPoint") {
-        visible && setVisible(false);
+        setVisible(false);
         return;
       }
 
@@ -206,6 +206,7 @@ export default function Map() {
     <div className={styles.map}>
       <div className={styles["map-cover"]}></div>
       <div className={cn("container", styles.content)}>
+        <h2>人才招募</h2>
         <div id="my-map" className={styles["map-container"]}></div>
         <div className={cn(styles.popup, { [styles.visible]: visible })}>
           <div className={styles.item}>

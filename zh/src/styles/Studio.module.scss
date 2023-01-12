@@ -2,17 +2,23 @@
   background-image: url("/images/cad/grid.png");
   background-repeat: repeat;
 }
+
 .top-banner {
+  background-image: url("/images/studio/banner-bg.jpg");
+  background-size: cover;
+
   .top-banner-content {
     max-width: 42.3125rem;
     margin: 0 auto;
     position: relative;
     padding-top: 12.1875rem;
+
     .top-banner-text {
       position: relative;
       width: 37.875rem;
       height: 8.25rem;
     }
+
     p {
       font-style: normal;
       font-weight: 300;
@@ -25,6 +31,7 @@
       color: rgba(255, 255, 255, 0.5);
       margin-top: 1.125rem;
     }
+
     .shoe {
       margin-top: 2.625rem;
       width: 100%;
@@ -32,14 +39,17 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+
       .shoe-gif,
       .shoe-under {
         position: relative;
       }
+
       .shoe-gif {
         width: 37.5rem;
         height: 26.8125rem;
       }
+
       .shoe-under {
         width: 36.1875rem;
         height: 15.875rem;
@@ -47,30 +57,37 @@
     }
   }
 }
+
 .text__banner {
   min-height: 75rem;
   background-color: black;
   @apply relative;
+
   .text__banner__bg {
     position: absolute;
   }
-  .text__banner__bg > .bg__wrap {
+
+  .text__banner__bg>.bg__wrap {
     width: 735px;
     height: 986px;
     position: relative;
   }
+
   .text__banner__content {
     min-height: 75rem;
     @apply container relative flex flex-row items-center h-full justify-end;
+
     .text__slider {
       width: 745px;
       height: 17.5rem;
       color: white;
       margin: 0;
     }
+
     .slide__item {
       @apply h-full flex flex-col;
       padding: 0 8.375rem;
+
       h2 {
         font-weight: 500;
         font-size: 50px;
@@ -79,6 +96,7 @@
 
         color: #ffffff;
       }
+
       h3 {
         font-weight: 300;
         font-size: 30px;
@@ -88,6 +106,7 @@
         color: #ffffff;
         margin: 0.9375rem 0 1.1875rem 0;
       }
+
       p {
         font-weight: 300;
         font-size: 20px;
@@ -96,24 +115,29 @@
         color: rgba(255, 255, 255, 0.5);
       }
     }
+
     :global(.swiper-button-prev) {
       width: 60px;
       height: 60px;
       background-image: url("/images/studio/btn-prev.png");
       background-size: cover;
+
       &::after {
         content: "";
       }
     }
+
     :global(.swiper-button-next) {
       width: 60px;
       height: 60px;
       background-image: url("/images/studio/btn-next.png");
       background-size: cover;
+
       &::after {
         content: "";
       }
     }
+
     :global(.swiper-pagination-bullet) {
       width: 3.125rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -131,16 +155,19 @@
     }
   }
 }
+
 .card {
   background: linear-gradient(180deg, #9747ff 0%, rgba(151, 71, 255, 0) 100%);
   border-radius: 1.25rem;
   padding: 6.9375rem 0 10.5625rem 0;
   @apply flex flex-col items-center;
+
   .iconWrap {
     @apply relative;
     width: 10.0625rem;
     height: 9rem;
   }
+
   p {
     font-weight: 500;
     font-size: 3.75rem;
@@ -153,6 +180,7 @@
     margin-top: 4.6875rem;
   }
 }
+
 .power {
   font-style: normal;
   font-weight: 700;
@@ -170,16 +198,20 @@
   margin-right: 6.25rem;
   flex-shrink: 0;
 }
+
 .slider-wrap {
   flex: 1;
   overflow: hidden;
 }
+
 .slider {
   height: 100%;
   color: white;
+
   :global(.swiper-pagination) {
     text-align: left;
   }
+
   :global(.swiper-pagination-bullet) {
     width: 2.5rem;
     height: 2.5rem;
@@ -190,6 +222,7 @@
     opacity: 1;
     background: rgba(255, 255, 255, 0.2);
     margin-right: 1.875rem !important;
+
     &:last-child {
       margin-right: 0 !important;
     }
@@ -199,6 +232,7 @@
     color: #a76fd8;
     background: #ffffff;
   }
+
   .slide-item .slide-item__title {
     font-weight: 500;
     font-size: 3.125rem;
@@ -207,6 +241,7 @@
 
     color: #ffffff;
   }
+
   .slide-item .slide-item__sub-title {
     font-weight: 300;
     font-size: 1.25rem;
@@ -216,12 +251,15 @@
     margin-top: 0.5625rem;
     margin-bottom: 1.1875rem;
   }
+
   .slide-item__image {
     height: 25.125rem;
     position: relative;
+
     &.small {
       height: 18.75rem;
     }
+
     .image {
       object-fit: contain;
       width: unset !important;
@@ -233,6 +271,7 @@
 
 .number {
   background: black;
+
   .num {
     font-weight: 800;
     font-size: 50rem;
@@ -244,6 +283,7 @@
     color: rgba(255, 255, 255, 0.14);
     letter-spacing: 7.5rem;
   }
+
   .title {
     position: absolute;
     left: 0;
@@ -263,11 +303,13 @@
 
     color: #ffffff;
   }
+
   .number-section {
     position: relative;
     padding: 150px 0;
   }
-  .number-section > .image-wrapper {
+
+  .number-section>.image-wrapper {
     @apply relative;
     width: 57.5rem;
     height: 57rem;
@@ -278,7 +320,8 @@
       height: 46.1875rem;
     }
   }
-  .number-section > .text {
+
+  .number-section>.text {
     color: white;
     text-align: center;
     position: absolute;
@@ -288,7 +331,8 @@
     height: 50%;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 55.73%);
   }
-  .number-section > .text > h2 {
+
+  .number-section>.text>h2 {
     margin-top: 150px;
     font-weight: 600;
     font-size: 60px;
@@ -299,7 +343,8 @@
 
     color: #ffffff;
   }
-  .number-section > .text > h1 {
+
+  .number-section>.text>h1 {
     font-weight: 600;
     font-size: 90px;
     line-height: 126px;
@@ -314,6 +359,7 @@
 .tab-view {
   background-color: #000000;
   color: white;
+
   h2 {
     font-weight: 600;
     font-size: 40px;
@@ -324,12 +370,15 @@
 
     color: #ffffff;
   }
+
   .tab-view__content {
     @apply container;
+
     .image-wrapper {
       height: 560px;
       margin: 3.0625rem 0;
       @apply relative flex flex-row items-center justify-center;
+
       .image {
         height: 100% !important;
         width: unset !important;
@@ -338,9 +387,11 @@
         transform: translateX(-50%) !important;
       }
     }
+
     .btns {
       @apply flex flex-row items-center justify-center;
     }
+
     .btn {
       @apply flex flex-row items-center justify-center;
       background: rgba(255, 255, 255, 0.1);
@@ -349,13 +400,16 @@
       height: 90px;
       cursor: pointer;
       margin-right: 10px;
+
       &:last-child {
         margin-right: 0;
       }
+
       &.active {
         background: #a76fd8;
       }
     }
+
     .btn__icon {
       width: 3.75rem;
       height: 3.75rem;
@@ -363,10 +417,12 @@
     }
   }
 }
+
 .download {
   background: black;
   position: relative;
   padding-bottom: 5rem;
+
   h2 {
     font-weight: 500;
     font-size: 2.5rem;
@@ -378,6 +434,7 @@
     color: #ffffff;
     padding: 7.5rem 0;
   }
+
   .download__bg {
     @apply absolute top-0 bottom-0 flex justify-center items-center;
     font-weight: 700;
@@ -389,11 +446,14 @@
     color: rgba(255, 255, 255, 0.1);
     text-align: center;
   }
+
   .download__content {
     position: relative;
   }
+
   .download__wrap {
     @apply container grid grid-cols-3 gap-55/2;
+
     .card {
       background: rgba(255, 255, 255, 0.12);
       backdrop-filter: blur(40px);
@@ -401,11 +461,13 @@
 
       border-radius: 1.25rem;
       padding: 8.5625rem 0 3.5rem 0;
+
       .icon__wrap {
         width: 10rem;
         height: 10rem;
         position: relative;
       }
+
       p {
         font-weight: 400;
         font-size: 1.875rem;
@@ -415,11 +477,13 @@
     }
   }
 }
+
 .relation {
   background: black;
   padding: 5rem 0;
   height: 1100px;
   overflow: hidden;
+
   h2 {
     margin-bottom: 5rem;
     font-weight: 500;

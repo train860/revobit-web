@@ -13,7 +13,7 @@ export default function Eco() {
             <div className={cn(styles["eco-item-icon"], styles.i1)}>
               <Image src="/images/cad/studio.png" alt="" fill />
             </div>
-            <h3>打通STUDIO</h3>
+            <h3>打通Studio</h3>
             <p>借助Studio即时渲染，协同工作，高效沟通，提高中单率</p>
             <div className={styles.btn}>
               <Link href={"/studio"}>了解更多</Link>

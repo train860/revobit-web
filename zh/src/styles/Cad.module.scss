@@ -6,16 +6,20 @@
 .banner {
   @apply relative;
   height: 75rem;
+
   .image {
     object-fit: cover;
   }
+
   .cover {
     @apply absolute left-0 top-0 right-0 bottom-0 flex flex-col justify-center items-center text-white;
     background: rgba(3, 2, 32, 0.5);
+
     .content {
       @apply container;
       text-align: center;
     }
+
     .title {
       @apply flex flex-row items-center justify-center;
       font-weight: 400;
@@ -24,13 +28,15 @@
       /* identical to box height */
 
       color: #ffffff;
-      > span.line {
+
+      >span.line {
         color: rgba(255, 255, 255, 0.5);
         display: inline-block;
         margin: 0 1.875rem;
         font-size: 3rem;
       }
     }
+
     h2 {
       font-weight: 300;
       font-size: 1.75rem;
@@ -45,6 +51,7 @@
 .highlights {
   .highlights-content {
     @apply container;
+
     h2 {
       font-size: 2.5rem;
       line-height: 3.5rem;
@@ -55,11 +62,14 @@
       color: #ffffff;
       margin: 6.25rem 0;
     }
+
     .items {
       @apply grid grid-cols-2 gap-31;
     }
-    .items > .item {
+
+    .items>.item {
       @apply flex flex-col items-center;
+
       .item-icon {
         @apply relative flex justify-center items-center;
         width: 9.375rem;
@@ -67,11 +77,13 @@
         background: #5b7af3;
         border-radius: 100%;
       }
+
       .image {
         position: unset !important;
         width: 3.75rem !important;
         height: unset !important;
       }
+
       p {
         font-weight: 400;
         font-size: 1.875rem;
@@ -87,14 +99,17 @@
 
 .design {
   margin-top: 11.25rem;
+
   .design-content {
     @apply container relative flex flex-row justify-center items-center;
   }
+
   .bg-image {
     @apply relative;
     width: 82.9375rem;
     height: 60.5rem;
   }
+
   .text {
     @apply left-0 top-0 w-full h-full absolute flex flex-row justify-center items-center;
     font-weight: 600;
@@ -109,8 +124,10 @@
 .eco {
   background-image: url("/images/cad/dot_grid.png");
   background-repeat: repeat;
+
   .eco-content {
     @apply container relative;
+
     h2 {
       font-size: 2.5rem;
       line-height: 3.5rem;
@@ -122,24 +139,30 @@
       padding-top: 11.25rem;
     }
   }
+
   .eco-items {
     @apply flex flex-row;
     padding: 12.5rem 0 18.75rem 0;
+
     .eco-item {
       @apply flex flex-col flex-1 items-center;
     }
+
     .eco-item-icon {
       @apply relative;
+
       &.i1 {
         width: 11.75rem;
         height: 13.125rem;
       }
+
       &.i2 {
         width: 14.625rem;
         height: 11.5rem;
         margin-top: 1.625rem;
       }
     }
+
     h3 {
       font-size: 2.5rem;
       line-height: 3.5rem;
@@ -148,6 +171,7 @@
       color: #5b7af3;
       margin-top: 6rem;
     }
+
     p {
       font-weight: 300;
       font-size: 1.5rem;
@@ -157,6 +181,7 @@
       color: #ffffff;
       margin: 1.5rem 0;
     }
+
     .btn {
       background: #ffffff;
       border-radius: 4px;
@@ -168,7 +193,8 @@
       text-align: center;
 
       color: #000000;
-      > a {
+
+      >a {
         display: block;
       }
     }
@@ -178,6 +204,7 @@
 .library {
   background-image: url("/images/cad/dot_grid.png");
   padding: 11.25rem 0;
+
   h2 {
     font-size: 2.5rem;
     line-height: 3.5rem;
@@ -188,6 +215,7 @@
     color: #ffffff;
     padding: 0 0 4.25rem 0;
   }
+
   .library-items {
     @apply relative;
     width: 120.1875rem;
@@ -199,10 +227,13 @@
 
 .process {
   padding: 5rem 0;
+
   .process-content {
     @apply container flex;
+
     .process-step {
       width: 20.6875rem;
+
       h2 {
         font-weight: 500;
         font-size: 2.5rem;
@@ -214,24 +245,39 @@
         color: rgba(255, 255, 255, 0.5);
         margin-bottom: 1.4375rem;
       }
+
       .step-wrap {
         width: 20.6875rem;
       }
     }
+
     .process-items {
       display: flex;
       flex: 1;
       flex-direction: column;
       align-items: center;
+
       .process-item {
-        padding-bottom: 4.125rem;
+        padding-bottom: 400px;
       }
-      .process-item > .image-wrap {
+
+      .process-item>.image-wrap {
         position: relative;
         width: 33.9375rem;
         height: 18.375rem;
         border-radius: 0.375rem;
         overflow: hidden;
+      }
+
+      .process-item>p {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 42px;
+        /* identical to box height */
+
+
+        color: #FFFFFF;
+        margin-top: 20px;
       }
     }
   }

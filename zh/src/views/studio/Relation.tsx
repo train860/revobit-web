@@ -1,4 +1,4 @@
-import G6, { IG6GraphEvent } from "@antv/g6";
+import G6, { G6Event, IG6GraphEvent } from "@antv/g6";
 import { useEffect } from "react";
 import styles from "styles/Studio.module.scss";
 export default function Relation() {
@@ -11,7 +11,7 @@ export default function Relation() {
       return;
     }
     const width = container?.scrollWidth;
-    const height = 800;
+    const height = 900;
 
     G6.registerNode(
       "dom-node",
@@ -30,6 +30,7 @@ export default function Relation() {
               y: labelPos[0],
               x: labelPos[1],
               text: `${cfg?.label}`,
+              tag: `${cfg?.tag}`,
               fill: "white",
               fontWeight: 600,
               fontSize: 30,
@@ -42,6 +43,7 @@ export default function Relation() {
               y: desPos[0],
               x: desPos[1],
               text: `${cfg?.description}`,
+              tag: `${cfg?.tag}`,
               fill: "#A76FD8",
               fontWeight: 300,
               fontSize: 24,
@@ -105,6 +107,7 @@ export default function Relation() {
           label: "使用Trend",
           description: "精准企划分析",
           align: "left",
+          tag: "trends",
           x: 100,
         },
         {
@@ -113,6 +116,7 @@ export default function Relation() {
           label: "使用Library",
           description: "管理数字资产",
           align: "right",
+          tag: "library",
           x: 1000,
           y: 100,
         },
@@ -122,6 +126,7 @@ export default function Relation() {
           label: "使用Manager",
           description: "可视化管理项目",
           align: "right",
+          tag: "manager",
           x: 200,
           y: 10,
         },
@@ -131,6 +136,7 @@ export default function Relation() {
           label: "使用KicksCAD",
           description: "快速创建鞋模",
           align: "right",
+          tag: "cad",
           x: 1000,
           y: 200,
         },
@@ -140,6 +146,7 @@ export default function Relation() {
           label: "使用Versebook",
           description: "获取海量素材",
           align: "right",
+          tag: "versebook",
           x: 200,
           y: 450,
         },
@@ -160,7 +167,7 @@ export default function Relation() {
       }),
     });
     graph.render();
-    /*
+
     graph.on("node:dragstart", function (e) {
       graph.layout();
       refreshDragedNodePosition(e);
@@ -173,7 +180,38 @@ export default function Relation() {
         e.item.get("model").fx = null;
         e.item.get("model").fy = null;
       }
-    });*/
+    });
+
+    graph.on('node:click', function (e) {
+      if (!e.item || !e.item.get("model").tag) {
+        return;
+      }
+      const tag = e.item.get("model").tag
+      let url = "";
+      switch (tag) {
+        case "trends":
+          url = "/trends.html"
+          break;
+        case "library":
+          url = "/library.html"
+          break;
+        case "cad":
+          url = "/cad.html"
+          break;
+        case "manager":
+          url = "/fim/manager.html"
+          break;
+        case "versebook":
+          url = "/verse/versebook.html"
+          break;
+        default:
+          break;
+      }
+      if (!url) {
+        return
+      }
+      location.href = url
+    });
 
     if (typeof window !== "undefined")
       window.onresize = () => {

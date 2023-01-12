@@ -10,10 +10,11 @@
     height: 898px;
     bottom: 0;
     right: -50%;
-    transform: translateY(50%);
+    transform: translateX(-50%);
     background: #444FC4;
     opacity: 0.2;
     filter: blur(250px);
+
   }
 
   h2 {
@@ -42,7 +43,7 @@
       opacity: 0.5;
 
       p {
-        margin-bottom: 15px;
+        margin-bottom: 40px;
       }
     }
 
@@ -63,7 +64,8 @@
       }
 
       .image-wrap {
-        max-width: 100%;
+        width: 100%;
+        max-width: 600px;
         position: relative;
 
         img {
@@ -150,7 +152,7 @@
       color: #FFFFFF;
 
       opacity: 0.3;
-      margin-bottom: 89px;
+      height: 115px;
     }
   }
 }
@@ -249,9 +251,19 @@
   position: relative;
   background-color: #0B0A24;
 
+  h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 50px;
+
+    color: #FFFFFF;
+    text-align: center;
+  }
+
   .content {
     position: relative;
-    padding-top: 12.5rem;
+    padding-top: 120px;
   }
 
   .map-cover {

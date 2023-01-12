@@ -24,9 +24,9 @@ const About: NextPage = () => {
           <div className="container">
             <h2>企业文化</h2>
             <div className={styles.content}>
-              <SimpleCard icon="/images/about/email.png" title="愿景" description="让数字创意改变时尚未来" />
-              <SimpleCard icon="/images/about/email.png" title="使命" description="致力于成为全球时尚产业数字创意与智能互联的首选伙伴" />
-              <SimpleCard icon="/images/about/email.png" title="价值观" description="客户为本、诚实守信、团队协作、追求极致、开放共赢" />
+              <SimpleCard icon="/images/about/i1.png" title="愿景" description="让数字创意改变时尚未来" />
+              <SimpleCard icon="/images/about/i2.png" title="使命" description="致力于成为全球时尚产业数字创意与智能互联的首选伙伴" />
+              <SimpleCard icon="/images/about/i3.png" title="价值观" description="客户为本、诚实守信、团队协作、追求极致、开放共赢" />
             </div>
           </div>
         </div>

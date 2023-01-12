@@ -32,8 +32,19 @@
             height: 640px;
         }
 
+        .cover {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(179.98deg, rgba(32, 51, 74, 0.12) 32.18%, rgba(32, 51, 74, 0.728) 79.59%, rgba(53, 43, 69, 0.8) 100.42%);
+        }
+
         .content {
             padding: 36px 58px;
+            position: relative;
+            z-index: 9;
         }
 
         h2 {
