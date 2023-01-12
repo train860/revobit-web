@@ -17,27 +17,27 @@ const items: TabItem[] = [
   {
     title: "服装",
     icon: "/images/studio/Icon_Category_Clothes.png",
-    image: "/images/studio/t2.png",
+    image: "/images/studio/服装.png",
   },
   {
     title: "包包",
     icon: "/images/studio/Icon_Category_Bag.png",
-    image: "/images/studio/t3.png",
+    image: "/images/studio/包.png",
   },
   {
     title: "配饰",
     icon: "/images/studio/Icon_Category_Cap.png",
-    image: "/images/studio/tab-1.png",
+    image: "/images/studio/配饰.png",
   },
   {
-    title: "其它",
+    title: "数码",
     icon: "/images/studio/Icon_Category_Other.png",
-    image: "/images/studio/tab-1.png",
+    image: "/images/studio/数码.png",
   },
   {
     title: "工业品",
     icon: "/images/studio/Icon_Category_Menufacture.png",
-    image: "/images/studio/tab-1.png",
+    image: "/images/studio/工业品.png",
   },
 ];
 

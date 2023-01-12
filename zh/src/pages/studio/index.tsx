@@ -94,17 +94,17 @@ const s3: SlideItem[] = [
   {
     title: "尖端的速度和性能",
     subTitle: "Apple M2芯片、Surface",
-    image: "/images/studio/RTX实时光线追踪.png",
+    image: "/images/studio/尖端的速度和性能.png",
   },
   {
     title: "专业的合作伙伴",
     subTitle: "Pantone、Coloro、NIVIDIA",
-    image: "/images/studio/可编辑的材质.png",
+    image: "/images/studio/专业的合作伙伴.png",
   },
   {
     title: "插件生态",
     subTitle: "Adobe、CLO",
-    image: "/images/studio/AI配色.png",
+    image: "/images/studio/插件生态.png",
   },
   {
     title: "数据生态",

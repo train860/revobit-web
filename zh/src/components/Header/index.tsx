@@ -116,10 +116,10 @@ export default function Header({ className }: Props) {
             {isActive("3") && <div className={styles.line}></div>}
           </li>
           <li>
-            <a href="">品牌案例</a>
+            <a href="/case.html">品牌案例</a>
           </li>
           <li>
-            <a href="">关于我们</a>
+            <a href="/about.html">关于我们</a>
           </li>
         </ul>
       </div>

@@ -179,7 +179,7 @@
 .news {
   background-image: url("/images/about/news-bg.png");
   background-size: cover;
-  padding: 160px 0;
+  padding: 160px 0 60px 0;
 
   h1 {
     font-weight: 500;
@@ -192,7 +192,8 @@
   }
 
   .list {
-    @apply grid grid-cols-3 gap-4;
+    display: flex;
+    justify-content: center;
   }
 
   .card {
@@ -203,26 +204,41 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    max-width: 385px;
+    width: 320px;
     height: 420px;
     cursor: pointer;
-
     color: #FFFFFF;
 
     &:hover {
-      color: #BF99FF;
+      //color: #BF99FF;
 
       h2 {
-        border-bottom: 1px solid #BF99FF;
+        //border-bottom: 1px solid #BF99FF;
+      }
+
+      .cover {
+        background: linear-gradient(179.98deg, rgba(32, 51, 74, 0.4) 32.18%, rgba(32, 51, 74, 0.8) 79.59%, rgba(53, 43, 69, 0.9) 100.42%);
       }
     }
 
     @screen xl {
+      width: 385px;
       height: 640px;
+    }
+
+    .cover {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(179.98deg, rgba(32, 51, 74, 0.12) 32.18%, rgba(32, 51, 74, 0.728) 79.59%, rgba(53, 43, 69, 0.8) 100.42%);
     }
 
     .content {
       padding: 36px 58px;
+      position: relative;
+      z-index: 9;
     }
 
     .time {
@@ -242,6 +258,25 @@
       width: 38px;
       height: 38px;
       margin-top: 23px;
+    }
+  }
+
+  .control {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+
+    .prev,
+    .next {
+      width: 66px;
+      height: 66px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .next {
+      margin-left: 20px;
     }
   }
 }

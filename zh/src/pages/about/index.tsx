@@ -8,7 +8,51 @@ import Card from "views/about/Card";
 import History from "views/about/History";
 import Info from "views/about/Info";
 import Map from "views/about/Map";
+import News from "views/about/News";
 import SimpleCard from "views/about/SimpleCard";
+
+const news = [
+  {
+    title: '喜讯|时谛智能X安踏荣获中纺联“2022年度十大类纺织创新产品”',
+    time: '2022-12-09',
+    image: '/images/about/news/1.png'
+  },
+  {
+    title: '时谛智能亮相GAMES&CCF 图形学研讨会，加速图形学落地时尚产业',
+    time: '2022-10-17',
+    image: '/images/about/news/2.png'
+  },
+  {
+    title: '同心聚力，携手致远|时谛智能与Dr.Kong江博士达成战略合作',
+    time: '2022-08-10',
+    image: '/images/about/news/3.png'
+  },
+  {
+    title: '广州市海珠区政府区长毛松柏领导一行莅临时谛智能',
+    time: '2022-05-26',
+    image: '/images/about/news/4.png'
+  },
+  {
+    title: '时谛智能 X RPRSENTED | 上线即秒空！探秘潮鞋NFT背后的数字时尚潮流',
+    time: '2022-05-16',
+    image: '/images/about/news/5.png'
+  },
+  {
+    title: '数字赋能，共绘产业蓝图|杭州线下沙龙活动圆满收官！',
+    time: '2022-11-14',
+    image: '/images/about/news/6.png'
+  },
+  {
+    title: '深圳时装周 X 时谛智能丨玩转元宇宙时尚新想象',
+    time: '2022-04-23',
+    image: '/images/about/news/7.png'
+  },
+  {
+    title: '相约2022阿里U设计周，看创意设计如何与科技共舞',
+    time: '2022-08-13',
+    image: '/images/about/news/8.png'
+  }
+]
 const About: NextPage = () => {
   return (
     <Layout>
@@ -31,16 +75,7 @@ const About: NextPage = () => {
           </div>
         </div>
         <History />
-        <div className={styles.news}>
-          <div className="container">
-            <h1>资讯动态</h1>
-            <div className={styles.list}>
-              <Card title="喜讯|时谛智能X安踏荣获中纺联“2022年度十大类纺织创新产品”" time="2022-12-09" image="" />
-
-              <Card title="喜讯|时谛智能X安踏荣获中纺”" time="2022-12-09" image="" />
-            </div>
-          </div>
-        </div>
+        <News items={news} />
         <Map />
         <div className="bg-rev-bg-black-0B">
           <div className="container pb-32">

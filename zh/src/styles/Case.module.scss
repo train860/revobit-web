@@ -3,7 +3,9 @@
     padding: 160px 0;
 
     .wrap {
-        @apply grid grid-cols-3 gap-4;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .card {
@@ -15,16 +17,23 @@
         flex-direction: column;
         justify-content: flex-end;
         max-width: 385px;
+        width: 33.33333%;
         height: 420px;
         cursor: pointer;
+        overflow: hidden;
 
         color: #FFFFFF;
+        margin: 40px 20px;
 
         &:hover {
-            color: #BF99FF;
+            //color: #BF99FF;
 
             h2 {
-                border-bottom: 1px solid #BF99FF;
+                //border-bottom: 1px solid #BF99FF;
+            }
+
+            .cover {
+                background: linear-gradient(179.98deg, rgba(32, 51, 74, 0.4) 32.18%, rgba(32, 51, 74, 0.8) 79.59%, rgba(53, 43, 69, 0.9) 100.42%);
             }
         }
 
@@ -45,6 +54,10 @@
             padding: 36px 58px;
             position: relative;
             z-index: 9;
+        }
+
+        .logo {
+            position: relative;
         }
 
         h2 {

@@ -1,15 +1,66 @@
+import cn from 'classnames'
 import Layout from "components/Layout";
 import TitleBanner from "components/TitleBanner";
 import { NextPage } from "next";
 import Head from "next/head";
 import styles from "styles/Case.module.scss";
 import Card from "views/case/Card";
-import cn from 'classnames'
 const list = [
   {
     title: "时谛智能X安踏荣获中纺联“2022年度十大类纺织创新产品”",
-    logo: "2022-12-09",
+    logo: "/images/case/anta.png",
     image: "/images/case/1.png",
+    logoWidth: 112,
+    logoHeight: 60,
+  },
+  {
+    title: "国潮品牌1807通过时谛智能全链路数字化解决方案实现产品从0-1孵化落地",
+    logo: "/images/case/1807.png",
+    image: "/images/case/2.png",
+    logoWidth: 106,
+    logoHeight: 86,
+  },
+  {
+    title: "国内TOP鞋类出口企业建发轻工通过时谛智能3D技术构建核心竞争优势",
+    logo: "/images/case/建发集团.png",
+    image: "/images/case/3.png",
+    logoWidth: 114,
+    logoHeight: 70,
+  },
+  {
+    title: "国际一线运动品牌供应商其云进出口贸易通过时谛智能3D数字化设计成功转化高额订单",
+    logo: "/images/case/planone.png",
+    image: "/images/case/4.png",
+    logoWidth: 138,
+    logoHeight: 30,
+  },
+  {
+    title: "冠星携手时谛智能实现面料数字化管理",
+    logo: "/images/case/冠星.png",
+    image: "/images/case/5.png",
+    logoWidth: 264,
+    logoHeight: 58,
+  },
+  {
+    title: "旭泰鞋材借助时谛智能3D设计工具大幅减少实体样品打样成本",
+    logo: "/images/case/旭泰.png",
+    image: "/images/case/6.png",
+    logoWidth: 102,
+    logoHeight: 76,
+  },
+  {
+    title: "时谛智能 X 华为云<br/>用数字技术践行科技向善",
+    logo: "/images/case/华为云.png",
+    image: "/images/case/7.png",
+    logoWidth: 161,
+    logoHeight: 57,
+  },
+  {
+    title: "时谛智能 X 微软<br/>依托微软生态实现平台应用场景的高效稳定",
+    logo: "/images/case/微软.png",
+    image: "/images/case/8.png",
+    logoWidth: 175,
+    logoHeight: 37,
   },
 ]
 
@@ -24,12 +75,14 @@ const Case: NextPage = () => {
       <div className={styles.case}>
         <TitleBanner title="品牌案例" backgroundImage="/images/case/banner.png" />
         <div className={styles.list}>
-          <div className={cn("container", styles.wrap)}>
-            {
-              list.map((item, index) => {
-                return <Card key={index} title={item.title} logo={item.logo} image={item.image} />
-              })
-            }
+          <div className={cn("container")}>
+            <div className={styles.wrap}>
+              {
+                list.map((item, index) => {
+                  return <Card key={index} {...item} />
+                })
+              }
+            </div>
           </div>
         </div>
       </div>
