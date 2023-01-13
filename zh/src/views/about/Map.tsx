@@ -5,45 +5,25 @@ import { useCallback, useEffect, useState } from "react";
 import styles from "styles/About.module.scss";
 
 const contactData: Record<string, Record<string, string>> = {
-  成都: {
-    email: "",
-    phone: "",
-    address: "",
-  },
   广州: {
     email: "4DZP@4DSTC.COM",
     phone: "189-8896-5774（微信同号）",
     address: "广东省广州市海珠区新港东路70号万胜汇创客PARK15号楼",
   },
-  深圳: {
-    email: "",
-    phone: "",
-    address: "",
+  东莞: {
+    email: "4DZP@4DSTC.COM",
+    phone: "189-8896-5774（微信同号）",
+    address: "东莞市厚街镇富康路1号巨富大厦",
   },
-  厦门: {
-    email: "",
-    phone: "",
-    address: "",
-  },
-  杭州: {
-    email: "",
-    phone: "",
-    address: "",
+  温州: {
+    email: "4DZP@4DSTC.COM",
+    phone: "189-8896-5774（微信同号）",
+    address: "浙江省温州市鹿城区丰门街道丁桥路经济总部基地B07栋",
   },
   上海: {
-    email: "",
-    phone: "",
-    address: "",
-  },
-  山东: {
-    email: "",
-    phone: "",
-    address: "",
-  },
-  湖北: {
-    email: "",
-    phone: "",
-    address: "",
+    email: "4DZP@4DSTC.COM",
+    phone: "189-8896-5774（微信同号）",
+    address: "上海市浦东新区浦电路438号双鸽大厦309室",
   },
 };
 export default function Map() {
@@ -96,14 +76,10 @@ export default function Map() {
           },
           data: [
             //跟markPoint中的data顺序要一致
-            { name: "四川省" },
             { name: "广东省" },
             { name: "广东省" },
-            { name: "福建省" },
             { name: "浙江省" },
             { name: "上海市" },
-            { name: "山东省" },
-            { name: "湖北省" },
           ],
           markPoint: {
             symbolSize: 60,
@@ -120,14 +96,6 @@ export default function Map() {
             },
             data: [
               {
-                coord: [104.06, 30.67],
-                value: "成都",
-                label: {
-                  fontSize: 10,
-                  color: "#fff",
-                },
-              },
-              {
                 coord: [113.1553, 23.0632],
                 value: "广州",
                 label: {
@@ -136,24 +104,17 @@ export default function Map() {
                 },
               },
               {
-                coord: [114.025973657, 22.5460535462],
-                value: "深圳",
+                coord: [113.31, 22.39],
+                value: "东莞",
                 label: {
                   fontSize: 10,
                   color: "#fff",
                 },
               },
+
               {
-                coord: [118.103886046, 24.4892306125],
-                value: "厦门",
-                label: {
-                  fontSize: 10,
-                  color: "#fff",
-                },
-              },
-              {
-                coord: [120.219375416, 30.2592444615],
-                value: "杭州",
+                coord: [119.37, 27.03],
+                value: "温州",
                 label: {
                   fontSize: 10,
                   color: "#fff",
@@ -167,22 +128,7 @@ export default function Map() {
                   color: "#fff",
                 },
               },
-              {
-                coord: [117.024967066, 36.6827847272],
-                value: "山东",
-                label: {
-                  fontSize: 10,
-                  color: "#fff",
-                },
-              },
-              {
-                coord: [114.316200103, 30.5810841269],
-                value: "湖北",
-                label: {
-                  fontSize: 10,
-                  color: "#fff",
-                },
-              },
+
             ],
           },
         },
