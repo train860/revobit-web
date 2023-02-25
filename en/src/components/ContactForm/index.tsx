@@ -56,7 +56,33 @@ export default function ContactForm({ page, className }: Props) {
 
     //todo check empty
     const id = toast.loading(contact.submitting);
-
+    fetch("/api/records", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ ...values, from: page }),
+    }).then((response) => {
+      return response.json()
+    }).then((res) => {
+      setValues({});
+      toast.update(id, {
+        render: contact.succeed,
+        type: toast.TYPE.SUCCESS,
+        isLoading: false,
+        autoClose: 2000,
+        delay: 1000,
+      });
+    }).catch((err) => {
+      toast.update(id, {
+        render: contact.failed,
+        type: toast.TYPE.ERROR,
+        isLoading: false,
+        autoClose: 2000,
+        delay: 1000,
+      });
+    });
+    /*
     api.records
       .create("message", { ...values, from: page })
       .then((res) => {
@@ -77,7 +103,7 @@ export default function ContactForm({ page, className }: Props) {
           autoClose: 2000,
           delay: 1000,
         });
-      });
+      });*/
   };
   return (
     <div className={cn(_className)}>
