@@ -24,6 +24,15 @@ function MyApp({ Component, pageProps }: AppProps) {
           crossOrigin=""
           type="font/truetype"
         />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDV13TYB55"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-GDV13TYB55');
+        </script>
       </Head>
       <Component {...pageProps} />
     </main>
